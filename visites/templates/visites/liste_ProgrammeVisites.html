@@ -1,0 +1,24 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Liste des Programmes de Visite</h2>
+<table>
+    <tr>
+        <th>Visite</th>
+        <th>Statut</th>
+        <th>Actions</th>
+    </tr>
+    {% for programme in programmes %}
+    <tr>
+        <td>{{ programme.visite }}</td>
+        <td>{{ programme.statut }}</td>
+        <td>
+            <a href="{% url 'modifier_ProgrammeVisite' programme.id %}">Modifier</a>
+            <a href="{% url 'supprimer_ProgrammeVisite' programme.id %}" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce programme de visite ?');">Supprimer</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{% url 'ajouter_ProgrammeVisite' %}">Ajouter un Programme de Visite</a>
+{% endblock %}

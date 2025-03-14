@@ -1,0 +1,8 @@
+{
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.columnSelection": false,
+    "editor.definitionLinkOpensInPeek": true,
+    "editor.guides.highlightActiveBracketPair": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.hover.above": false
+}

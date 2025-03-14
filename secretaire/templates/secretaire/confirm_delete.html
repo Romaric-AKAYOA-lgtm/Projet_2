@@ -1,0 +1,39 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+<div class="container mt-4">
+    <h1>Confirmer la suppression</h1>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Confirmer la suppression</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Êtes-vous sûr de vouloir supprimer le secrétaire "{{ secretaire.nom }}" ?</p>
+                </div>
+                <div class="modal-footer">
+                    <form action="{% url 'secretaire:supprimer' secretaire.id %}" method="POST">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Supprimer</button>
+                    </form>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script pour ouvrir la modale automatiquement à l'ouverture de la page -->
+<script>
+    // Lorsque la page est complètement chargée, on affiche la modale
+    window.onload = function() {
+        var myModal = new bootstrap.Modal(document.getElementById('deleteModal'));
+        myModal.show();
+    };
+</script>
+
+{% endblock %}

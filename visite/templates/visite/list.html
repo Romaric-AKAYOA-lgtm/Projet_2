@@ -1,0 +1,43 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+<div class="container mt-4">
+    <h1 class="text-center   text-white">Liste des Visites</h1>
+
+    <div class="d-flex justify-content-start mb-3">
+        <a href="{% url 'visite:creer' %}" class="btn btn-primary">Ajouter une Visite</a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Nom du Visiteur</th>
+                    <th>Date de Visite</th>
+                    <th>Heure de Visite</th>
+                    <th>Description</th>
+                    <th>Directeur</th>
+                    <th>Statut</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white" >
+                {% for visite in visites %}
+                <tr>
+                    <td>{{ visite.visiteur.nom }} {{ visite.visiteur.prenom }}</td>
+                    <td>{{ visite.date_visite }}</td>
+                    <td>{{ visite.heure_visite }}</td>
+                    <td>{{ visite.objet }}</td>
+                    <td>{{ visite.directeur.nom }} {{ visite.directeur.prenom }}</td>
+                    <td>{{ visite.statut }}</td>
+                    <td>
+                        <a href="{% url 'visite:modifier' visite.id %}" class="btn btn-warning mb-1 ">Modifier</a>
+           <!--          <a href="{% url 'visite:supprimer' visite.id %}" class="btn btn-danger mb-1">Supprimer</a>  -->    
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

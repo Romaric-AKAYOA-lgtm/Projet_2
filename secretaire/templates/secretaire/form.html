@@ -1,0 +1,56 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+<div class="container mt-4">
+    <h1>{% if form.instance.id %}Modifier{% else %}Créer{% endif %} un Secrétaire</h1>
+
+    {% if form.errors %}
+    <div class="alert alert-danger">
+        {% for field in form %}
+            {% if field.errors %}
+                <strong>{{ field.label }}</strong> : {{ field.errors|striptags }}
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <form action="{% url 'secretaire:modifier' form.instance.id %}" method="POST">
+        {% csrf_token %}
+        
+        <div class="mb-3">
+            <label for="nom" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="nom" name="nom" value="{{ form.instance.nom }}" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="prenom" class="form-label">Prénom</label>
+            <input type="text" class="form-control" id="prenom" name="prenom" value="{{ form.instance.prenom }}" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" value="{{ form.instance.email }}">
+        </div>
+
+        <div class="mb-3">
+            <label for="num_tel" class="form-label">Téléphone</label>
+            <input type="text" class="form-control" id="num_tel" name="num_tel" value="{{ form.instance.num_tel }}">
+        </div>
+
+        <div class="mb-3">
+            <label for="date_debut" class="form-label">Date Début</label>
+            <input type="date" class="form-control" id="date_debut" name="date_debut" value="{{ form.instance.date_debut|date:'Y-m-d' }}">
+        </div>
+
+        <div class="mb-3">
+            <label for="date_fin" class="form-label">Date Fin</label>
+            <input type="date" class="form-control" id="date_fin" name="date_fin" value="{{ form.instance.date_fin|date:'Y-m-d' }}">
+        </div>
+
+        <div class="text-end">
+            <button type="submit" class="btn btn-warning">Sauvegarder</button>
+            <a href="{% url 'secretaire:Secretaire' %}" class="btn btn-secondary">Annuler</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

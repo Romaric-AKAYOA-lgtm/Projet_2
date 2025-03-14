@@ -1,0 +1,48 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+
+<!-- Modal Activation requise -->
+<div class="modal fade" id="modalActivation" tabindex="-1" aria-labelledby="modalActivationLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg"> <!-- Largeur augmentée -->
+        <div class="modal-content">
+            <div class="modal-header bg-warning text-dark">
+                <h5 class="modal-title" id="modalActivationLabel">Activation requise</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="modal-body">
+                    <p class="text-danger fw-bold">Votre accès est expiré. Veuillez entrer une clé d'activation.</p>
+                    <input type="text" name="key" class="form-control mb-2" placeholder="Entrez la clé" required>
+                    <div class="text-end">
+                        <button type="submit" class="btn btn-success">Activer</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Script pour afficher le modal automatiquement -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var myModal = new bootstrap.Modal(document.getElementById("modalActivation"));
+        myModal.show();
+    });
+</script>
+
+{% endblock %}
+
+
+
+username='Admin2'
+password='motdepasse'
+7dfba45c-5880-48a9-90d5-30879344c9b7-202504012212
+expire le 2 avril 
+
+db128825-d8dd-4926-84bb-c3210fddb8c3-202504012252
+
+curl -X POST http://127.0.0.1:8000/Notifications/send_sms/ \
+     -H "Content-Type: application/json" \
+     -d '{"phone_number": "+242064596201", "message": "Bonjour !"}'

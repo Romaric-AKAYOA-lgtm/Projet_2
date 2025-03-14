@@ -1,0 +1,116 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+
+<!-- Modal structure -->
+<div class="modal fade show" id="directeurModal" tabindex="-1" aria-labelledby="directeurModalLabel" aria-hidden="true" style="display: block;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h5 class="modal-title text-white" id="directeurModalLabel">
+                    {{ form.instance.pk|yesno:"Modifier un Directeur,Créer un Directeur" }}
+                </h5>
+             </div>
+            <div class="modal-body">
+                {% if form.errors %}
+                <div class="alert alert-danger">
+                    {% for field in form %}
+                        {% if field.errors %}
+                            <strong>{{ field.label }}</strong> : {{ field.errors|striptags }}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <form method="POST" class="needs-validation" novalidate>
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                        <label for="nom" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="nom" name="nom" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="prenom" class="form-label">Prénom</label>
+                        <input type="text" class="form-control" id="prenom" name="prenom" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <div class="input-group">
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            <span class="input-group-text">
+                                <a href="#" id="mailto-link" class="text-decoration-none" style="pointer-events: none;">
+                                    <i class="bi bi-envelope"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="num_tel" class="form-label">Numéro de téléphone</label>
+                        <div class="input-group">
+                            <input type="tel" class="form-control" id="num_tel" name="num_tel">
+                            <span class="input-group-text">
+                                <a href="#" id="tel-link" class="text-decoration-none" style="pointer-events: none;">
+                                    <i class="bi bi-telephone"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="adresse" class="form-label">Adresse</label>
+                        <input type="text" class="form-control" id="adresse" name="adresse" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="date_debut" class="form-label">Date de début</label>
+                        <input type="date" class="form-control" id="date_debut" name="date_debut" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="date_fin" class="form-label">Date de fin</label>
+                        <input type="date" class="form-control" id="date_fin" name="date_fin">
+                    </div>
+
+                    <div class="text-end">
+                        <a href="{% url 'directeur:Directeur' %}" class="btn btn-secondary px-4 py-2 btn-sm">Annuler</a>
+                        <button type="submit" class="btn btn-primary px-4 py-2 btn-sm">
+                            {{ form.instance.pk|yesno:"Modifier,Créer" }}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script to trigger modal -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Show the modal automatically on page load
+        var myModal = new bootstrap.Modal(document.getElementById('directeurModal'), {
+            keyboard: false,
+            backdrop: 'static' // Disables closing the modal by clicking outside
+        });
+        myModal.show();
+
+        // Enable email and tel links only if the fields are filled
+        var emailInput = document.getElementById('email');
+        var telInput = document.getElementById('num_tel');
+        var mailtoLink = document.getElementById('mailto-link');
+        var telLink = document.getElementById('tel-link');
+
+        emailInput.addEventListener('input', function() {
+            mailtoLink.href = 'mailto:' + emailInput.value;
+            mailtoLink.style.pointerEvents = emailInput.value ? 'auto' : 'none';
+        });
+
+        telInput.addEventListener('input', function() {
+            telLink.href = 'tel:' + telInput.value;
+            telLink.style.pointerEvents = telInput.value ? 'auto' : 'none';
+        });
+    });
+</script>
+
+{% endblock %}

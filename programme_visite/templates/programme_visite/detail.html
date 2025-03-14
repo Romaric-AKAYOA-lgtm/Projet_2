@@ -1,0 +1,60 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+
+<!-- 🔹 MODALE AUTOMATIQUE POUR LES DÉTAILS DU PROGRAMME DE VISITE -->
+<div class="modal fade show" id="detailsProgrammeVisite" tabindex="-1" aria-labelledby="detailsProgrammeVisiteLabel" aria-hidden="true" style="display: block;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="detailsProgrammeVisiteLabel">Détails du Programme de Visite</h5>
+           </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>ID</th>
+                        <td>{{ programme.id|default:"Inconnu" }}</td>
+                    </tr>
+                    <tr>
+                        <th>Visite</th>
+                        <td>{{ programme.visite|default:"Non spécifié" }}</td>
+                    </tr>
+                    <tr>
+                        <th>Secrétaire</th>
+                        <td>{{ programme.secretaire|default:"Non spécifié" }}</td>
+                    </tr>
+                    <tr>
+                        <th>Statut</th>
+                        <td>{{ programme.statut|default:"Non défini" }}</td>
+                    </tr>
+                    <tr>
+                        <th>Date de Création</th>
+                        <td>{{ programme.date_creation|date:"d/m/Y"|default:"Non spécifié" }}</td>
+                    </tr>
+                    <tr>
+                        <th>Heure de Début</th>
+                        <td>{{ programme.heure_debut|date:"H:i"|default:"Non spécifié" }}</td>
+                    </tr>
+                    <tr>
+                        <th>Heure de Fin</th>
+                        <td>{{ programme.heure_fin|date:"H:i"|default:"Non spécifié" }}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <a href="{% url 'programme_visite:modifier' programme.id %}" class="btn btn-warning">Modifier</a>
+                <a href="{% url 'programme_visite:ProgrammeVisite' %}" class="btn btn-secondary px-4 py-2 btn-sm">Annuler</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 🔹 SCRIPT POUR OUVRIR LA MODALE AUTOMATIQUEMENT -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var myModal = new bootstrap.Modal(document.getElementById('detailsProgrammeVisite'));
+        myModal.show();
+    });
+</script>
+
+{% endblock %}

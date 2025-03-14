@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Liste des Visites</h2>
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Heure</th>
+        <th>Visiteur</th>
+        <th>Actions</th>
+    </tr>
+    {% for visite in visites %}
+    <tr>
+        <td>{{ visite.date }}</td>
+        <td>{{ visite.heure }}</td>
+        <td>{{ visite.visiteur.nom }} {{ visite.visiteur.prenom }}</td>
+        <td>
+            <a href="{% url 'modifier_Visite' visite.id %}">Modifier</a>
+            <a href="{% url 'supprimer_Visite' visite.id %}" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette visite ?');">Supprimer</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{% url 'ajouter_Visite' %}">Ajouter une Visite</a>
+{% endblock %}

@@ -1,0 +1,99 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+
+<div class="container mt-4">
+
+    <!-- Modal Modifier avec les détails du Directeur -->
+    <div class="modal fade show" id="modifierModal" tabindex="-1" aria-labelledby="modifierModalLabel" aria-hidden="true" style="display: block;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h5 class="modal-title text-white" id="modifierModalLabel">Détails du Directeur</h5>
+               </div>
+                <div class="modal-body">
+                    <!-- Tableau des informations du Directeur -->
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>Nom</th>
+                                <td>{{ directeur.nom }}</td>
+                            </tr>
+                            <tr>
+                                <th>Prénom</th>
+                                <td>{{ directeur.prenom }}</td>
+                            </tr>
+                            <tr>
+                                <th>Email</th>
+                                <td>
+                                    <a href="mailto:{{ directeur.email }}">{{ directeur.email }}</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Numéro de téléphone</th>
+                                <td>
+                                    <a href="tel:{{ directeur.num_tel }}">{{ directeur.num_tel }}</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Adresse</th>
+                                <td>{{ directeur.adresse }}</td>
+                            </tr>
+                            <tr>
+                                <th>Date de début</th>
+                                <td>{{ directeur.date_debut |date:"d/m/Y"|default:"Non spécifié" }}</td>
+                            </tr>
+                            <tr>
+                                <th>Date de fin</th>
+                                <td>
+                                    {% if directeur.date_fin %}
+                                        {{ directeur.date_fin|date:"d/m/Y"|default:"Non spécifié"  }}
+                                    {% else %}
+                                        Non spécifiée
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <a href="{% url 'directeur:modifier' directeur.id %}" class="btn btn-warning">Modifier</a>
+                    <a href="{% url 'directeur:Directeur' %}" class="btn btn-secondary">Retour</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Supprimer -->
+    <div class="modal fade" id="supprimerModal" tabindex="-1" aria-labelledby="supprimerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger">
+                    <h5 class="modal-title text-white" id="supprimerModalLabel">Supprimer le Directeur</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Êtes-vous sûr de vouloir supprimer {{ directeur.nom }} {{ directeur.prenom }} ? Cette action est irréversible.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="{% url 'directeur:supprimer' directeur.id %}" class="btn btn-danger">Supprimer</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script pour afficher automatiquement le modal de modification lors du chargement de la page -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var modal = new bootstrap.Modal(document.getElementById('modifierModal'), {
+                keyboard: false,
+                backdrop: 'static' // Désactive la fermeture du modal en cliquant en dehors
+            });
+            modal.show();
+        });
+    </script>
+
+</div>
+
+{% endblock %}

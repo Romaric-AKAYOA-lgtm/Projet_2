@@ -1,0 +1,116 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+
+<!-- Modal structure for Editing -->
+<div class="modal fade show" id="directeurModal" tabindex="-1" aria-labelledby="directeurModalLabel" aria-hidden="true" style="display: block;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-warning">
+                <h5 class="modal-title text-white" id="directeurModalLabel">
+                    Modifier un Directeur
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                {% if form.errors %}
+                <div class="alert alert-danger">
+                    {% for field in form %}
+                        {% if field.errors %}
+                            <strong>{{ field.label }}</strong> : {{ field.errors|striptags }}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <form method="POST" action="{% url 'directeur:modifier' form.instance.pk %}" class="needs-validation" novalidate>
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                        <label for="nom" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="nom" name="nom" value="{{ form.nom.value }}" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="prenom" class="form-label">Prénom</label>
+                        <input type="text" class="form-control" id="prenom" name="prenom" value="{{ form.prenom.value }}" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <div class="input-group">
+                            <input type="email" class="form-control" id="email" name="email" value="{{ form.email.value }}" required>
+                            <span class="input-group-text">
+                                <a href="#" id="mailto-link" class="text-decoration-none" style="pointer-events: none;">
+                                    <i class="bi bi-envelope"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="num_tel" class="form-label">Numéro de téléphone</label>
+                        <div class="input-group">
+                            <input type="tel" class="form-control" id="num_tel" name="num_tel" value="{{ form.num_tel.value }}">
+                            <span class="input-group-text">
+                                <a href="#" id="tel-link" class="text-decoration-none" style="pointer-events: none;">
+                                    <i class="bi bi-telephone"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="adresse" class="form-label">Adresse</label>
+                        <input type="text" class="form-control" id="adresse" name="adresse" value="{{ form.adresse.value }}" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Date Début</label>
+                        <input type="date" class="form-control" name="date_debut" value="{{ directeur.date_debut|date:'Y-m-d' }}">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Date Fin</label>
+                        <input type="date" class="form-control" name="date_fin" value="{{ directeur.date_fin|date:'Y-m-d' }}">
+                    </div>
+                    
+                    <div class="text-end">
+                        <a href="{% url 'directeur:Directeur' %}" class="btn btn-secondary px-4 py-2 btn-sm">Annuler</a>
+                        <button type="submit" class="btn btn-warning px-4 py-2 btn-sm">
+                            Modifier
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script to trigger modal and email/tel links -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Show the modal automatically on page load
+        var myModal = new bootstrap.Modal(document.getElementById('directeurModal'), {
+            keyboard: false,
+            backdrop: 'static' // Disables closing the modal by clicking outside
+        });
+        myModal.show();
+
+        // Enable email and tel links only if the fields are filled
+        var emailInput = document.getElementById('email');
+        var telInput = document.getElementById('num_tel');
+        var mailtoLink = document.getElementById('mailto-link');
+        var telLink = document.getElementById('tel-link');
+
+        emailInput.addEventListener('input', function() {
+            mailtoLink.href = 'mailto:' + emailInput.value;
+            mailtoLink.style.pointerEvents = emailInput.value ? 'auto' : 'none';
+        });
+
+        telInput.addEventListener('input', function() {
+            telLink.href = 'tel:' + telInput.value;
+            telLink.style.pointerEvents = telInput.value ? 'auto' : 'none';
+        });
+    });
+</script>
+
+{% endblock %}

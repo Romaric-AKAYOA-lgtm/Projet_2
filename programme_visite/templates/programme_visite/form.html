@@ -1,0 +1,131 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+<div class="container mt-4">
+    <!-- Affichage des erreurs -->
+    {% if messages %}
+        <div class="mb-3">
+            {% for message in messages %}
+                <div class="alert {% if message.tags == 'error' %}alert-danger{% else %}alert-success{% endif %} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <!-- Modal Ajouter Programme de Visite -->
+    <div class="modal fade show" id="modalProgrammeVisite" tabindex="-1" aria-labelledby="modalProgrammeVisiteLabel" aria-hidden="false" style="display: block;">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="modalProgrammeVisiteLabel">Créer un Programme de Visite</h5>
+                </div>
+                <div class="modal-body">
+                    <form action="{% url 'programme_visite:creer' %}" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+                        {% csrf_token %}
+
+                        {% if form.errors %}
+                            <div class="alert alert-danger">
+                                <ul>
+                                    {% for field, errors in form.errors.items %}
+                                        <li><strong>{{ field }}</strong> : {{ errors|join:", " }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                    
+                        <div class="mb-3">
+                            <label for="visite" class="form-label">Visite</label>
+                            <select class="form-select input-focus-blue" id="visite" name="visite" required onchange="updateHeure()">
+                                <option value="">-- Sélectionner une visite --</option>
+                                {% for visite in visites %}
+                                    <option value="{{ visite.id }}" 
+                                            data-heure-debut="{{ visite.heure_visite|time:'H:i' }}"
+                                            data-heure-fin="{{ visite.heure_fin|time:'H:i' }}"
+                                            {% if forloop.first %}selected{% endif %}>
+                                        {{ visite }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="secretaire" class="form-label">Secrétaire</label>
+                            <select class="form-select input-focus-blue" id="secretaire" name="secretaire" required>
+                                {% for secretaire in secretaires %}
+                                    <option value="{{ secretaire.id }}">{{ secretaire.last_name }} {{ secretaire.first_name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="statut" class="form-label">Statut</label>
+                            <select class="form-select input-focus-blue" id="statut" name="statut" required>
+                                <option value="en attente">En attente</option>
+                                <option value="validé">Validé</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="heure_debut" class="form-label">Heure de Début</label>
+                            <input type="datetime-local" class="form-control input-focus-blue" id="heure_debut" name="heure_debut" 
+                                   value="{% if visites %}
+                                            {{ current_date|date:'Y-m-d' }}T{{ visites.0.heure_visite|time:'H:i' }}
+                                            {% endif %}" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="heure_fin" class="form-label">Heure de Fin</label>
+                            <input type="time" class="form-control input-focus-blue" id="heure_fin" name="heure_fin" 
+                                   value="{% if visites %}{{ visites.0.heure_fin|time:'H:i' }}{% endif %}" required>
+                        </div>
+
+                        <div class="text-end">
+                            <a href="{% url 'programme_visite:ProgrammeVisite' %}" class="btn btn-secondary px-4 py-2 btn-sm">Annuler</a>
+                            <button type="submit" class="btn btn-primary px-4 py-2 btn-sm">Créer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function updateHeure() {
+        var visiteSelect = document.getElementById("visite");
+        var heureDebut = document.getElementById("heure_debut");
+        var heureFin = document.getElementById("heure_fin");
+
+        // Récupérer les attributs "data-heure-debut" et "data-heure-fin" du choix de la visite
+        var selectedOption = visiteSelect.options[visiteSelect.selectedIndex];
+
+        if (selectedOption) {
+            var heureDebutValue = selectedOption.getAttribute("data-heure-debut");
+            var heureFinValue = selectedOption.getAttribute("data-heure-fin");
+
+            // Récupérer la date actuelle du système
+            var currentDate = new Date();
+            var currentDateString = currentDate.toISOString().split('T')[0]; // Format YYYY-MM-DD
+
+            // Concaténer la date actuelle avec l'heure de début de la visite
+            var newHeureDebut = currentDateString + 'T' + heureDebutValue;
+
+            // Vérifier si les valeurs sont valides avant d'affecter
+            if (heureDebutValue) {
+                heureDebut.value = newHeureDebut;  // Mettre la nouvelle valeur dans le champ heure_debut
+            }
+            if (heureFinValue) {
+                heureFin.value = heureFinValue; // Mettre la valeur dans le champ heure_fin
+            }
+        }
+    }
+
+    // Appel de la fonction au chargement pour initialiser les valeurs
+    document.addEventListener("DOMContentLoaded", function() {
+        updateHeure();
+    });
+</script>
+
+{% endblock %}

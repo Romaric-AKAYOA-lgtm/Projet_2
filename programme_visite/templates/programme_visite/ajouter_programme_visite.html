@@ -1,0 +1,78 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+<div class="container mt-4">
+    <!-- Modal Modifier Programme de Visite -->
+    <div class="modal fade show" id="modalModifierProgrammeVisite" tabindex="-1" aria-labelledby="modalModifierProgrammeVisiteLabel" aria-hidden="false" style="display: block;">
+        <div class="modal-dialog modal-lg"> <!-- Large width -->
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title" id="modalModifierProgrammeVisiteLabel">Modifier un Programme de Visite</h5>
+                </div>
+                <div class="modal-body">
+                    {% if form.errors %}
+                    <div class="alert alert-danger">
+                        {% for field in form %}
+                            {% if field.errors %}
+                                <strong>{{ field.label }}</strong> : {{ field.errors|striptags }}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    <form action="{% url 'programme_visite:modifier' programme_visite.id %}" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+                        {% csrf_token %}
+                        
+                        <div class="mb-3">
+                            <label for="visite" class="form-label">Visite</label>
+                            <select class="form-select input-focus-blue" id="visite" name="visite" required>
+                                {% for visite in visites %}
+                                    <option value="{{ visite.id }}" {% if visite.id == programme_visite.visite.id %}selected{% endif %}>{{ visite }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="secretaire" class="form-label">Secrétaire</label>
+                            <select class="form-select input-focus-blue" id="secretaire" name="secretaire" required>
+                                {% for secretaire in secretaires %}
+                                    <option value="{{ secretaire.id }}" {% if secretaire.id == programme_visite.secretaire.id %}selected{% endif %}>{{ secretaire.last_name }} {{ secretaire.first_name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="statut" class="form-label">Statut</label>
+                            <select class="form-select input-focus-blue" id="statut" name="statut" required>
+                                <option value="en attente" {% if programme_visite.statut == "en attente" %}selected{% endif %}>En attente</option>
+                                <option value="validé" {% if programme_visite.statut == "validé" %}selected{% endif %}>Validé</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="heure_debut" class="form-label">Heure de Début</label>
+                            <input type="datetime-local" class="form-control input-focus-blue" id="heure_debut" name="heure_debut" value="{{ programme_visite.heure_debut|date:'Y-m-d\TH:i' }}" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="heure_fin" class="form-label">Heure de Fin</label>
+                            <input type="datetime-local" class="form-control input-focus-blue" id="heure_fin" name="heure_fin" value="{{ programme_visite.heure_fin|date:'Y-m-d\TH:i' }}" required>
+                        </div>
+
+                        <div class="text-end">
+                            <a href="{% url 'programme_visite:ProgrammeVisite' %}" class="btn btn-secondary px-4 py-2 btn-sm">Annuler</a>
+                            <button type="submit" class="btn btn-warning px-4 py-2 btn-sm">Modifier</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var myModal = new bootstrap.Modal(document.getElementById("modalModifierProgrammeVisite"));
+        myModal.show();
+    });
+</script>
+{% endblock %}

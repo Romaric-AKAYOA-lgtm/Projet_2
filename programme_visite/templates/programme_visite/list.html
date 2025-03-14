@@ -1,0 +1,50 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+<div class="container-fluid mt-4 mb-4">
+    <h2 class="mb-4 text-center text-white">Liste des Programmes de Visite</h2>
+
+    <div class="d-flex flex-wrap justify-content-between mb-3">
+        <a href="{% url 'programme_visite:creer' %}" class="btn btn-primary mb-2">Créer un Nouveau Programme</a>
+        <a href="{% url 'programme_visite:imprimer' %}" class="btn btn-success mb-2">Imprimer Programmes du Jour</a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Visite</th>
+                    <th>Statut</th>
+                    <th>Date de Création</th>
+                    <th>Heure debut</th>
+                    <th>Heure fin </th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white" > 
+                {% for programme in programmes %}
+                <tr>
+                    <td>{{ programme.id }}</td>
+                    <td>{{ programme.visite }}</td>
+                    <td>{{ programme.statut }}</td>
+                    <td>{{ programme.date_creation|date:"d-m-Y" }}</td>
+                    <td>{{ programme.heure_debut|date:"H:i"|default:"Non spécifié" }}</td>
+                    <td>{{ programme.heure_fin|date:"H:i"|default:"Non spécifié" }}</td>
+                   <td>
+                        <div class="btn-group btn-group-sm" role="group">
+                            <a href="{% url 'programme_visite:information' programme.id %}" class="btn btn-info m-1">Détails</a>
+                            <a href="{% url 'programme_visite:modifier' programme.id %}" class="btn btn-warning m-1">Modifier</a>
+                            <form action="{% url 'programme_visite:supprimer' programme.id %}" method="POST" class="d-inline m-1">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce programme ?');">Supprimer</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

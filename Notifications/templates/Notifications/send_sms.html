@@ -1,0 +1,63 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+
+<!-- Modale Bootstrap affichée automatiquement -->
+<div class="modal fade show" id="smsModal" tabindex="-1" aria-labelledby="smsModalLabel" aria-hidden="false" style="display: block; background: rgba(0,0,0,0.5);">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h5  class="modal-title  text-white" id="smsModalLabel">Envoyer un SMS</h5>
+           </div>
+            <div class="modal-body">
+                <form id="smsForm" method="POST">
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                        <label for="phone_number" class="form-label">Numéro de téléphone :</label>
+                        <select class="form-control" id="phone_number" name="phone_number" onchange="updatePhoneInput(this)">
+                            <option value="">-- Sélectionnez un numéro --</option>
+                            {% for contact in contacts %}
+                                <option value="{{ contact.numero }}">{{ contact.nom }} {{ contact.prenom }}  ({{ contact.role }}) - {{ contact.numero }}</option>
+                            {% endfor %}
+                        </select>
+                        <input type="text" class="form-control mt-2" id="manual_phone" name="manual_phone" placeholder="Ou saisissez un numéro manuellement">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message :</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    </div>
+
+                    <!-- Boutons alignés à droite -->
+                    <div class="d-flex justify-content-end">
+                        <a href="{% url 'home' %}" class="btn btn-secondary me-2">Annuler</a>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function updatePhoneInput(select) {
+        document.getElementById("manual_phone").value = select.value;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var smsModal = new bootstrap.Modal(document.getElementById('smsModal'), {
+            backdrop: 'static',
+            keyboard: false
+        });
+        smsModal.show();
+    });
+</script>
+
+{% if status %}
+    <script>
+        alert("{{ status }}");
+    </script>
+{% endif %}
+
+{% endblock %}

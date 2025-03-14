@@ -1,0 +1,82 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+
+<div class="container mt-4">
+    <h1 class="text-center">Gestion des Adhérents</h1>
+
+    <!-- Modal Modifier Adhérent -->
+    <div class="modal fade show d-block" id="editAdherentModal" tabindex="-1" aria-labelledby="editAdherentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title" id="editAdherentModalLabel">Modifier un visiteur</h5>
+                </div>
+                <div class="modal-body">
+                    {% if form.errors %}
+                    <div class="alert alert-danger">
+                        {% for field in form %}
+                            {% if field.errors %}
+                                <strong>{{ field.label }}</strong> : {{ field.errors|striptags }}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    <form method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+                        {% csrf_token %}
+                        
+                        <div class="mb-3">
+                            <label for="nom" class="form-label">Nom</label>
+                            <input type="text" class="form-control input-focus-blue" id="nom" name="nom" value="{{ visiteur.nom }}" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="prenom" class="form-label">Prénom</label>
+                            <input type="text" class="form-control input-focus-blue" id="prenom" name="prenom" value="{{ visiteur.prenom }}" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="sexe" class="form-label">Sexe</label>
+                            <select class="form-select input-focus-blue" id="sexe" name="sexe" required>
+                                <option value="Masculin" {% if visiteur.sexe == 'Masculin' %}selected{% endif %}>Masculin</option>
+                                <option value="Féminin" {% if visiteur.sexe == 'Féminin' %}selected{% endif %}>Féminin</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label> <!-- Nouveau champ Email -->
+                            <input type="email" class="form-control input-focus-blue" id="email" name="email" value="{{ visiteur.email }}" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="type_visiteur" class="form-label">Type de visiteur</label>
+                            <input type="text" class="form-control input-focus-blue" id="type_visiteur" name="type_visiteur" value="{{ visiteur.type_visiteur }}" required>
+                        </div>
+    
+                        <div class="mb-3">
+                            <label for="contact" class="form-label">Numéro de téléphone</label>
+                            <input type="tel" class="form-control input-focus-blue" id="contact" name="contact" value="{{ visiteur.contact }}" required>
+                        </div>
+                      
+                        <div class="text-end">
+                            <a href="{% url 'Visiteur:Visiteur' %}" class="btn btn-secondary px-4 py-2 btn-sm">Annuler</a>
+                            <button type="submit" class="btn btn-warning">Modifier</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script pour afficher automatiquement le modal -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var myModal = new bootstrap.Modal(document.getElementById("editAdherentModal"), {
+            keyboard: false
+        });
+        myModal.show();
+    });
+</script>
+
+{% endblock %}

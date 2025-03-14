@@ -1,0 +1,44 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+<div class="container mt-4">
+    <h1 class="text-center">Détails de la Visite</h1>
+
+    <!-- Modale pour afficher les détails de la visite -->
+    <div class="modal fade" id="detailsVisiteModal" tabindex="-1" aria-labelledby="detailsVisiteModalLabel" aria-hidden="true" style="display: block;" aria-modal="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailsVisiteModalLabel">Détails de la Visite</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <strong>Visiteur:</strong> {{ visite.visiteur.nom }} {{ visite.visiteur.prenom }}<br>
+                        <strong>Date de Visite:</strong> {{ visite.date_visite }}<br>
+                        <strong>Heure de Visite:</strong> {{ visite.heure_visite }}<br>
+                        <strong>Description:</strong> {{ visite.objet }}<br>
+                        <strong>Directeur:</strong> {{ visite.directeur.nom }} {{ visite.directeur.prenom }}<br>
+                        <strong>Statut:</strong> {{ visite.statut }}<br>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-start mb-3">
+                        <a href="{% url 'visite:modifier' visite.id %}" class="btn btn-warning">Modifier</a>
+                        <a href="{% url 'visite:liste' %}" class="btn btn-secondary">Retour à la Liste</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Ouvrir la modale automatiquement lors du chargement de la page
+    document.addEventListener('DOMContentLoaded', function () {
+        var modal = new bootstrap.Modal(document.getElementById('detailsVisiteModal'));
+        modal.show();
+    });
+</script>
+
+{% endblock %}

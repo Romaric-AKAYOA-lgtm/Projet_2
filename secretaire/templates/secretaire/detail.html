@@ -1,0 +1,72 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+<div class="container mt-4">
+    <!-- Modal -->
+    <div class="modal fade" id="secretaireModal" tabindex="-1" aria-labelledby="secretaireModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header  bg-primary">
+                    <h5 class="modal-title text-white"  id="secretaireModalLabel">Détails du Secrétaire</h5>
+               </div>
+                <div class="modal-body">
+                    <!-- Tableau des informations du secrétaire -->
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>ID</th>
+                                <td>{{ secretaire.id }}</td>
+                            </tr>
+                            <tr>
+                                <th>Nom</th>
+                                <td>{{ secretaire.last_name }}</td>
+                            </tr>
+                            <tr>
+                                <th>Prénom</th>
+                                <td>{{ secretaire.first_name }}</td>
+                            </tr>
+                            <tr>
+                                <th>Email</th>
+                                <td>{{ secretaire.email }}</td>
+                            </tr>
+                            <tr>
+                                <th>Téléphone</th>
+                                <td>{{ secretaire.num_tel }}</td>
+                            </tr>
+                            <tr>
+                                <th>Date de début</th>
+                                <td>{{ secretaire.date_debut|date:"d-m-Y" }}</td>
+                            </tr>
+                            <tr>
+                                <th>Date de fin</th>
+                                <td>{{ secretaire.date_fin|date:"d-m-Y" }}</td>
+                            </tr>
+                            <tr>
+                                <th>Nom d''utilisateur</th>
+                                <td>{{ secretaire.username }}</td>
+                            </tr>
+                            <tr>
+                                <th>Mot de passe</th>
+                                <td>{{ secretaire.password }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <a href="{% url 'secretaire:Secretaire' %}" class="btn btn-secondary">Retour</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script pour ouvrir la modale automatiquement à l'ouverture de la page -->
+<script>
+    // Lorsque la page est complètement chargée, on affiche la modale
+    window.onload = function() {
+        var myModal = new bootstrap.Modal(document.getElementById('secretaireModal'));
+        myModal.show();
+    };
+</script>
+
+{% endblock %}
