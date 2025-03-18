@@ -1,0 +1,223 @@
+('C:\\Users\\DAII '
+ 'IATITUDE\\Desktop\\Projet\\Gestion_visite\\build\\setup\\setup.pkg',
+ {'BINARY': True,
+  'DATA': True,
+  'EXECUTABLE': True,
+  'EXTENSION': True,
+  'PYMODULE': True,
+  'PYSOURCE': True,
+  'PYZ': False,
+  'SPLASH': True,
+  'SYMLINK': False},
+ [('pyi-contents-directory _internal', '', 'OPTION'),
+  ('PYZ-00.pyz',
+   'C:\\Users\\DAII '
+   'IATITUDE\\Desktop\\Projet\\Gestion_visite\\build\\setup\\PYZ-00.pyz',
+   'PYZ'),
+  ('struct',
+   'C:\\Users\\DAII '
+   'IATITUDE\\Desktop\\Projet\\Gestion_visite\\build\\setup\\localpycs\\struct.pyc',
+   'PYMODULE'),
+  ('pyimod01_archive',
+   'C:\\Users\\DAII '
+   'IATITUDE\\Desktop\\Projet\\Gestion_visite\\build\\setup\\localpycs\\pyimod01_archive.pyc',
+   'PYMODULE'),
+  ('pyimod02_importers',
+   'C:\\Users\\DAII '
+   'IATITUDE\\Desktop\\Projet\\Gestion_visite\\build\\setup\\localpycs\\pyimod02_importers.pyc',
+   'PYMODULE'),
+  ('pyimod03_ctypes',
+   'C:\\Users\\DAII '
+   'IATITUDE\\Desktop\\Projet\\Gestion_visite\\build\\setup\\localpycs\\pyimod03_ctypes.pyc',
+   'PYMODULE'),
+  ('pyimod04_pywin32',
+   'C:\\Users\\DAII '
+   'IATITUDE\\Desktop\\Projet\\Gestion_visite\\build\\setup\\localpycs\\pyimod04_pywin32.pyc',
+   'PYMODULE'),
+  ('pyiboot01_bootstrap',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'PYSOURCE'),
+  ('pyi_rth_setuptools',
+   'C:\\Users\\DAII '
+   'IATITUDE\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_setuptools.py',
+   'PYSOURCE'),
+  ('pyi_rth_pkgutil',
+   'C:\\Users\\DAII '
+   'IATITUDE\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
+   'PYSOURCE'),
+  ('pyi_rth_inspect',
+   'C:\\Users\\DAII '
+   'IATITUDE\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('pyi_rth_multiprocessing',
+   'C:\\Users\\DAII '
+   'IATITUDE\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
+   'PYSOURCE'),
+  ('pyi_rth_pkgres',
+   'C:\\Users\\DAII '
+   'IATITUDE\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgres.py',
+   'PYSOURCE'),
+  ('setup',
+   'C:\\Users\\DAII IATITUDE\\Desktop\\Projet\\Gestion_visite\\setup.py',
+   'PYSOURCE'),
+  ('python39.dll',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\python39.dll',
+   'BINARY'),
+  ('select.pyd',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\DLLs\\select.pyd',
+   'EXTENSION'),
+  ('_lzma.pyd',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\DLLs\\_lzma.pyd',
+   'EXTENSION'),
+  ('_bz2.pyd',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\DLLs\\_bz2.pyd',
+   'EXTENSION'),
+  ('unicodedata.pyd',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('_socket.pyd',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\DLLs\\_socket.pyd',
+   'EXTENSION'),
+  ('_decimal.pyd',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\DLLs\\_decimal.pyd',
+   'EXTENSION'),
+  ('_hashlib.pyd',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\DLLs\\_hashlib.pyd',
+   'EXTENSION'),
+  ('_ctypes.pyd',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\DLLs\\_ctypes.pyd',
+   'EXTENSION'),
+  ('_uuid.pyd',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\DLLs\\_uuid.pyd',
+   'EXTENSION'),
+  ('_ssl.pyd',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\DLLs\\_ssl.pyd',
+   'EXTENSION'),
+  ('pyexpat.pyd',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\DLLs\\pyexpat.pyd',
+   'EXTENSION'),
+  ('_multiprocessing.pyd',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\DLLs\\_multiprocessing.pyd',
+   'EXTENSION'),
+  ('_queue.pyd',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\DLLs\\_queue.pyd',
+   'EXTENSION'),
+  ('VCRUNTIME140.dll',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('libcrypto-1_1.dll',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\DLLs\\libcrypto-1_1.dll',
+   'BINARY'),
+  ('libffi-7.dll',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\DLLs\\libffi-7.dll',
+   'BINARY'),
+  ('libssl-1_1.dll',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\DLLs\\libssl-1_1.dll',
+   'BINARY'),
+  ('pip-25.0.1.dist-info\\INSTALLER',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pip-25.0.1.dist-info\\INSTALLER',
+   'DATA'),
+  ('pip-25.0.1.dist-info\\WHEEL',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pip-25.0.1.dist-info\\WHEEL',
+   'DATA'),
+  ('pip-25.0.1.dist-info\\RECORD',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pip-25.0.1.dist-info\\RECORD',
+   'DATA'),
+  ('pip-25.0.1.dist-info\\LICENSE.txt',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pip-25.0.1.dist-info\\LICENSE.txt',
+   'DATA'),
+  ('pip-25.0.1.dist-info\\entry_points.txt',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pip-25.0.1.dist-info\\entry_points.txt',
+   'DATA'),
+  ('setuptools-49.2.1.dist-info\\REQUESTED',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools-49.2.1.dist-info\\REQUESTED',
+   'DATA'),
+  ('setuptools-49.2.1.dist-info\\METADATA',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools-49.2.1.dist-info\\METADATA',
+   'DATA'),
+  ('pip-25.0.1.dist-info\\AUTHORS.txt',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pip-25.0.1.dist-info\\AUTHORS.txt',
+   'DATA'),
+  ('pip-25.0.1.dist-info\\METADATA',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pip-25.0.1.dist-info\\METADATA',
+   'DATA'),
+  ('setuptools-49.2.1.dist-info\\dependency_links.txt',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools-49.2.1.dist-info\\dependency_links.txt',
+   'DATA'),
+  ('pip-25.0.1.dist-info\\top_level.txt',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pip-25.0.1.dist-info\\top_level.txt',
+   'DATA'),
+  ('setuptools-49.2.1.dist-info\\LICENSE',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools-49.2.1.dist-info\\LICENSE',
+   'DATA'),
+  ('setuptools-49.2.1.dist-info\\INSTALLER',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools-49.2.1.dist-info\\INSTALLER',
+   'DATA'),
+  ('setuptools-49.2.1.dist-info\\RECORD',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools-49.2.1.dist-info\\RECORD',
+   'DATA'),
+  ('setuptools-49.2.1.dist-info\\WHEEL',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools-49.2.1.dist-info\\WHEEL',
+   'DATA'),
+  ('setuptools-49.2.1.dist-info\\zip-safe',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools-49.2.1.dist-info\\zip-safe',
+   'DATA'),
+  ('setuptools-49.2.1.dist-info\\entry_points.txt',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools-49.2.1.dist-info\\entry_points.txt',
+   'DATA'),
+  ('setuptools-49.2.1.dist-info\\top_level.txt',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools-49.2.1.dist-info\\top_level.txt',
+   'DATA'),
+  ('pip-25.0.1.dist-info\\REQUESTED',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pip-25.0.1.dist-info\\REQUESTED',
+   'DATA'),
+  ('base_library.zip',
+   'C:\\Users\\DAII '
+   'IATITUDE\\Desktop\\Projet\\Gestion_visite\\build\\setup\\base_library.zip',
+   'DATA')],
+ 'python39.dll',
+ False,
+ False,
+ False,
+ [],
+ None,
+ None,
+ None)

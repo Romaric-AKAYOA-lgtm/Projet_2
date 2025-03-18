@@ -1,0 +1,8 @@
+Activation
+Gestion_visite
+Notifications
+directeur
+programme_visite
+secretaire
+visite
+visiteur

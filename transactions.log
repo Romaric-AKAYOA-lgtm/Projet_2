@@ -2329,3 +2329,604 @@ NameError: name 'username' is not defined
 2025-03-13 19:12:46,848 - INFO - basehttp - "GET /programme_visite/6/modifier/ HTTP/1.1" 200 11722
 2025-03-13 19:12:52,794 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 13998
 2025-03-13 19:46:33,656 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\Gestion_visite\settings.py changed, reloading.
+2025-03-18 07:05:49,061 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 07:12:56,223 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 13:38:17,827 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 13:41:41,011 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\Gestion_visite\settings.py changed, reloading.
+2025-03-18 13:41:44,052 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 13:41:49,966 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 13:46:17,482 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\Gestion_visite\settings.py changed, reloading.
+2025-03-18 13:46:19,530 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 13:48:13,648 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\Gestion_visite\settings.py changed, reloading.
+2025-03-18 13:56:06,369 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 13:59:03,777 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 13:59:36,446 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 14:01:40,963 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 14:02:11,275 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\Gestion_visite\settings.py changed, reloading.
+2025-03-18 14:02:13,704 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 14:02:23,100 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\Gestion_visite\settings.py changed, reloading.
+2025-03-18 14:02:24,897 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 14:02:41,872 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 14:04:15,894 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\Gestion_visite\settings.py changed, reloading.
+2025-03-18 14:04:18,315 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 14:04:30,929 - INFO - basehttp - "GET / HTTP/1.1" 200 9573
+2025-03-18 14:04:33,302 - INFO - basehttp - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 155845
+2025-03-18 14:04:33,320 - INFO - basehttp - "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 78743
+2025-03-18 14:04:33,325 - INFO - basehttp - "GET /static/image/administration-1867877_1280.jpg HTTP/1.1" 200 407089
+2025-03-18 14:04:33,376 - INFO - basehttp - "GET /static/image/congo-2697382_1920.jpg HTTP/1.1" 200 566668
+2025-03-18 14:04:33,404 - INFO - basehttp - "GET /static/image/buildings-6956678_1920.jpg HTTP/1.1" 200 617712
+2025-03-18 14:04:33,676 - WARNING - log - Not Found: /favicon.ico
+2025-03-18 14:04:33,679 - WARNING - basehttp - "GET /favicon.ico HTTP/1.1" 404 3254
+2025-03-18 14:04:46,589 - INFO - basehttp - "POST / HTTP/1.1" 302 0
+2025-03-18 14:04:46,673 - INFO - basehttp - "GET /home HTTP/1.1" 200 14308
+2025-03-18 14:04:46,836 - INFO - basehttp - "GET /static/image/city-182223_1280.jpg HTTP/1.1" 200 376515
+2025-03-18 14:04:46,857 - INFO - basehttp - "GET /static/image/city-7352352_1280.jpg HTTP/1.1" 200 445704
+2025-03-18 14:04:46,897 - INFO - basehttp - "GET /static/image/istockphoto-2162033406-1024x1024.jpg HTTP/1.1" 200 62104
+2025-03-18 14:06:37,864 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\secretaire\views.py changed, reloading.
+2025-03-18 14:06:39,832 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 14:08:28,137 - INFO - basehttp - "GET /home HTTP/1.1" 200 14698
+2025-03-18 14:09:35,927 - INFO - basehttp - "GET /home HTTP/1.1" 200 14705
+2025-03-18 14:09:55,651 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 14395
+2025-03-18 14:10:11,896 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 15788
+2025-03-18 14:10:14,059 - INFO - basehttp - "GET /visiteur/creer/ HTTP/1.1" 200 11495
+2025-03-18 14:10:17,237 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 15788
+2025-03-18 14:12:44,294 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visiteur\views.py changed, reloading.
+2025-03-18 14:12:50,572 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 14:13:13,514 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visiteur\urls.py changed, reloading.
+2025-03-18 14:13:15,040 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 14:16:07,454 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 16202
+2025-03-18 14:16:19,210 - ERROR - log - Internal Server Error: /visiteur/recherche/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visiteur\views.py", line 94, in visiteur_search
+    return render(request, 'visiteur/search.html', {'visiteurs': visiteurs, 'query': query})
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: visiteur/search.html
+2025-03-18 14:16:19,213 - ERROR - basehttp - "GET /visiteur/recherche/?query=AKAYOA HTTP/1.1" 500 82913
+2025-03-18 14:26:15,352 - ERROR - log - Internal Server Error: /visiteur/recherche/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visiteur\views.py", line 94, in visiteur_search
+    return render(request, 'visiteur/search.html', {'visiteurs': visiteurs, 'query': query})
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: visiteur/search.html
+2025-03-18 14:26:15,360 - ERROR - basehttp - "GET /visiteur/recherche/?query=AKAYOA HTTP/1.1" 500 83050
+2025-03-18 14:26:16,995 - ERROR - log - Internal Server Error: /visiteur/recherche/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visiteur\views.py", line 94, in visiteur_search
+    return render(request, 'visiteur/search.html', {'visiteurs': visiteurs, 'query': query})
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: visiteur/search.html
+2025-03-18 14:26:16,999 - ERROR - basehttp - "GET /visiteur/recherche/?query=AKAYOA HTTP/1.1" 500 83050
+2025-03-18 14:26:45,975 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visiteur\views.py changed, reloading.
+2025-03-18 14:26:49,143 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 14:27:04,965 - INFO - basehttp - "GET /visiteur/recherche/?query=AKAYOA HTTP/1.1" 200 11230
+2025-03-18 14:27:51,298 - INFO - basehttp - "GET /visiteur/recherche/?query=AKAYOA HTTP/1.1" 200 11218
+2025-03-18 14:27:59,195 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 16202
+2025-03-18 14:28:09,706 - INFO - basehttp - "GET /visiteur/recherche/?query=AKAYOA HTTP/1.1" 200 11218
+2025-03-18 14:29:02,561 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 16202
+2025-03-18 14:29:16,989 - INFO - basehttp - "GET /visiteur/recherche/?query=akayoaromaric%40gmail.com HTTP/1.1" 200 11218
+2025-03-18 14:30:27,927 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visiteur\views.py changed, reloading.
+2025-03-18 14:30:30,688 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 14:30:31,752 - INFO - basehttp - "GET /visiteur/recherche/?query=akayoaromaric%40gmail.com HTTP/1.1" 200 11218
+2025-03-18 14:30:33,921 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 16202
+2025-03-18 14:30:43,088 - INFO - basehttp - "GET /visiteur/recherche/?query=AKAYOA HTTP/1.1" 200 11218
+2025-03-18 14:31:04,234 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visiteur\views.py changed, reloading.
+2025-03-18 14:31:06,597 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 14:35:01,170 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visiteur\views.py changed, reloading.
+2025-03-18 14:35:05,185 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 14:35:08,790 - INFO - basehttp - "GET /visiteur/recherche/?query=AKAYOA HTTP/1.1" 200 11218
+2025-03-18 14:35:10,839 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 16202
+2025-03-18 14:35:21,027 - INFO - basehttp - "GET /visiteur/recherche/?query=akayoaromaric%40gmail.com HTTP/1.1" 200 11218
+2025-03-18 14:35:56,073 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 16202
+2025-03-18 14:36:12,163 - INFO - basehttp - "GET /visiteur/recherche/?query=F%C3%A9minin%09 HTTP/1.1" 200 11218
+2025-03-18 14:36:16,439 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 16202
+2025-03-18 14:36:23,493 - INFO - basehttp - "GET /visiteur/recherche/?query=Masculin HTTP/1.1" 200 11218
+2025-03-18 14:36:34,335 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 16202
+2025-03-18 14:36:47,070 - INFO - basehttp - "GET /visiteur/recherche/?query=Masculin HTTP/1.1" 200 11218
+2025-03-18 14:37:08,430 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visiteur\views.py changed, reloading.
+2025-03-18 14:37:10,926 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 14:39:20,126 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visiteur\views.py changed, reloading.
+2025-03-18 14:39:21,847 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 14:40:05,170 - INFO - basehttp - "GET /visiteur/recherche/?query=Masculin HTTP/1.1" 200 11218
+2025-03-18 14:40:09,580 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 16202
+2025-03-18 14:40:15,611 - INFO - basehttp - "GET /visiteur/recherche/?query=AKAYOA HTTP/1.1" 200 11218
+2025-03-18 14:40:25,176 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 16202
+2025-03-18 14:42:01,283 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 16812
+2025-03-18 14:42:10,405 - INFO - basehttp - "GET /visiteur/recherche/?criteres=nom&query=AKAYOA HTTP/1.1" 200 11218
+2025-03-18 14:50:54,471 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visiteur\views.py changed, reloading.
+2025-03-18 14:50:58,110 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 14:51:14,229 - INFO - basehttp - "GET /visiteur/recherche/?criteres=nom&query=AKAYOA HTTP/1.1" 200 9397
+2025-03-18 14:51:25,452 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 16812
+2025-03-18 14:51:30,517 - INFO - basehttp - "GET /visiteur/recherche/?criteres=nom&query=douce HTTP/1.1" 200 8658
+2025-03-18 14:51:34,834 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 16812
+2025-03-18 14:51:39,688 - INFO - basehttp - "GET /visiteur/recherche/?criteres=nom&query=BAKA HTTP/1.1" 200 10318
+2025-03-18 14:51:46,090 - INFO - basehttp - "GET /visiteur/2/modifier/ HTTP/1.1" 200 11266
+2025-03-18 14:51:50,408 - INFO - basehttp - "POST /visiteur/2/modifier/ HTTP/1.1" 302 0
+2025-03-18 14:51:50,443 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 16812
+2025-03-18 14:52:21,585 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 13021
+2025-03-18 14:52:25,704 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 13021
+2025-03-18 14:53:22,317 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visite\urls.py changed, reloading.
+2025-03-18 14:53:24,645 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 14:53:55,052 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visiteur\views.py changed, reloading.
+2025-03-18 14:53:56,999 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 14:54:15,883 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visite\views.py changed, reloading.
+2025-03-18 14:54:17,402 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 14:57:59,572 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visite\views.py changed, reloading.
+2025-03-18 14:58:03,998 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 14:58:20,763 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visite\urls.py changed, reloading.
+2025-03-18 14:58:24,366 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 15:05:53,480 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 14156
+2025-03-18 15:11:26,343 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 14165
+2025-03-18 15:14:52,406 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 15357
+2025-03-18 15:14:54,277 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 15357
+2025-03-18 15:15:04,156 - INFO - basehttp - "GET /visite/recherche/?criteres=date_visite&query=&date_debut=&date_fin= HTTP/1.1" 200 9810
+2025-03-18 15:15:12,836 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 16812
+2025-03-18 15:15:17,047 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 15357
+2025-03-18 15:16:08,344 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 14757
+2025-03-18 15:16:18,531 - INFO - basehttp - "GET /visite/recherche/?criteres=visiteur&query=AKAYOA HTTP/1.1" 200 9390
+2025-03-18 15:16:23,331 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 16812
+2025-03-18 15:16:26,476 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 14757
+2025-03-18 15:17:24,374 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 14750
+2025-03-18 15:17:38,534 - INFO - basehttp - "GET /visite/recherche/?criteres=statut&query=Confirm%C3%A9 HTTP/1.1" 200 9674
+2025-03-18 15:17:47,958 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 16812
+2025-03-18 15:20:30,384 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 14750
+2025-03-18 15:20:37,383 - INFO - basehttp - "GET /visite/recherche/?criteres=visiteur&query=Romaric HTTP/1.1" 200 8658
+2025-03-18 15:20:44,833 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 14750
+2025-03-18 15:20:49,458 - INFO - basehttp - "GET /visite/recherche/?criteres=visiteur&query=AKAYOA HTTP/1.1" 200 11475
+2025-03-18 15:23:30,286 - ERROR - log - Internal Server Error: /visite/recherche/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visite\views.py", line 159, in visite_search
+    return render(request, 'visite/search.html', {
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 953, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: 'Y-m-d'' from 'visite.date_visite|date:''Y-m-d''
+2025-03-18 15:23:30,300 - ERROR - basehttp - "GET /visite/recherche/?criteres=visiteur&query=AKAYOA HTTP/1.1" 500 235275
+2025-03-18 15:24:18,138 - INFO - basehttp - "GET /visite/recherche/?criteres=visiteur&query=AKAYOA HTTP/1.1" 200 11456
+2025-03-18 15:24:32,608 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 14648
+2025-03-18 15:24:34,096 - INFO - basehttp - "GET /visite/creer/ HTTP/1.1" 200 12154
+2025-03-18 15:24:36,817 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 14648
+2025-03-18 15:25:01,242 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 14395
+2025-03-18 15:25:18,452 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 14648
+2025-03-18 15:25:22,458 - INFO - basehttp - "GET /visite/recherche/?criteres=visiteur&query=AKAYOA HTTP/1.1" 200 11456
+2025-03-18 15:25:24,963 - INFO - basehttp - "GET /visite/3/modifier/ HTTP/1.1" 200 12708
+2025-03-18 15:25:32,145 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 14648
+2025-03-18 15:26:37,416 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 14648
+2025-03-18 15:27:23,296 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 14688
+2025-03-18 15:28:11,448 - INFO - basehttp - "GET /visite/recherche/?criteres=visiteur&query=AKAYOA HTTP/1.1" 200 11456
+2025-03-18 15:28:20,221 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 14688
+2025-03-18 15:28:28,794 - INFO - basehttp - "GET /secretaire/Secretaire/ HTTP/1.1" 200 15925
+2025-03-18 15:28:37,128 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 16812
+2025-03-18 15:28:51,833 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 16812
+2025-03-18 15:28:53,786 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 14688
+2025-03-18 15:28:55,527 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 14395
+2025-03-18 15:28:58,382 - INFO - basehttp - "GET /secretaire/Secretaire/ HTTP/1.1" 200 15925
+2025-03-18 15:28:59,628 - INFO - basehttp - "GET /directeur/ HTTP/1.1" 200 10032
+2025-03-18 15:29:00,642 - INFO - basehttp - "GET /secretaire/Secretaire/ HTTP/1.1" 200 15925
+2025-03-18 15:29:01,628 - INFO - basehttp - "GET /directeur/ HTTP/1.1" 200 10032
+2025-03-18 15:29:02,488 - INFO - basehttp - "GET /secretaire/Secretaire/ HTTP/1.1" 200 15925
+2025-03-18 15:34:18,860 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\secretaire\urls.py changed, reloading.
+2025-03-18 15:34:23,324 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 15:42:49,117 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\secretaire\views.py changed, reloading.
+2025-03-18 15:42:51,802 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 15:44:02,953 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\secretaire\urls.py changed, reloading.
+2025-03-18 15:44:05,642 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 15:46:33,532 - INFO - basehttp - "GET /secretaire/Secretaire/ HTTP/1.1" 200 17184
+2025-03-18 15:46:40,201 - INFO - basehttp - "GET /secretaire/recherche/?criteres=nom&query=AKAYOA HTTP/1.1" 200 8230
+2025-03-18 15:49:38,209 - INFO - basehttp - "GET /secretaire/recherche/?criteres=nom&query=AKAYOA HTTP/1.1" 200 9426
+2025-03-18 15:49:48,067 - INFO - basehttp - "GET /secretaire/2/modifier/ HTTP/1.1" 200 9387
+2025-03-18 15:50:00,485 - INFO - basehttp - "GET /secretaire/Secretaire/ HTTP/1.1" 200 17184
+2025-03-18 15:50:16,572 - INFO - basehttp - "GET /secretaire/Secretaire/ HTTP/1.1" 200 17184
+2025-03-18 15:53:40,869 - INFO - basehttp - "GET /secretaire/recherche/?criteres=nom&query=AKAYOA HTTP/1.1" 200 9426
+2025-03-18 15:53:43,484 - INFO - basehttp - "GET /secretaire/2/modifier/ HTTP/1.1" 200 11388
+2025-03-18 15:54:40,085 - INFO - basehttp - "GET /secretaire/Secretaire/ HTTP/1.1" 200 17184
+2025-03-18 15:56:00,142 - INFO - basehttp - "GET /secretaire/recherche/?criteres=nom&query=AKAYOA HTTP/1.1" 200 9426
+2025-03-18 15:56:02,094 - INFO - basehttp - "GET /secretaire/2/modifier/ HTTP/1.1" 200 11391
+2025-03-18 15:56:36,721 - INFO - basehttp - "GET /secretaire/2/modifier/ HTTP/1.1" 200 11391
+2025-03-18 15:57:11,138 - ERROR - log - Internal Server Error: /secretaire/2/modifier/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\secretaire\views.py", line 66, in modifier_secretaire
+    return render(request, 'secretaire/form.html', {'form': form})
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ':value' from 'form.password:value'
+2025-03-18 15:57:11,152 - ERROR - basehttp - "GET /secretaire/2/modifier/ HTTP/1.1" 500 193871
+2025-03-18 15:57:50,349 - INFO - basehttp - "GET /secretaire/2/modifier/ HTTP/1.1" 200 11391
+2025-03-18 15:58:05,855 - INFO - basehttp - "POST /secretaire/2/modifier/ HTTP/1.1" 302 0
+2025-03-18 15:58:05,900 - INFO - basehttp - "GET /secretaire/Secretaire/ HTTP/1.1" 200 17184
+2025-03-18 15:58:39,925 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 14395
+2025-03-18 16:02:59,761 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\urls.py changed, reloading.
+2025-03-18 16:03:02,903 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:03:23,346 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\urls.py changed, reloading.
+2025-03-18 16:03:26,599 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:04:57,949 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-18 16:04:59,950 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:12:45,172 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-18 16:12:48,271 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:13:50,984 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-18 16:13:53,409 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:14:31,999 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-18 16:14:34,071 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:15:43,719 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-18 16:15:46,721 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:16:17,031 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-18 16:16:20,200 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:19:36,516 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 15234
+2025-03-18 16:19:44,915 - ERROR - log - Internal Server Error: /programme_visite/recherche/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 106, in programme_visite_search
+    programmes = programmes.filter(visite__nom__icontains=query)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1546, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1577, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1492, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1306, in build_lookup
+    lhs = self.try_transform(lhs, name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1357, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'nom' for ForeignKey or join on the field not permitted.
+2025-03-18 16:19:44,924 - ERROR - basehttp - "GET /programme_visite/recherche/?criteres=visite&query=akayoaromaric%40gmail.com HTTP/1.1" 500 109351
+2025-03-18 16:20:29,767 - ERROR - log - Internal Server Error: /programme_visite/recherche/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 106, in programme_visite_search
+    programmes = programmes.filter(visite__nom__icontains=query)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1546, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1577, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1492, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1306, in build_lookup
+    lhs = self.try_transform(lhs, name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1357, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'nom' for ForeignKey or join on the field not permitted.
+2025-03-18 16:20:29,772 - ERROR - basehttp - "GET /programme_visite/recherche/?criteres=visite&query=AKAYOA HTTP/1.1" 500 109050
+2025-03-18 16:22:13,636 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-18 16:22:17,671 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:22:19,383 - ERROR - log - Internal Server Error: /programme_visite/recherche/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 106, in programme_visite_search
+    programmes = programmes.filter(visite__nom__icontains=query)  # Assurez-vous que 'visite' est le bon champ
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1546, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1577, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1492, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1306, in build_lookup
+    lhs = self.try_transform(lhs, name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1357, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'nom' for ForeignKey or join on the field not permitted.
+2025-03-18 16:22:19,391 - ERROR - basehttp - "GET /programme_visite/recherche/?criteres=visite&query=AKAYOA HTTP/1.1" 500 109359
+2025-03-18 16:22:21,208 - ERROR - log - Internal Server Error: /programme_visite/recherche/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 106, in programme_visite_search
+    programmes = programmes.filter(visite__nom__icontains=query)  # Assurez-vous que 'visite' est le bon champ
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1546, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1577, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1492, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1306, in build_lookup
+    lhs = self.try_transform(lhs, name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1357, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'nom' for ForeignKey or join on the field not permitted.
+2025-03-18 16:22:21,217 - ERROR - basehttp - "GET /programme_visite/recherche/?criteres=visite&query=AKAYOA HTTP/1.1" 500 109359
+2025-03-18 16:22:26,383 - ERROR - log - Internal Server Error: /programme_visite/recherche/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 106, in programme_visite_search
+    programmes = programmes.filter(visite__nom__icontains=query)  # Assurez-vous que 'visite' est le bon champ
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1546, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1577, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1492, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1306, in build_lookup
+    lhs = self.try_transform(lhs, name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1357, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'nom' for ForeignKey or join on the field not permitted.
+2025-03-18 16:22:26,388 - ERROR - basehttp - "GET /programme_visite/recherche/?criteres=visite&query=AKAYOA HTTP/1.1" 500 109222
+2025-03-18 16:24:39,073 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-18 16:24:41,838 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:24:44,200 - ERROR - log - Internal Server Error: /programme_visite/recherche/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 106, in programme_visite_search
+    programmes = programmes.filter(visite__nom__icontains=query)  # Assurez-vous que 'nom' est un champ de Visite
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1546, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1577, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1492, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1306, in build_lookup
+    lhs = self.try_transform(lhs, name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1357, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'nom' for ForeignKey or join on the field not permitted.
+2025-03-18 16:24:44,210 - ERROR - basehttp - "GET /programme_visite/recherche/?criteres=visite&query=AKAYOA HTTP/1.1" 500 109374
+2025-03-18 16:24:45,441 - ERROR - log - Internal Server Error: /programme_visite/recherche/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 106, in programme_visite_search
+    programmes = programmes.filter(visite__nom__icontains=query)  # Assurez-vous que 'nom' est un champ de Visite
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1546, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1577, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1492, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1306, in build_lookup
+    lhs = self.try_transform(lhs, name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1357, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'nom' for ForeignKey or join on the field not permitted.
+2025-03-18 16:24:45,447 - ERROR - basehttp - "GET /programme_visite/recherche/?criteres=visite&query=AKAYOA HTTP/1.1" 500 109374
+2025-03-18 16:28:13,786 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-18 16:28:15,945 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:28:20,107 - INFO - basehttp - "GET /programme_visite/recherche/?criteres=visite&query=AKAYOA HTTP/1.1" 200 8674
+2025-03-18 16:28:24,651 - INFO - basehttp - "GET /secretaire/Secretaire/ HTTP/1.1" 200 17184
+2025-03-18 16:28:37,640 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 15234
+2025-03-18 16:28:49,893 - INFO - basehttp - "GET /programme_visite/recherche/?criteres=secretaire&query=AKAYOA HTTP/1.1" 200 8674
+2025-03-18 16:28:52,806 - INFO - basehttp - "GET /secretaire/Secretaire/ HTTP/1.1" 200 17184
+2025-03-18 16:34:41,431 - INFO - basehttp - "GET /secretaire/Secretaire/ HTTP/1.1" 200 17184
+2025-03-18 16:34:43,667 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 15234
+2025-03-18 16:34:48,536 - INFO - basehttp - "GET /programme_visite/recherche/?criteres=visite&query=AKAYOA HTTP/1.1" 200 10721
+2025-03-18 16:35:37,092 - INFO - basehttp - "GET /programme_visite/recherche/?criteres=visite&query=AKAYOA HTTP/1.1" 200 10677
+2025-03-18 16:35:40,660 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 15234
+2025-03-18 16:35:43,898 - INFO - basehttp - "GET /programme_visite/recherche/?criteres=visite&query=AKAYOA HTTP/1.1" 200 10677
+2025-03-18 16:35:47,756 - INFO - basehttp - "GET /programme_visite/1/modifier/ HTTP/1.1" 200 12111
+2025-03-18 16:35:51,101 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 15234
+2025-03-18 16:36:22,756 - INFO - basehttp - "GET /programme_visite/recherche/?criteres=visite&query=025-01-01 HTTP/1.1" 200 8680
+2025-03-18 16:36:24,867 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 15234
+2025-03-18 16:36:30,474 - INFO - basehttp - "GET /programme_visite/recherche/?criteres=visite&query=122344421 HTTP/1.1" 200 8680
+2025-03-18 16:36:32,305 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 15234
+2025-03-18 16:36:48,428 - INFO - basehttp - "GET /directeur/ HTTP/1.1" 200 10032
+2025-03-18 16:44:03,568 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\directeur\urls.py changed, reloading.
+2025-03-18 16:44:07,195 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:44:58,852 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\directeur\views.py changed, reloading.
+2025-03-18 16:45:01,022 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:45:42,007 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\directeur\views.py changed, reloading.
+2025-03-18 16:45:44,311 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:46:27,827 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\directeur\views.py changed, reloading.
+2025-03-18 16:46:29,968 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:47:11,877 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\directeur\views.py changed, reloading.
+2025-03-18 16:47:13,680 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:48:08,206 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\directeur\views.py changed, reloading.
+2025-03-18 16:48:10,189 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:49:26,893 - INFO - basehttp - "GET /directeur/ HTTP/1.1" 200 11347
+2025-03-18 16:49:31,219 - INFO - basehttp - "GET /directeur/recherche/?criteres=nom&query=AKAYOA HTTP/1.1" 200 9403
+2025-03-18 16:49:35,768 - INFO - basehttp - "GET /directeur/1/modifier/ HTTP/1.1" 200 12688
+2025-03-18 16:49:39,636 - INFO - basehttp - "GET /directeur/ HTTP/1.1" 200 11347
+2025-03-18 16:53:06,398 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\directeur\views.py changed, reloading.
+2025-03-18 16:53:09,077 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:55:55,483 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-18 16:55:57,657 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:56:19,381 - INFO - basehttp - "GET /directeur/creer/ HTTP/1.1" 200 12431
+2025-03-18 16:56:25,013 - INFO - basehttp - "GET /directeur/ HTTP/1.1" 200 11347
+2025-03-18 16:56:28,916 - INFO - basehttp - "GET /secretaire/Secretaire/ HTTP/1.1" 200 17184
+2025-03-18 16:56:35,525 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 14688
+2025-03-18 16:56:39,048 - INFO - basehttp - "GET /visite/creer/ HTTP/1.1" 200 12154
+2025-03-18 16:56:45,844 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 14688
+2025-03-18 16:57:41,154 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\secretaire\views.py changed, reloading.
+2025-03-18 16:57:43,359 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:58:50,913 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\secretaire\views.py changed, reloading.
+2025-03-18 16:58:53,511 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 16:59:14,955 - INFO - basehttp - "GET /secretaire/Secretaire/ HTTP/1.1" 200 17184
+2025-03-18 16:59:26,313 - INFO - basehttp - "GET /secretaire/2/ HTTP/1.1" 200 10387
+2025-03-18 17:00:20,480 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\secretaire\views.py changed, reloading.
+2025-03-18 17:00:23,913 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 17:01:39,183 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\secretaire\views.py changed, reloading.
+2025-03-18 17:01:41,579 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 17:04:59,831 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visite\views.py changed, reloading.
+2025-03-18 17:05:01,913 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 17:05:08,805 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visite\views.py changed, reloading.
+2025-03-18 17:05:11,103 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 17:05:20,531 - INFO - basehttp - "GET /secretaire/2/ HTTP/1.1" 200 10392
+2025-03-18 17:05:27,670 - INFO - basehttp - "GET /secretaire/Secretaire/ HTTP/1.1" 200 17184
+2025-03-18 17:58:25,931 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-18 17:58:27,096 - INFO - basehttp - "GET / HTTP/1.1" 200 9970
+2025-03-18 17:58:28,905 - INFO - basehttp - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 155845
+2025-03-18 17:58:28,925 - INFO - basehttp - "GET /static/image/administration-1867877_1280.jpg HTTP/1.1" 200 407089
+2025-03-18 17:58:28,933 - INFO - basehttp - "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 78743
+2025-03-18 17:58:28,937 - INFO - basehttp - "GET /static/image/congo-2697382_1920.jpg HTTP/1.1" 200 566668
+2025-03-18 17:58:29,033 - INFO - basehttp - "GET /static/image/buildings-6956678_1920.jpg HTTP/1.1" 200 617712
+2025-03-18 17:58:29,416 - WARNING - log - Not Found: /favicon.ico
+2025-03-18 17:58:29,418 - WARNING - basehttp - "GET /favicon.ico HTTP/1.1" 404 3254

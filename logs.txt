@@ -1,2 +1,0 @@
-🚀 Le serveur Django est déjà en cours d'exécution.
-✅ Navigateur ouvert sur le serveur Django.

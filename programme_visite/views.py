@@ -14,6 +14,8 @@ from django.http import HttpResponse
 from reportlab.lib import colors
 import io
 from io import BytesIO
+from django.db.models import Q
+
 
 def programme_visite_list(request):
     """Affiche la page d'accueil avec la gestion du personnel et la vérification d'activation."""
@@ -35,6 +37,12 @@ def programme_visite_list(request):
 
 
 def programme_visite_create(request):
+    username = get_username_from_session(request)
+
+    # Assurez-vous que le nom d'utilisateur est disponible dans la session
+    if not username:
+        return redirect('login')  # Redirige vers la page de connexion si pas de nom d'utilisateur dans la session
+
     # Obtenir la date système (aujourd'hui)
     today = now().date()
     
@@ -61,10 +69,22 @@ def programme_visite_create(request):
     })
     
 def programme_visite_detail(request, id):
+    username = get_username_from_session(request)
+
+    # Assurez-vous que le nom d'utilisateur est disponible dans la session
+    if not username:
+        return redirect('login')  # Redirige vers la page de connexion si pas de nom d'utilisateur dans la session
+
     programme = get_object_or_404(ProgrammeVisite, id=id)
-    return render(request, 'programme_visite/detail.html', {'programme': programme})
+    return render(request, 'programme_visite/detail.html', {'programme': programme, 'username':username})
 
 def modifier_programme_visite(request, id):
+    username = get_username_from_session(request)
+
+    # Assurez-vous que le nom d'utilisateur est disponible dans la session
+    if not username:
+        return redirect('login')  # Redirige vers la page de connexion si pas de nom d'utilisateur dans la session
+
     programme = get_object_or_404(ProgrammeVisite, id=id)
     visites = Visite.objects.filter(statut='confirmé').order_by('-date_visite')  # Récupère toutes les visites confirmées
     #secretaires = Secretaire.objects.all().order_by('-date_debut').first()  # Récupère la secrétaire la plus récente
@@ -79,6 +99,7 @@ def modifier_programme_visite(request, id):
         form = ProgrammeVisiteForm(instance=programme)
 
     return render(request, 'programme_visite/ajouter_programme_visite.html', {
+        'username':username,
         'form': form,
         'programme_visite': programme,
         'visites': visites,
@@ -90,6 +111,62 @@ def supprimer_programme_visite(request, id):
     programme.delete()
     return redirect('programme_visite:ProgrammeVisite')
 
+def programme_visite_search(request):
+    username = get_username_from_session(request)
+
+    # Assurez-vous que le nom d'utilisateur est disponible dans la session
+    if not username:
+        return redirect('login')  # Redirige vers la page de connexion si pas de nom d'utilisateur dans la session
+
+    # Récupérer les paramètres de recherche
+    query = request.GET.get('query', '')  # Recherche globale
+    critere = request.GET.get('criteres', '')  # Critère de recherche sélectionné (visite, secretaire, statut, etc.)
+    
+    # Initialisation de la queryset avec tous les programmes de visite
+    programmes = ProgrammeVisite.objects.all()
+
+    # Si un critère et un terme de recherche sont saisis, filtrer en fonction du critère
+    if critere and query:
+        if critere == 'visite':
+            programmes = programmes.filter(visite__visiteur__nom__icontains=query)  # Filtrer par nom du visiteur
+        elif critere == 'secretaire':
+            programmes = programmes.filter(secretaire__last_name__icontains=query)  # Assurez-vous que 'last_name' est un champ de Secretaire
+        elif critere == 'statut':
+            programmes = programmes.filter(statut__icontains=query)
+        elif critere == 'date_creation':
+            programmes = programmes.filter(date_creation__icontains=query)  # Recherche par date
+    elif query:
+        # Si un terme de recherche est saisi sans critère, effectuer une recherche globale sur plusieurs champs
+        programmes = programmes.filter(
+            Q(visite__visiteur__nom__icontains=query) |  # Recherche sur le nom du visiteur
+            Q(secretaire__last_name__icontains=query) |
+            Q(statut__icontains=query) |
+            Q(date_creation__icontains=query)
+        )
+
+    # Ajouter des filtres supplémentaires pour les dates (date_debut et date_fin)
+    date_debut = request.GET.get('date_debut', '')
+    date_fin = request.GET.get('date_fin', '')
+    
+    # Appliquer les filtres supplémentaires si les champs sont remplis
+    if date_debut:
+        programmes = programmes.filter(date_creation__gte=date_debut)  # Filtrer après la date_debut
+    if date_fin:
+        programmes = programmes.filter(date_creation__lte=date_fin)  # Filtrer avant la date_fin
+
+    # Si aucun résultat n'est trouvé, on peut afficher un message ou laisser la queryset vide
+    if not programmes:
+        programmes = None  # Pas de programmes trouvés
+
+    # Retourner la réponse au template avec les données filtrées
+    return render(request, 'programme_visite/search.html', {
+        'username':username,
+        'programmes': programmes,
+        'query': query,
+        'criteres': critere,
+        'date_debut': date_debut,
+        'date_fin': date_fin,
+    })
 
 import io
 from datetime import date, timedelta

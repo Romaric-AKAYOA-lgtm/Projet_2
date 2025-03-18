@@ -1,0 +1,1162 @@
+('C:\\Users\\DAII '
+ 'IATITUDE\\Desktop\\Projet\\Gestion_visite\\build\\setup\\PYZ-00.pyz',
+ [('__future__',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\__future__.py',
+   'PYMODULE'),
+  ('_aix_support',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\_aix_support.py',
+   'PYMODULE'),
+  ('_bootsubprocess',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\_bootsubprocess.py',
+   'PYMODULE'),
+  ('_compat_pickle',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\_compat_pickle.py',
+   'PYMODULE'),
+  ('_compression',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\_compression.py',
+   'PYMODULE'),
+  ('_markupbase',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\_markupbase.py',
+   'PYMODULE'),
+  ('_osx_support',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\_osx_support.py',
+   'PYMODULE'),
+  ('_py_abc',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\_py_abc.py',
+   'PYMODULE'),
+  ('_pydecimal',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\_pydecimal.py',
+   'PYMODULE'),
+  ('_sitebuiltins',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\_sitebuiltins.py',
+   'PYMODULE'),
+  ('_strptime',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\_strptime.py',
+   'PYMODULE'),
+  ('_threading_local',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\_threading_local.py',
+   'PYMODULE'),
+  ('argparse',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\argparse.py',
+   'PYMODULE'),
+  ('ast',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\ast.py',
+   'PYMODULE'),
+  ('base64',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\base64.py',
+   'PYMODULE'),
+  ('bdb',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\bdb.py',
+   'PYMODULE'),
+  ('bisect',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\bisect.py',
+   'PYMODULE'),
+  ('bz2',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\bz2.py',
+   'PYMODULE'),
+  ('calendar',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\calendar.py',
+   'PYMODULE'),
+  ('cgi',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\cgi.py',
+   'PYMODULE'),
+  ('cmd',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\cmd.py',
+   'PYMODULE'),
+  ('code',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\code.py',
+   'PYMODULE'),
+  ('codeop',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\codeop.py',
+   'PYMODULE'),
+  ('concurrent',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\concurrent\\__init__.py',
+   'PYMODULE'),
+  ('concurrent.futures',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\concurrent\\futures\\__init__.py',
+   'PYMODULE'),
+  ('concurrent.futures._base',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\concurrent\\futures\\_base.py',
+   'PYMODULE'),
+  ('concurrent.futures.process',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\concurrent\\futures\\process.py',
+   'PYMODULE'),
+  ('concurrent.futures.thread',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\concurrent\\futures\\thread.py',
+   'PYMODULE'),
+  ('configparser',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\configparser.py',
+   'PYMODULE'),
+  ('contextlib',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\contextlib.py',
+   'PYMODULE'),
+  ('contextvars',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\contextvars.py',
+   'PYMODULE'),
+  ('copy',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\copy.py',
+   'PYMODULE'),
+  ('csv',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\csv.py',
+   'PYMODULE'),
+  ('ctypes',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\ctypes\\__init__.py',
+   'PYMODULE'),
+  ('ctypes._endian',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\ctypes\\_endian.py',
+   'PYMODULE'),
+  ('dataclasses',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\dataclasses.py',
+   'PYMODULE'),
+  ('datetime',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\datetime.py',
+   'PYMODULE'),
+  ('decimal',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\decimal.py',
+   'PYMODULE'),
+  ('dis',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\dis.py',
+   'PYMODULE'),
+  ('distutils',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\__init__.py',
+   'PYMODULE'),
+  ('distutils._msvccompiler',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\_msvccompiler.py',
+   'PYMODULE'),
+  ('distutils.archive_util',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\archive_util.py',
+   'PYMODULE'),
+  ('distutils.ccompiler',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\ccompiler.py',
+   'PYMODULE'),
+  ('distutils.cmd',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\cmd.py',
+   'PYMODULE'),
+  ('distutils.command',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\command\\__init__.py',
+   'PYMODULE'),
+  ('distutils.command.bdist',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\command\\bdist.py',
+   'PYMODULE'),
+  ('distutils.command.build_ext',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\command\\build_ext.py',
+   'PYMODULE'),
+  ('distutils.command.build_scripts',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\command\\build_scripts.py',
+   'PYMODULE'),
+  ('distutils.command.install',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\command\\install.py',
+   'PYMODULE'),
+  ('distutils.command.install_scripts',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\command\\install_scripts.py',
+   'PYMODULE'),
+  ('distutils.command.sdist',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\command\\sdist.py',
+   'PYMODULE'),
+  ('distutils.config',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\config.py',
+   'PYMODULE'),
+  ('distutils.core',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\core.py',
+   'PYMODULE'),
+  ('distutils.debug',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\debug.py',
+   'PYMODULE'),
+  ('distutils.dep_util',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\dep_util.py',
+   'PYMODULE'),
+  ('distutils.dir_util',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\dir_util.py',
+   'PYMODULE'),
+  ('distutils.dist',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\dist.py',
+   'PYMODULE'),
+  ('distutils.errors',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\errors.py',
+   'PYMODULE'),
+  ('distutils.extension',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\extension.py',
+   'PYMODULE'),
+  ('distutils.fancy_getopt',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\fancy_getopt.py',
+   'PYMODULE'),
+  ('distutils.file_util',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\file_util.py',
+   'PYMODULE'),
+  ('distutils.filelist',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\filelist.py',
+   'PYMODULE'),
+  ('distutils.log',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\log.py',
+   'PYMODULE'),
+  ('distutils.msvc9compiler',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\msvc9compiler.py',
+   'PYMODULE'),
+  ('distutils.spawn',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\spawn.py',
+   'PYMODULE'),
+  ('distutils.sysconfig',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\sysconfig.py',
+   'PYMODULE'),
+  ('distutils.text_file',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\text_file.py',
+   'PYMODULE'),
+  ('distutils.util',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\util.py',
+   'PYMODULE'),
+  ('distutils.version',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\version.py',
+   'PYMODULE'),
+  ('distutils.versionpredicate',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\versionpredicate.py',
+   'PYMODULE'),
+  ('email',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\email\\__init__.py',
+   'PYMODULE'),
+  ('email._encoded_words',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\email\\_encoded_words.py',
+   'PYMODULE'),
+  ('email._header_value_parser',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\email\\_header_value_parser.py',
+   'PYMODULE'),
+  ('email._parseaddr',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\email\\_parseaddr.py',
+   'PYMODULE'),
+  ('email._policybase',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\email\\_policybase.py',
+   'PYMODULE'),
+  ('email.base64mime',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\email\\base64mime.py',
+   'PYMODULE'),
+  ('email.charset',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\email\\charset.py',
+   'PYMODULE'),
+  ('email.contentmanager',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\email\\contentmanager.py',
+   'PYMODULE'),
+  ('email.encoders',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\email\\encoders.py',
+   'PYMODULE'),
+  ('email.errors',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\email\\errors.py',
+   'PYMODULE'),
+  ('email.feedparser',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\email\\feedparser.py',
+   'PYMODULE'),
+  ('email.generator',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\email\\generator.py',
+   'PYMODULE'),
+  ('email.header',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\email\\header.py',
+   'PYMODULE'),
+  ('email.headerregistry',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\email\\headerregistry.py',
+   'PYMODULE'),
+  ('email.iterators',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\email\\iterators.py',
+   'PYMODULE'),
+  ('email.message',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\email\\message.py',
+   'PYMODULE'),
+  ('email.parser',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\email\\parser.py',
+   'PYMODULE'),
+  ('email.policy',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\email\\policy.py',
+   'PYMODULE'),
+  ('email.quoprimime',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\email\\quoprimime.py',
+   'PYMODULE'),
+  ('email.utils',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\email\\utils.py',
+   'PYMODULE'),
+  ('fnmatch',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\fnmatch.py',
+   'PYMODULE'),
+  ('fractions',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\fractions.py',
+   'PYMODULE'),
+  ('ftplib',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\ftplib.py',
+   'PYMODULE'),
+  ('getopt',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\getopt.py',
+   'PYMODULE'),
+  ('getpass',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\getpass.py',
+   'PYMODULE'),
+  ('gettext',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\gettext.py',
+   'PYMODULE'),
+  ('glob',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\glob.py',
+   'PYMODULE'),
+  ('gzip',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\gzip.py',
+   'PYMODULE'),
+  ('hashlib',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\hashlib.py',
+   'PYMODULE'),
+  ('hmac',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\hmac.py',
+   'PYMODULE'),
+  ('html',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\html\\__init__.py',
+   'PYMODULE'),
+  ('html.entities',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\html\\entities.py',
+   'PYMODULE'),
+  ('html.parser',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\html\\parser.py',
+   'PYMODULE'),
+  ('http',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\http\\__init__.py',
+   'PYMODULE'),
+  ('http.client',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\http\\client.py',
+   'PYMODULE'),
+  ('http.cookiejar',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\http\\cookiejar.py',
+   'PYMODULE'),
+  ('http.server',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\http\\server.py',
+   'PYMODULE'),
+  ('imp',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\imp.py',
+   'PYMODULE'),
+  ('importlib',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\importlib\\__init__.py',
+   'PYMODULE'),
+  ('importlib._bootstrap',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\importlib\\_bootstrap.py',
+   'PYMODULE'),
+  ('importlib._bootstrap_external',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\importlib\\_bootstrap_external.py',
+   'PYMODULE'),
+  ('importlib.abc',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\importlib\\abc.py',
+   'PYMODULE'),
+  ('importlib.machinery',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\importlib\\machinery.py',
+   'PYMODULE'),
+  ('importlib.metadata',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\importlib\\metadata.py',
+   'PYMODULE'),
+  ('importlib.util',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\importlib\\util.py',
+   'PYMODULE'),
+  ('inspect',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\inspect.py',
+   'PYMODULE'),
+  ('json',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\json\\__init__.py',
+   'PYMODULE'),
+  ('json.decoder',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\json\\decoder.py',
+   'PYMODULE'),
+  ('json.encoder',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\json\\encoder.py',
+   'PYMODULE'),
+  ('json.scanner',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\json\\scanner.py',
+   'PYMODULE'),
+  ('logging',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\logging\\__init__.py',
+   'PYMODULE'),
+  ('lzma',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\lzma.py',
+   'PYMODULE'),
+  ('mimetypes',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\mimetypes.py',
+   'PYMODULE'),
+  ('multiprocessing',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\__init__.py',
+   'PYMODULE'),
+  ('multiprocessing.connection',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\connection.py',
+   'PYMODULE'),
+  ('multiprocessing.context',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\context.py',
+   'PYMODULE'),
+  ('multiprocessing.dummy',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\dummy\\__init__.py',
+   'PYMODULE'),
+  ('multiprocessing.dummy.connection',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\dummy\\connection.py',
+   'PYMODULE'),
+  ('multiprocessing.forkserver',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\forkserver.py',
+   'PYMODULE'),
+  ('multiprocessing.heap',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\heap.py',
+   'PYMODULE'),
+  ('multiprocessing.managers',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\managers.py',
+   'PYMODULE'),
+  ('multiprocessing.pool',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\pool.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_fork',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\popen_fork.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_forkserver',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\popen_forkserver.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_spawn_posix',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\popen_spawn_posix.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_spawn_win32',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\popen_spawn_win32.py',
+   'PYMODULE'),
+  ('multiprocessing.process',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\process.py',
+   'PYMODULE'),
+  ('multiprocessing.queues',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\queues.py',
+   'PYMODULE'),
+  ('multiprocessing.reduction',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\reduction.py',
+   'PYMODULE'),
+  ('multiprocessing.resource_sharer',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\resource_sharer.py',
+   'PYMODULE'),
+  ('multiprocessing.resource_tracker',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\resource_tracker.py',
+   'PYMODULE'),
+  ('multiprocessing.shared_memory',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\shared_memory.py',
+   'PYMODULE'),
+  ('multiprocessing.sharedctypes',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\sharedctypes.py',
+   'PYMODULE'),
+  ('multiprocessing.spawn',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\spawn.py',
+   'PYMODULE'),
+  ('multiprocessing.synchronize',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\synchronize.py',
+   'PYMODULE'),
+  ('multiprocessing.util',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\util.py',
+   'PYMODULE'),
+  ('netrc',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\netrc.py',
+   'PYMODULE'),
+  ('nturl2path',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\nturl2path.py',
+   'PYMODULE'),
+  ('numbers',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\numbers.py',
+   'PYMODULE'),
+  ('opcode',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\opcode.py',
+   'PYMODULE'),
+  ('optparse',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\optparse.py',
+   'PYMODULE'),
+  ('packaging',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('packaging._elffile',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\_elffile.py',
+   'PYMODULE'),
+  ('packaging._manylinux',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\_manylinux.py',
+   'PYMODULE'),
+  ('packaging._musllinux',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\_musllinux.py',
+   'PYMODULE'),
+  ('packaging._parser',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\_parser.py',
+   'PYMODULE'),
+  ('packaging._structures',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\_structures.py',
+   'PYMODULE'),
+  ('packaging._tokenizer',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\_tokenizer.py',
+   'PYMODULE'),
+  ('packaging.licenses',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\licenses\\__init__.py',
+   'PYMODULE'),
+  ('packaging.licenses._spdx',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\licenses\\_spdx.py',
+   'PYMODULE'),
+  ('packaging.markers',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\markers.py',
+   'PYMODULE'),
+  ('packaging.metadata',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\metadata.py',
+   'PYMODULE'),
+  ('packaging.requirements',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\requirements.py',
+   'PYMODULE'),
+  ('packaging.specifiers',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\specifiers.py',
+   'PYMODULE'),
+  ('packaging.tags',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\tags.py',
+   'PYMODULE'),
+  ('packaging.utils',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\utils.py',
+   'PYMODULE'),
+  ('packaging.version',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\version.py',
+   'PYMODULE'),
+  ('pathlib',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\pathlib.py',
+   'PYMODULE'),
+  ('pdb',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\pdb.py',
+   'PYMODULE'),
+  ('pickle',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\pickle.py',
+   'PYMODULE'),
+  ('pkg_resources',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.appdirs',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\appdirs.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.__about__',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__about__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._compat',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_compat.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._structures',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_structures.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.markers',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\markers.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.requirements',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\requirements.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.specifiers',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\specifiers.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.tags',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\tags.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.utils',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\utils.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.version',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\version.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.pyparsing',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.six',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\six.py',
+   'PYMODULE'),
+  ('pkg_resources.extern',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\extern\\__init__.py',
+   'PYMODULE'),
+  ('pkgutil',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\pkgutil.py',
+   'PYMODULE'),
+  ('platform',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\platform.py',
+   'PYMODULE'),
+  ('plistlib',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\plistlib.py',
+   'PYMODULE'),
+  ('pprint',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\pprint.py',
+   'PYMODULE'),
+  ('py_compile',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\py_compile.py',
+   'PYMODULE'),
+  ('pydoc',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\pydoc.py',
+   'PYMODULE'),
+  ('pydoc_data',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\pydoc_data\\__init__.py',
+   'PYMODULE'),
+  ('pydoc_data.topics',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\pydoc_data\\topics.py',
+   'PYMODULE'),
+  ('queue',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\queue.py',
+   'PYMODULE'),
+  ('quopri',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\quopri.py',
+   'PYMODULE'),
+  ('random',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\random.py',
+   'PYMODULE'),
+  ('rlcompleter',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\rlcompleter.py',
+   'PYMODULE'),
+  ('runpy',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\runpy.py',
+   'PYMODULE'),
+  ('secrets',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\secrets.py',
+   'PYMODULE'),
+  ('selectors',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\selectors.py',
+   'PYMODULE'),
+  ('setuptools',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._deprecation_warning',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_deprecation_warning.py',
+   'PYMODULE'),
+  ('setuptools._imp',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_imp.py',
+   'PYMODULE'),
+  ('setuptools._vendor',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.ordered_set',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\ordered_set.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.__about__',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\__about__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._compat',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\_compat.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._structures',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\_structures.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.markers',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\markers.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.requirements',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\requirements.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.specifiers',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\specifiers.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.tags',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\tags.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.utils',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\utils.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.version',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\version.py',
+   'PYMODULE'),
+  ('setuptools._vendor.pyparsing',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\pyparsing.py',
+   'PYMODULE'),
+  ('setuptools._vendor.six',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\six.py',
+   'PYMODULE'),
+  ('setuptools.archive_util',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\archive_util.py',
+   'PYMODULE'),
+  ('setuptools.command',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\command\\__init__.py',
+   'PYMODULE'),
+  ('setuptools.command.bdist_egg',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\command\\bdist_egg.py',
+   'PYMODULE'),
+  ('setuptools.command.easy_install',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\command\\easy_install.py',
+   'PYMODULE'),
+  ('setuptools.command.egg_info',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\command\\egg_info.py',
+   'PYMODULE'),
+  ('setuptools.command.install_scripts',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\command\\install_scripts.py',
+   'PYMODULE'),
+  ('setuptools.command.py36compat',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\command\\py36compat.py',
+   'PYMODULE'),
+  ('setuptools.command.sdist',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\command\\sdist.py',
+   'PYMODULE'),
+  ('setuptools.command.setopt',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\command\\setopt.py',
+   'PYMODULE'),
+  ('setuptools.config',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\config.py',
+   'PYMODULE'),
+  ('setuptools.depends',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\depends.py',
+   'PYMODULE'),
+  ('setuptools.dist',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\dist.py',
+   'PYMODULE'),
+  ('setuptools.distutils_patch',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\distutils_patch.py',
+   'PYMODULE'),
+  ('setuptools.extension',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\extension.py',
+   'PYMODULE'),
+  ('setuptools.extern',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\extern\\__init__.py',
+   'PYMODULE'),
+  ('setuptools.glob',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\glob.py',
+   'PYMODULE'),
+  ('setuptools.installer',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\installer.py',
+   'PYMODULE'),
+  ('setuptools.monkey',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\monkey.py',
+   'PYMODULE'),
+  ('setuptools.msvc',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\msvc.py',
+   'PYMODULE'),
+  ('setuptools.package_index',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\package_index.py',
+   'PYMODULE'),
+  ('setuptools.py27compat',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\py27compat.py',
+   'PYMODULE'),
+  ('setuptools.py31compat',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\py31compat.py',
+   'PYMODULE'),
+  ('setuptools.py33compat',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\py33compat.py',
+   'PYMODULE'),
+  ('setuptools.py34compat',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\py34compat.py',
+   'PYMODULE'),
+  ('setuptools.sandbox',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\sandbox.py',
+   'PYMODULE'),
+  ('setuptools.ssl_support',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\ssl_support.py',
+   'PYMODULE'),
+  ('setuptools.unicode_utils',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\unicode_utils.py',
+   'PYMODULE'),
+  ('setuptools.version',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\version.py',
+   'PYMODULE'),
+  ('setuptools.wheel',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\wheel.py',
+   'PYMODULE'),
+  ('setuptools.windows_support',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\windows_support.py',
+   'PYMODULE'),
+  ('shlex',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\shlex.py',
+   'PYMODULE'),
+  ('shutil',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\shutil.py',
+   'PYMODULE'),
+  ('signal',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\signal.py',
+   'PYMODULE'),
+  ('site',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\site.py',
+   'PYMODULE'),
+  ('socket',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\socket.py',
+   'PYMODULE'),
+  ('socketserver',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\socketserver.py',
+   'PYMODULE'),
+  ('ssl',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\ssl.py',
+   'PYMODULE'),
+  ('statistics',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\statistics.py',
+   'PYMODULE'),
+  ('string',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\string.py',
+   'PYMODULE'),
+  ('stringprep',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\stringprep.py',
+   'PYMODULE'),
+  ('subprocess',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\subprocess.py',
+   'PYMODULE'),
+  ('sysconfig',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\sysconfig.py',
+   'PYMODULE'),
+  ('tarfile',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\tarfile.py',
+   'PYMODULE'),
+  ('tempfile',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\tempfile.py',
+   'PYMODULE'),
+  ('textwrap',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\textwrap.py',
+   'PYMODULE'),
+  ('threading',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\threading.py',
+   'PYMODULE'),
+  ('token',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\token.py',
+   'PYMODULE'),
+  ('tokenize',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\tokenize.py',
+   'PYMODULE'),
+  ('tracemalloc',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\tracemalloc.py',
+   'PYMODULE'),
+  ('tty',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\tty.py',
+   'PYMODULE'),
+  ('typing',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\typing.py',
+   'PYMODULE'),
+  ('urllib',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\urllib\\__init__.py',
+   'PYMODULE'),
+  ('urllib.error',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\urllib\\error.py',
+   'PYMODULE'),
+  ('urllib.parse',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\urllib\\parse.py',
+   'PYMODULE'),
+  ('urllib.request',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\urllib\\request.py',
+   'PYMODULE'),
+  ('urllib.response',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\urllib\\response.py',
+   'PYMODULE'),
+  ('uu',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\uu.py',
+   'PYMODULE'),
+  ('uuid',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\uuid.py',
+   'PYMODULE'),
+  ('webbrowser',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\webbrowser.py',
+   'PYMODULE'),
+  ('xml',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\xml\\__init__.py',
+   'PYMODULE'),
+  ('xml.parsers',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\xml\\parsers\\__init__.py',
+   'PYMODULE'),
+  ('xml.parsers.expat',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\xml\\parsers\\expat.py',
+   'PYMODULE'),
+  ('xml.sax',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\xml\\sax\\__init__.py',
+   'PYMODULE'),
+  ('xml.sax._exceptions',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\xml\\sax\\_exceptions.py',
+   'PYMODULE'),
+  ('xml.sax.expatreader',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\xml\\sax\\expatreader.py',
+   'PYMODULE'),
+  ('xml.sax.handler',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\xml\\sax\\handler.py',
+   'PYMODULE'),
+  ('xml.sax.saxutils',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\xml\\sax\\saxutils.py',
+   'PYMODULE'),
+  ('xml.sax.xmlreader',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\xml\\sax\\xmlreader.py',
+   'PYMODULE'),
+  ('xmlrpc',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\xmlrpc\\__init__.py',
+   'PYMODULE'),
+  ('xmlrpc.client',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\xmlrpc\\client.py',
+   'PYMODULE'),
+  ('zipfile',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\zipfile.py',
+   'PYMODULE'),
+  ('zipimport',
+   'c:\\users\\daii '
+   'iatitude\\appdata\\local\\programs\\python\\python39\\lib\\zipimport.py',
+   'PYMODULE')])

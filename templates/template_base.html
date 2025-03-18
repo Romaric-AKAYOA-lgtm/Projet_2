@@ -143,13 +143,23 @@
 </head>
 <body>
 
-    <!-- En-tête -->
-    <header class="bg-white">
-        <img src="{% static 'image/administration-1867877_1280.jpg' %}" alt="INRAP" width="50">
-        <h1 class="text-center">Institut National de Recherche et d'Action Pédagogiques</h1>
-        <img src="{% static 'image/congo-2697382_1920.jpg' %}" alt="Congo Brazzaville" width="50">
-    </header>
-    
+        <!-- En-tête -->
+        <header class="bg-white py-3 shadow">
+            <div class="container-fluid  d-flex justify-content-between align-items-center">
+                <!-- Logo de l'INRAP -->
+                <img src="{% static 'image/administration-1867877_1280.jpg' %}" alt="INRAP" class="img-fluid" width="70">
+
+                <!-- Titre centré -->
+                <h1 class="text-center flex-grow-1 fw-bold text-primary">
+                    Institut National de Recherche et d'Action Pédagogiques
+                </h1>
+
+                <!-- Logo du Congo -->
+                <img src="{% static 'image/congo-2697382_1920.jpg' %}" alt="Congo Brazzaville" class="img-fluid" width="70">
+            </div>
+        </header>
+
+            
     <div class="container-fluid">
         <div class="row">
             <!-- Barre latérale (colonne gauche) -->

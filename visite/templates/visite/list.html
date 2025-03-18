@@ -4,9 +4,26 @@
 <div class="container mt-4">
     <h1 class="text-center   text-white">Liste des Visites</h1>
 
-    <div class="d-flex justify-content-start mb-3">
+    <div class="d-flex justify-content-between mb-3">
+        <!-- Bouton Ajouter une Visite à gauche -->
         <a href="{% url 'visite:creer' %}" class="btn btn-primary">Ajouter une Visite</a>
+    
+        <!-- Formulaire de recherche aligné à droite -->
+        <form action="{% url 'visite:recherche' %}" method="get" class="d-flex">
+            <select name="criteres" class="form-select me-2" aria-label="Critère de recherche" id="criteres">
+                <option value="visiteur">Visiteur</option>
+                <option value="directeur">Directeur</option>
+                <option value="statut">Statut</option>
+            </select>
+    
+            <input type="text" name="query" class="form-control me-2" placeholder="Rechercher une visite" aria-label="Recherche" value="{{ query }}">
+    
+            <button type="submit" class="btn btn-secondary">
+                <i class="bi bi-search"></i> Rechercher
+            </button>
+        </form>
     </div>
+    
 
     <div class="table-responsive">
         <table class="table table-striped">
@@ -25,8 +42,8 @@
                 {% for visite in visites %}
                 <tr>
                     <td>{{ visite.visiteur.nom }} {{ visite.visiteur.prenom }}</td>
-                    <td>{{ visite.date_visite }}</td>
-                    <td>{{ visite.heure_visite }}</td>
+                    <td>{{ visite.date_visite|date:'Y-m-d' }}</td>
+                    <td>{{ visite.heure_visite|date:"H:i" }}</td>
                     <td>{{ visite.objet }}</td>
                     <td>{{ visite.directeur.nom }} {{ visite.directeur.prenom }}</td>
                     <td>{{ visite.statut }}</td>
@@ -40,4 +57,27 @@
         </table>
     </div>
 </div>
+
+
+<!-- Script JavaScript pour afficher les champs de date lorsque "Date de visite" est sélectionné -->
+<script>
+    document.getElementById('criteres').addEventListener('change', function() {
+        var dateFields = document.getElementById('date-fields');
+        var criteres = this.value;
+        
+        if (criteres === 'date_visite') {
+            dateFields.style.display = 'block';  // Afficher les champs de date
+        } else {
+            dateFields.style.display = 'none';   // Masquer les champs de date
+        }
+    });
+
+    // Initialiser l'état des champs de date lors du chargement de la page
+    window.onload = function() {
+        var criteres = document.getElementById('criteres').value;
+        if (criteres === 'date_visite') {
+            document.getElementById('date-fields').style.display = 'block'; // Afficher par défaut si "Date de visite" est sélectionné
+        }
+    };
+</script>
 {% endblock %}

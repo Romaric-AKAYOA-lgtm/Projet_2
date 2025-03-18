@@ -1,0 +1,47 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+<div class="container mt-4">
+    <!-- Modal pour afficher les résultats de la recherche -->
+    <div class="modal fade show" id="modalSearchResults" tabindex="-1" aria-labelledby="modalSearchResultsLabel" aria-hidden="true" style="display: block;">
+        <div class="modal-dialog modal-lg"> <!-- Largeur augmentée -->
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="modalSearchResultsLabel">Résultats de la recherche</h5>
+                </div>
+                <div class="modal-body">
+                    {% if directeurs %}
+                        <ul class="list-group">
+                            {% for directeur in directeurs %}
+                                <li class="list-group-item">
+                                    {{ directeur.nom }} {{ directeur.prenom }} - {{ directeur.email }}
+                                    <a href="{% url 'directeur:modifier' directeur.id %}" class="btn btn-warning btn-sm float-end ms-2">Modifier</a>
+                                    <a href="{% url 'directeur:supprimer' directeur.id %}" class="btn btn-danger btn-sm float-end ms-2">Supprimer</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>Aucun directeur trouvé pour "{{ query }}"</p>
+                    {% endif %}
+                </div>
+                <div class="modal-footer">
+                    <a href="{% url 'directeur:Directeur' %}" class="btn btn-secondary px-4 py-2 btn-sm">Annuler</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script pour afficher le modal de façon automatique à la fin de la page -->
+{% if directeurs %}
+    <script>
+        window.onload = function() {
+            var myModal = new bootstrap.Modal(document.getElementById("modalSearchResults"), {
+                keyboard: false
+            });
+            myModal.show();
+        };
+    </script>
+{% endif %}
+
+{% endblock %}

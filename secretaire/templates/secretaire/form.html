@@ -14,43 +14,74 @@
     </div>
     {% endif %}
 
-    <form action="{% url 'secretaire:modifier' form.instance.id %}" method="POST">
-        {% csrf_token %}
-        
-        <div class="mb-3">
-            <label for="nom" class="form-label">Nom</label>
-            <input type="text" class="form-control" id="nom" name="nom" value="{{ form.instance.nom }}" required>
-        </div>
+    <!-- Modal pour Modifier un Secrétaire -->
+    <div class="modal fade" id="modalModifierSecretaire" tabindex="-1" aria-labelledby="modalModifierSecretaireLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title" id="modalModifierSecretaireLabel">Modifier Secrétaire</h5>
+                </div>
+                <div class="modal-body">
+                    <form action="{% url 'secretaire:modifier' form.instance.id %}" method="POST">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label class="form-label">Nom</label>
+                            <input type="text" class="form-control" name="last_name" value="{{ form.last_name.value }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Prénom</label>
+                            <input type="text" class="form-control" name="first_name" value="{{ form.first_name.value }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" value="{{ form.email.value }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Téléphone</label>
+                            <input type="text" class="form-control" name="num_tel" value="{{ form.num_tel.value }}">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Nom d'utilisateur</label>
+                            <input type="text" class="form-control" name="username" value="{{ form.username.value }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Mot de passe</label>
+                            <input type="text" class="form-control" name="password"    value="{{ form.password.value}}">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Date Début</label>
+                            <input type="date" class="form-control" name="date_debut" value="{{ form.date_debut.value|date:'Y-m-d' }}">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Date Fin</label>
+                            <input type="date" class="form-control" name="date_fin" value="{{ form.date_fin.value|date:'Y-m-d' }}">
+                        </div>
 
-        <div class="mb-3">
-            <label for="prenom" class="form-label">Prénom</label>
-            <input type="text" class="form-control" id="prenom" name="prenom" value="{{ form.instance.prenom }}" required>
+                        <div class="text-end">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                            <button type="submit" class="btn btn-warning">Sauvegarder</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" name="email" value="{{ form.instance.email }}">
-        </div>
+    <!-- Si le formulaire a bien été soumis avec succès, affichez le modal automatiquement -->
+    {% if form.instance.id %}
+    <script>
+        window.onload = function() {
+            var myModal = new bootstrap.Modal(document.getElementById('modalModifierSecretaire'), {
+                keyboard: false
+            });
+            myModal.show();
+        };
+    </script>
+    {% endif %}
 
-        <div class="mb-3">
-            <label for="num_tel" class="form-label">Téléphone</label>
-            <input type="text" class="form-control" id="num_tel" name="num_tel" value="{{ form.instance.num_tel }}">
-        </div>
-
-        <div class="mb-3">
-            <label for="date_debut" class="form-label">Date Début</label>
-            <input type="date" class="form-control" id="date_debut" name="date_debut" value="{{ form.instance.date_debut|date:'Y-m-d' }}">
-        </div>
-
-        <div class="mb-3">
-            <label for="date_fin" class="form-label">Date Fin</label>
-            <input type="date" class="form-control" id="date_fin" name="date_fin" value="{{ form.instance.date_fin|date:'Y-m-d' }}">
-        </div>
-
-        <div class="text-end">
-            <button type="submit" class="btn btn-warning">Sauvegarder</button>
-            <a href="{% url 'secretaire:Secretaire' %}" class="btn btn-secondary">Annuler</a>
-        </div>
-    </form>
+    <div class="text-end mt-3">
+        <button type="submit" class="btn btn-warning">Sauvegarder</button>
+        <a href="{% url 'secretaire:Secretaire' %}" class="btn btn-secondary">Annuler</a>
+    </div>
 </div>
 {% endblock %}

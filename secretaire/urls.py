@@ -11,4 +11,5 @@ urlpatterns = [
     path('<int:id>/supprimer/', views.supprimer_secretaire, name='supprimer'),
     path('', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),
+     path('recherche/', views.secretaire_search, name='recherche'),  # Ajout de la route de recherche
 ]

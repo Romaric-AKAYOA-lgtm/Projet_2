@@ -3,10 +3,30 @@
 {% block contenue %}
 <div class="container mt-4">
     <h1 class="text-center text-white">Liste des Secrétaires</h1>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAjouterSecretaire">
-        Ajouter un Secrétaire
-    </button>
-
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAjouterSecretaire">
+            Ajouter un Secrétaire
+        </button>
+                    <!-- Formulaire de recherche -->
+                    <form action="{% url 'secretaire:recherche' %}" method="get" class="d-flex">
+                        <!-- Champ pour sélectionner le critère de recherche -->
+                        <select name="criteres" class="form-select me-2" aria-label="Critère de recherche">
+                            <option value="nom">Nom</option>
+                            <option value="prenom">Prénom</option>
+                            <option value="email">Email</option>
+                            <option value="contact">Contact</option>
+                            <!-- Ajouter d'autres critères si nécessaire -->
+                        </select>
+        
+                        <!-- Champ pour la valeur de recherche -->
+                        <input type="text" name="query" class="form-control me-2" placeholder="Rechercher un visiteur" aria-label="Recherche">
+                        
+                        <button type="submit" class="btn btn-secondary">
+                            <i class="bi bi-search"></i> Rechercher
+                        </button>
+                    </form>
+        
+    </div>
     <div class="table-responsive mt-3">
         <table class="table table-striped table-bordered">
             <thead class="table-dark">

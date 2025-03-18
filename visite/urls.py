@@ -9,4 +9,5 @@ urlpatterns = [
     path('<int:id>/', views.visite_detail, name='infomation'),
     path('<int:id>/modifier/', views.modifier_visite, name='modifier'),
     path('<int:id>/supprimer/', views.supprimer_visite, name='supprimer'),
+    path('recherche/', views.visite_search, name='recherche'),  # Ajout de la route de recherche
 ]

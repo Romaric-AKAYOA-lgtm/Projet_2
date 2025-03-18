@@ -10,4 +10,5 @@ urlpatterns = [
     path('<int:id>/modifier/', views.modifier_programme_visite, name='modifier'),
     path('<int:id>/supprimer/', views.supprimer_programme_visite, name='supprimer'),
     path('imprimer/', views.imprimer_tous_les_programmes, name='imprimer'),  # Ajout de l'URL d'impression
+     path('recherche/', views.programme_visite_search, name='recherche'),  # Ajout de la route de recherche
 ]

@@ -9,6 +9,25 @@
         <a href="{% url 'directeur:creer' %}" class="btn btn-primary">
             <i class="bi bi-person-plus"></i> Créer un Directeur
         </a>
+                            <!-- Formulaire de recherche -->
+                            <form action="{% url 'directeur:recherche' %}" method="get" class="d-flex">
+                                <!-- Champ pour sélectionner le critère de recherche -->
+                                <select name="criteres" class="form-select me-2" aria-label="Critère de recherche">
+                                    <option value="nom">Nom</option>
+                                    <option value="prenom">Prénom</option>
+                                    <option value="email">Email</option>
+                                    <option value="contact">Contact</option>
+                                    <!-- Ajouter d'autres critères si nécessaire -->
+                                </select>
+                
+                                <!-- Champ pour la valeur de recherche -->
+                                <input type="text" name="query" class="form-control me-2" placeholder="Rechercher un visiteur" aria-label="Recherche">
+                                
+                                <button type="submit" class="btn btn-secondary">
+                                    <i class="bi bi-search"></i> Rechercher
+                                </button>
+                            </form>
+                
     </div>
 
     <div class="table-responsive">

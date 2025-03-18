@@ -1,0 +1,3 @@
+[console_scripts]
+start-django = Gestion_visite.start_server:main
+

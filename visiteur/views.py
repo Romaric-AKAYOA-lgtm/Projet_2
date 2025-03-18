@@ -66,3 +66,55 @@ def supprimer_visiteur(request, id):
     visiteur = get_object_or_404(Visiteur, id=id)
     visiteur.delete()
     return redirect('Visiteur:Visiteur')
+
+def visiteur_search(request):
+    # Récupérer les paramètres de recherche
+    query = request.GET.get('query', '')  # Recherche globale
+    critere = request.GET.get('criteres', '')  # Critère de recherche sélectionné (nom, prénom, email, etc.)
+    
+    # Initialisation de la queryset avec tous les visiteurs
+    visiteurs = Visiteur.objects.all()
+
+    # Si un critère et un terme de recherche sont saisis, filtrer en fonction du critère
+    if critere and query:
+        if critere == 'nom':
+            visiteurs = visiteurs.filter(nom__icontains=query)
+        elif critere == 'prenom':
+            visiteurs = visiteurs.filter(prenom__icontains=query)
+        elif critere == 'email':
+            visiteurs = visiteurs.filter(email__icontains=query)
+        elif critere == 'contact':
+            visiteurs = visiteurs.filter(contact__icontains=query)
+    elif query:
+        # Si un terme de recherche est saisi sans critère, effectuer une recherche globale par nom ou prénom
+        visiteurs = visiteurs.filter(nom__icontains=query) | visiteurs.filter(prenom__icontains=query)
+
+    # Ajouter d'autres filtres si nécessaire, par exemple sexe, type_visiteur, etc.
+    sexe = request.GET.get('sexe', '')
+    type_visiteur = request.GET.get('type_visiteur', '')
+    contact = request.GET.get('contact', '')
+    email = request.GET.get('email', '')
+    
+    # Appliquer les filtres supplémentaires uniquement si les champs sont remplis
+    if sexe:
+        visiteurs = visiteurs.filter(sexe=sexe)
+    if type_visiteur:
+        visiteurs = visiteurs.filter(type_visiteur__icontains=type_visiteur)
+    if contact:
+        visiteurs = visiteurs.filter(contact__icontains=contact)
+    if email:
+        visiteurs = visiteurs.filter(email__icontains=email)
+
+    # Si aucune condition n'est remplie, on retourne un message disant qu'il n'y a pas de résultats
+    if not visiteurs:
+        visiteurs = None  # Pas de visiteurs trouvés
+
+    return render(request, 'visiteur/search.html', {
+        'visiteurs': visiteurs,
+        'query': query,
+        'criteres': critere,
+        'sexe': sexe,
+        'type_visiteur': type_visiteur,
+        'contact': contact,
+        'email': email
+    })
