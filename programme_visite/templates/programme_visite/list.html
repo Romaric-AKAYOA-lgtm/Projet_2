@@ -6,23 +6,23 @@
 
     <div class="d-flex flex-wrap justify-content-between mb-3">
         <a href="{% url 'programme_visite:creer' %}" class="btn btn-primary mb-2">Créer un Nouveau Programme</a>
-        <a href="{% url 'programme_visite:imprimer' %}" class="btn btn-success mb-2">Imprimer Programmes du Jour</a>
+        <a href="{% url 'programme_visite:imprimer' %}" class="btn btn-success mb-2 ml-2">Imprimer Programmes du Jour</a>
         <!-- Formulaire de recherche aligné à droite -->
-<form action="{% url 'programme_visite:recherche' %}" method="get" class="d-flex">
-    <select name="criteres" class="form-select me-2" aria-label="Critère de recherche" id="criteres">
-        <option value="visite">Visite</option>
-        <option value="secretaire">Secrétaire</option>
-        <option value="statut">Statut</option>
-        <option value="date_creation">Date de création</option>
-        <!-- Ajoutez d'autres critères si nécessaire -->
-            </select>
+        <form action="{% url 'programme_visite:recherche' %}" method="get" class="d-flex">
+            <select name="criteres" class="form-select me-2" aria-label="Critère de recherche" id="criteres">
+                <option value="visite">Visite</option>
+                <option value="secretaire">Secrétaire</option>
+                <option value="statut">Statut</option>
+                <option value="date_creation">Date de création</option>
+                <!-- Ajoutez d'autres critères si nécessaire -->
+                    </select>
 
-            <input type="text" name="query" class="form-control me-2" placeholder="Rechercher un programme de visite" aria-label="Recherche" value="{{ query }}">
+                    <input type="text" name="query" class="form-control me-2" placeholder="Rechercher un programme de visite" aria-label="Recherche" value="{{ query }}">
 
-            <button type="submit" class="btn btn-secondary">
-                <i class="bi bi-search"></i> Rechercher
-            </button>
-        </form>
+                    <button type="submit" class="btn btn-secondary">
+                        <i class="bi bi-search"></i> Rechercher
+                    </button>
+                </form>
     </div>
 
     <div class="table-responsive">

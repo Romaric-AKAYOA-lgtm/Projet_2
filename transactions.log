@@ -2930,3 +2930,60 @@ django.core.exceptions.FieldError: Unsupported lookup 'nom' for ForeignKey or jo
 2025-03-18 17:58:29,033 - INFO - basehttp - "GET /static/image/buildings-6956678_1920.jpg HTTP/1.1" 200 617712
 2025-03-18 17:58:29,416 - WARNING - log - Not Found: /favicon.ico
 2025-03-18 17:58:29,418 - WARNING - basehttp - "GET /favicon.ico HTTP/1.1" 404 3254
+2025-03-19 09:42:28,234 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-19 09:42:33,412 - INFO - basehttp - "GET / HTTP/1.1" 200 9970
+2025-03-19 09:42:35,875 - INFO - basehttp - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 155845
+2025-03-19 09:42:35,894 - INFO - basehttp - "GET /static/image/administration-1867877_1280.jpg HTTP/1.1" 200 407089
+2025-03-19 09:42:35,932 - INFO - basehttp - "GET /static/image/congo-2697382_1920.jpg HTTP/1.1" 200 566668
+2025-03-19 09:42:35,940 - INFO - basehttp - "GET /static/image/buildings-6956678_1920.jpg HTTP/1.1" 200 617712
+2025-03-19 09:42:36,055 - INFO - basehttp - "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 78743
+2025-03-19 09:42:37,540 - WARNING - log - Not Found: /favicon.ico
+2025-03-19 09:42:37,547 - WARNING - basehttp - "GET /favicon.ico HTTP/1.1" 404 3254
+2025-03-19 09:42:53,317 - INFO - basehttp - "GET / HTTP/1.1" 200 9970
+2025-03-19 09:42:53,936 - INFO - basehttp - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 155845
+2025-03-19 09:42:54,187 - INFO - basehttp - "GET /static/image/administration-1867877_1280.jpg HTTP/1.1" 200 407089
+2025-03-19 09:42:54,228 - INFO - basehttp - "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 78743
+2025-03-19 09:42:54,234 - INFO - basehttp - "GET /static/image/congo-2697382_1920.jpg HTTP/1.1" 200 566668
+2025-03-19 09:42:58,921 - INFO - basehttp - "GET /static/image/buildings-6956678_1920.jpg HTTP/1.1" 200 617712
+2025-03-19 09:43:00,491 - WARNING - log - Not Found: /favicon.ico
+2025-03-19 09:43:00,493 - WARNING - basehttp - "GET /favicon.ico HTTP/1.1" 404 3254
+2025-03-19 09:43:16,020 - INFO - basehttp - "POST / HTTP/1.1" 302 0
+2025-03-19 09:43:16,100 - INFO - basehttp - "GET /home HTTP/1.1" 200 14705
+2025-03-19 09:43:16,212 - INFO - basehttp - "GET /static/image/city-182223_1280.jpg HTTP/1.1" 200 376515
+2025-03-19 09:43:16,217 - INFO - basehttp - "GET /static/image/city-7352352_1280.jpg HTTP/1.1" 200 445704
+2025-03-19 09:43:16,241 - INFO - basehttp - "GET /static/image/istockphoto-2162033406-1024x1024.jpg HTTP/1.1" 200 62104
+2025-03-19 09:43:34,269 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 15234
+2025-03-19 09:43:39,548 - INFO - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 200 4158
+2025-03-19 09:48:27,872 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-19 09:48:31,633 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-19 09:48:52,787 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-19 09:48:54,672 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-19 09:49:07,499 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 15234
+2025-03-19 09:49:10,182 - INFO - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 200 4153
+2025-03-19 09:53:55,158 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-19 09:53:57,890 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-19 10:05:30,681 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-19 10:05:32,711 - INFO - basehttp - "GET / HTTP/1.1" 200 9970
+2025-03-19 10:06:04,168 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 15234
+2025-03-19 10:06:12,372 - INFO - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 200 37233
+2025-03-19 10:09:17,213 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-19 10:09:19,797 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-19 10:09:25,924 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 15234
+2025-03-19 10:09:29,030 - INFO - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 200 37248
+2025-03-19 10:14:07,902 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-19 10:14:10,624 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-19 10:14:14,160 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 15234
+2025-03-19 10:14:34,636 - INFO - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 200 37175
+2025-03-19 10:18:19,850 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-19 10:18:22,773 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-19 10:18:32,440 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 15234
+2025-03-19 10:18:34,852 - INFO - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 200 37183
+2025-03-19 10:21:30,164 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 15343
+2025-03-19 10:21:42,792 - INFO - basehttp - "GET /programme_visite/7/ HTTP/1.1" 200 9810
+2025-03-19 10:21:45,227 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 15343
+2025-03-19 10:21:50,971 - INFO - basehttp - "POST /programme_visite/3/supprimer/ HTTP/1.1" 302 0
+2025-03-19 10:21:51,059 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 14191
+2025-03-19 10:21:55,427 - INFO - basehttp - "GET /home HTTP/1.1" 200 14705
+2025-03-19 10:21:56,717 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 14688
+2025-03-19 10:21:57,996 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 14688
+2025-03-19 10:22:01,477 - INFO - basehttp - "GET /directeur/ HTTP/1.1" 200 11347
