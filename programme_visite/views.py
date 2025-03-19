@@ -167,6 +167,7 @@ def programme_visite_search(request):
         'date_debut': date_debut,
         'date_fin': date_fin,
     })
+
 import io
 from datetime import date, timedelta
 from django.http import HttpResponse
