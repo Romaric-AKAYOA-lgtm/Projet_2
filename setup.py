@@ -1,20 +1,43 @@
 from setuptools import setup, find_packages
+import os
 
-# Lire le fichier requirements.txt
-with open('requirements.txt') as f:
-    required = f.readlines()
-
-# Nettoyer les lignes (enlever les retours à la ligne)
-required = [r.strip() for r in required]
+# Lire et traiter le fichier requirements.txt si disponible
+requirements_file = "requirements.txt"
+if os.path.exists(requirements_file):
+    with open(requirements_file, encoding="utf-8") as f:
+        required = [
+            line.strip() for line in f.readlines() 
+            if line.strip() and not line.startswith("#")  # Ignore les lignes vides et les commentaires
+        ]
+else:
+    required = []
 
 setup(
-    name='Gestion_visite',  # Le nom de ton application
-    version='1.0',  # La version de ton application
-    packages=find_packages(),  # Trouve tous les packages dans ton projet
-    install_requires=required,  # Utilise les dépendances de requirements.txt
-    entry_points={
-        'console_scripts': [
-            'start-django=Gestion_visite.start_server:main',  # Commande personnalisée
+    name="Gestion_visite",  # Nom du package
+    version="1.0",  # Version du package
+    description="Application de gestion des visites",  # Brève description
+    long_description=open("README.md", encoding="utf-8").read() if os.path.exists("README.md") else "",  # Description longue si README.md existe
+    long_description_content_type="text/markdown",  # Format Markdown pour PyPI
+    author="Ton Nom",  # Auteur (à modifier)
+    author_email="ton.email@example.com",  # Email de l’auteur (optionnel)
+    license="MIT",  # Type de licence (modifiable)
+    url="https://github.com/ton-projet/Gestion_visite",  # URL du projet (à modifier)
+    packages=find_packages(),  # Recherche automatique des packages
+    install_requires=required,  # Dépendances à installer
+    python_requires=">=3.7",  # Version minimale de Python requise
+    entry_points={  # Point d'entrée de la commande CLI
+        "console_scripts": [
+            "start-django=Gestion_visite.start_server:main",  # Commande personnalisée
         ],
+    },
+    classifiers=[  # Catégories pour PyPI
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    project_urls={  # Liens supplémentaires
+        "Documentation": "https://github.com/ton-projet/Gestion_visite/wiki",
+        "Code Source": "https://github.com/ton-projet/Gestion_visite",
+        "Issues": "https://github.com/ton-projet/Gestion_visite/issues",
     },
 )
