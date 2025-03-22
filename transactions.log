@@ -3053,3 +3053,420 @@ django.core.exceptions.FieldError: Unsupported lookup 'nom' for ForeignKey or jo
 2025-03-19 10:45:19,193 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 14688
 2025-03-19 10:45:21,419 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 14191
 2025-03-19 10:45:23,278 - INFO - basehttp - "GET /secretaire/Secretaire/ HTTP/1.1" 200 17184
+2025-03-22 14:14:05,387 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-22 14:14:31,445 - INFO - basehttp - "GET / HTTP/1.1" 302 0
+2025-03-22 14:14:33,587 - ERROR - log - Internal Server Error: /activation/page/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\Activation\views.py", line 34, in activation_page
+    return render(request, "Activation/activation.html", {
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 11: 'static'. Did you forget to register or load this tag?
+2025-03-22 14:14:33,632 - ERROR - basehttp - "GET /activation/page/ HTTP/1.1" 500 177331
+2025-03-22 14:14:36,895 - WARNING - log - Not Found: /favicon.ico
+2025-03-22 14:14:36,900 - WARNING - basehttp - "GET /favicon.ico HTTP/1.1" 404 3254
+2025-03-22 14:25:19,565 - INFO - basehttp - "GET /activation/page/ HTTP/1.1" 200 9174
+2025-03-22 14:25:29,919 - INFO - basehttp - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 155845
+2025-03-22 14:25:29,987 - INFO - basehttp - "GET /static/image/congo-2697382_1920.jpg HTTP/1.1" 200 566668
+2025-03-22 14:25:30,047 - INFO - basehttp - "GET /static/image/administration-1867877_1280.jpg HTTP/1.1" 200 407089
+2025-03-22 14:25:30,059 - INFO - basehttp - "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 78743
+2025-03-22 14:25:32,107 - INFO - basehttp - "GET /static/image/buildings-6956678_1920.jpg HTTP/1.1" 200 617712
+2025-03-22 14:26:19,455 - INFO - basehttp - "GET /admin HTTP/1.1" 301 0
+2025-03-22 14:26:20,079 - INFO - basehttp - "GET /admin/ HTTP/1.1" 302 0
+2025-03-22 14:26:23,716 - INFO - basehttp - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+2025-03-22 14:26:32,980 - INFO - basehttp - "GET /static/admin/css/base.css HTTP/1.1" 200 21310
+2025-03-22 14:26:32,985 - INFO - basehttp - "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+2025-03-22 14:26:32,992 - INFO - basehttp - "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+2025-03-22 14:26:33,013 - INFO - basehttp - "GET /static/admin/css/login.css HTTP/1.1" 200 958
+2025-03-22 14:26:33,031 - INFO - basehttp - "GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+2025-03-22 14:26:50,585 - INFO - basehttp - "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+2025-03-22 14:26:50,602 - INFO - basehttp - "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+2025-03-22 14:27:18,279 - INFO - basehttp - "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4343
+2025-03-22 14:31:43,181 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-22 14:31:57,242 - INFO - basehttp - "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+2025-03-22 14:31:58,245 - INFO - basehttp - "GET /admin/ HTTP/1.1" 200 9717
+2025-03-22 14:32:21,994 - INFO - basehttp - "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+2025-03-22 14:32:23,100 - INFO - basehttp - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+2025-03-22 14:32:23,167 - INFO - basehttp - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+2025-03-22 14:32:27,363 - INFO - basehttp - "GET /admin/Activation/activation/ HTTP/1.1" 200 10307
+2025-03-22 14:32:27,745 - INFO - basehttp - "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+2025-03-22 14:32:27,789 - INFO - basehttp - "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+2025-03-22 14:32:27,922 - INFO - basehttp - "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+2025-03-22 14:32:27,941 - INFO - basehttp - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+2025-03-22 14:32:27,975 - INFO - basehttp - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+2025-03-22 14:32:28,009 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-22 14:32:28,036 - INFO - basehttp - "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+2025-03-22 14:32:28,054 - INFO - basehttp - "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+2025-03-22 14:32:28,153 - INFO - basehttp - "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+2025-03-22 14:32:28,174 - INFO - basehttp - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+2025-03-22 14:32:28,326 - INFO - basehttp - "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+2025-03-22 14:32:28,410 - INFO - basehttp - "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+2025-03-22 14:32:35,973 - INFO - basehttp - "GET /admin/Activation/activation/add/ HTTP/1.1" 200 11875
+2025-03-22 14:32:36,778 - INFO - basehttp - "GET /static/admin/css/forms.css HTTP/1.1" 200 9090
+2025-03-22 14:32:36,793 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-22 14:32:36,828 - INFO - basehttp - "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+2025-03-22 14:32:36,869 - INFO - basehttp - "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+2025-03-22 14:32:36,879 - INFO - basehttp - "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+2025-03-22 14:32:37,104 - INFO - basehttp - "GET /static/admin/css/widgets.css HTTP/1.1" 200 11921
+2025-03-22 14:32:37,183 - INFO - basehttp - "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+2025-03-22 14:32:37,852 - INFO - basehttp - "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+2025-03-22 14:32:37,877 - INFO - basehttp - "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+2025-03-22 14:32:42,794 - INFO - basehttp - "GET /static/admin/img/calendar-icons.svg HTTP/1.1" 200 1094
+2025-03-22 14:33:05,896 - INFO - basehttp - "POST /admin/Activation/activation/add/ HTTP/1.1" 302 0
+2025-03-22 14:33:06,107 - INFO - basehttp - "GET /admin/Activation/activation/ HTTP/1.1" 200 12242
+2025-03-22 14:33:06,408 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-22 14:33:06,559 - INFO - basehttp - "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+2025-03-22 14:33:18,259 - INFO - basehttp - "GET /activation/page/ HTTP/1.1" 200 9174
+2025-03-22 14:33:22,404 - INFO - basehttp - "POST /activation/page/ HTTP/1.1" 302 0
+2025-03-22 14:33:22,466 - INFO - basehttp - "GET /home HTTP/1.1" 302 0
+2025-03-22 14:33:22,538 - INFO - basehttp - "GET / HTTP/1.1" 200 9366
+2025-03-22 14:33:41,217 - INFO - basehttp - "GET /admin/secretaire/secretaire/ HTTP/1.1" 200 10307
+2025-03-22 14:33:41,868 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-22 14:33:46,490 - INFO - basehttp - "GET /admin/secretaire/secretaire/add/ HTTP/1.1" 200 15594
+2025-03-22 14:33:47,150 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-22 14:34:40,620 - INFO - basehttp - "POST /admin/secretaire/secretaire/add/ HTTP/1.1" 302 0
+2025-03-22 14:34:40,799 - INFO - basehttp - "GET /admin/secretaire/secretaire/ HTTP/1.1" 200 11715
+2025-03-22 14:34:41,072 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-22 14:34:51,368 - INFO - basehttp - "GET /admin/secretaire/secretaire/1/change/ HTTP/1.1" 200 15973
+2025-03-22 14:34:51,642 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-22 14:38:20,517 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\secretaire\models.py changed, reloading.
+2025-03-22 14:38:35,008 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-22 14:39:53,101 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\directeur\models.py changed, reloading.
+2025-03-22 14:40:03,624 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-22 14:59:22,742 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-22 14:59:28,715 - ERROR - log - Internal Server Error: /admin/secretaire/secretaire/1/change/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'secretaire_secretaire.sexe' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1767, in _changeform_view
+    obj = self.get_object(request, unquote(object_id), to_field)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 866, in get_object
+    return queryset.get(**{field.name: object_id})
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 633, in get
+    num = len(clone)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'secretaire_secretaire.sexe' in 'field list'")
+2025-03-22 14:59:28,780 - ERROR - basehttp - "GET /admin/secretaire/secretaire/1/change/ HTTP/1.1" 500 202266
+2025-03-22 15:01:26,271 - ERROR - log - Internal Server Error: /admin/secretaire/secretaire/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'secretaire_secretaire.sexe' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 2065, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'secretaire_secretaire.sexe' in 'field list'")
+2025-03-22 15:01:26,991 - ERROR - basehttp - "GET /admin/secretaire/secretaire/ HTTP/1.1" 500 184598
+2025-03-22 15:01:49,536 - INFO - basehttp - "GET /admin/secretaire/secretaire/add/ HTTP/1.1" 200 16316
+2025-03-22 15:02:09,351 - ERROR - log - Internal Server Error: /admin/secretaire/secretaire/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'secretaire_secretaire.sexe' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 2065, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'secretaire_secretaire.sexe' in 'field list'")
+2025-03-22 15:02:10,092 - ERROR - basehttp - "GET /admin/secretaire/secretaire/ HTTP/1.1" 500 184729
+2025-03-22 15:02:19,253 - INFO - basehttp - "GET /admin/secretaire/secretaire/add/ HTTP/1.1" 200 16316
+2025-03-22 15:02:22,504 - INFO - basehttp - "GET /admin/ HTTP/1.1" 200 10446
+2025-03-22 15:02:28,662 - INFO - basehttp - "GET /admin/ HTTP/1.1" 200 10446
+2025-03-22 15:02:32,517 - ERROR - log - Internal Server Error: /admin/secretaire/secretaire/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'secretaire_secretaire.sexe' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 2065, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'secretaire_secretaire.sexe' in 'field list'")
+2025-03-22 15:02:32,567 - ERROR - basehttp - "GET /admin/secretaire/secretaire/ HTTP/1.1" 500 184703
+2025-03-22 15:06:04,337 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-22 15:09:17,523 - INFO - basehttp - - Broken pipe from ('127.0.0.1', 54585)
+2025-03-22 15:09:17,545 - INFO - basehttp - "GET /admin/secretaire/secretaire/ HTTP/1.1" 200 10307
+2025-03-22 15:09:18,528 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-22 15:09:29,205 - INFO - basehttp - "GET /admin/secretaire/secretaire/add/ HTTP/1.1" 200 16316
+2025-03-22 15:09:29,573 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-22 15:15:23,550 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\directeur\models.py changed, reloading.
+2025-03-22 15:15:30,496 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-22 15:15:56,661 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\secretaire\models.py changed, reloading.
+2025-03-22 15:16:16,635 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-22 15:16:42,012 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\secretaire\forms.py changed, reloading.
+2025-03-22 15:16:48,483 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-22 15:21:11,181 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\secretaire\forms.py changed, reloading.
+2025-03-22 15:21:20,360 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-22 15:22:53,838 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\directeur\forms.py changed, reloading.
+2025-03-22 15:23:09,318 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-22 15:23:50,903 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\directeur\forms.py changed, reloading.
+2025-03-22 15:24:06,219 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-22 15:51:05,200 - INFO - autoreload - Watching for file changes with StatReloader

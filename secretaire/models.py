@@ -10,7 +10,12 @@ class Secretaire(models.Model):
     date_fin = models.DateField(null=True, blank=True)
     first_name = models.CharField(max_length=50, blank=True, null=True)
     last_name = models.CharField(max_length=50, blank=True, null=True)
-
+    sexe = models.CharField(
+        max_length=20, 
+        choices=[('Masculin', 'Masculin'), ('Féminin', 'Féminin')]
+    )
+    date_naissance = models.DateField()
+    lieu_naissance = models.CharField(max_length=60)
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
 

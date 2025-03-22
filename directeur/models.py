@@ -15,6 +15,9 @@ class Directeur(models.Model):
     adresse = models.CharField(max_length=60)
     date_debut = models.DateField()
     date_fin = models.DateField(null=True, blank=True)
+    sexe = models.CharField(max_length=1, choices=[('M', 'Masculin'), ('F', 'Féminin')], default='M')
+    date_naissance = models.DateField()
+    lieu_naissance = models.CharField(max_length=60)
 
     def __str__(self):
         return f"{self.nom} {self.prenom}"

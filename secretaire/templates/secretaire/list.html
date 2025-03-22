@@ -34,6 +34,7 @@
                     <th>ID</th>
                     <th>Nom</th>
                     <th>Prénom</th>
+                    <th>Sexe</th>
                     <th>Email</th>
                     <th>Téléphone</th>
                     <th>Date Début</th>
@@ -47,6 +48,7 @@
                     <td>{{ secretaire.id }}</td>
                     <td>{{ secretaire.last_name }}</td>
                     <td>{{ secretaire.first_name }}</td>
+                    <td>{{ secretaire.sexe}}</td>
                     <td>{{ secretaire.email }}</td>
                     <td>{{ secretaire.num_tel }}</td>
                     <td>{{ secretaire.date_debut|date:"d/m/Y"|default:"-" }}</td>
@@ -78,6 +80,22 @@
                                     <div class="mb-3">
                                         <label class="form-label">Prénom</label>
                                         <input type="text" class="form-control" name="first_name" value="{{ secretaire.first_name }}" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="date_naissance" class="form-label">Date de naissance</label>
+                                        <input type="date" class="form-control input-focus-blue" id="date_naissance" value="{{ secretaire.date_naissance|date:'Y-m-d' }}" r name="date_naissance" required>
+                                    </div>
+                
+                                    <div class="mb-3">
+                                        <label for="lieu_naissance" class="form-label">Lieu de naissance</label>
+                                        <input type="text" class="form-control input-focus-blue" id="lieu_naissance"  value="{{ secretaire.lieu_naissance }}" rname="lieu_naissance" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="sexe" class="form-label">Sexe</label>
+                                        <select class="form-select input-focus-blue" id="sexe" name="sexe" required>
+                                            <option value="Masculin" {% if visiteur.sexe == 'Masculin' %}selected{% endif %}>Masculin</option>
+                                            <option value="Féminin" {% if visiteur.sexe == 'Féminin' %}selected{% endif %}>Féminin</option>
+                                        </select>
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label">Email</label>
@@ -137,6 +155,22 @@
                     <div class="mb-3">
                         <label class="form-label">Prénom</label>
                         <input type="text" class="form-control" name="first_name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="date_naissance" class="form-label">Date de naissance</label>
+                        <input type="date" class="form-control input-focus-blue" id="date_naissance" name="date_naissance" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="lieu_naissance" class="form-label">Lieu de naissance</label>
+                        <input type="text" class="form-control input-focus-blue" id="lieu_naissance" name="lieu_naissance" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="sexe" class="form-label">Sexe</label>
+                        <select class="form-select input-focus-blue" id="sexe" name="sexe" required>
+                            <option value="Masculin" {% if visiteur.sexe == 'Masculin' %}selected{% endif %}>Masculin</option>
+                            <option value="Féminin" {% if visiteur.sexe == 'Féminin' %}selected{% endif %}>Féminin</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Email</label>

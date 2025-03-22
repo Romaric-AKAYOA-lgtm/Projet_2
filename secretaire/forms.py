@@ -3,12 +3,15 @@ from .models import Secretaire
 import re
 from django.contrib.auth.forms import AuthenticationForm
 from django.core.exceptions import ValidationError
+from datetime import date
+from django.utils.timezone import now
+
 
 # Formulaire pour la gestion des secrétaires
 class SecretaireForm(forms.ModelForm):
     class Meta:
         model = Secretaire
-        fields = ['username', 'last_name', 'first_name', 'email', 'num_tel', 'date_debut', 'date_fin']  # Ajout des champs nécessaires
+        fields = ['username', 'last_name', 'first_name', 'email','sexe' , 'num_tel','date_naissance', 'lieu_naissance', 'date_debut', 'date_fin']  # Ajout des champs nécessaires
     def clean_nom(self):
         nom = self.cleaned_data['last_name']
         
@@ -53,6 +56,17 @@ class SecretaireForm(forms.ModelForm):
             raise forms.ValidationError("La date de fin ne peut pas être antérieure à la date de début.")
         return date_fin
 
+    def clean_date_naissance(self):
+        date_naissance = self.cleaned_data.get('date_naissance')
+        if date_naissance:
+            # Calcul de l'âge minimum requis (18 ans)
+            today = date.today()
+            age = today.year - date_naissance.year - ((today.month, today.day) < (date_naissance.month, date_naissance.day))
+
+            if age < 18:
+                raise ValidationError("La secrétaire doit avoir au moins 18 ans.")
+        
+        return date_naissance
 
 class LoginForm(forms.Form):  # Remplace AuthenticationForm par forms.Form
     username = forms.CharField(

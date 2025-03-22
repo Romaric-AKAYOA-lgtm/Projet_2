@@ -37,6 +37,7 @@
                     <th>#</th>
                     <th>Nom</th>
                     <th>Prénom</th>
+                    <th>Sexe</th>
                     <th>Email</th>
                     <th>Téléphone</th>
                     <th>Adresse</th> <!-- Ajout de l'en-tête pour l'adresse -->
@@ -49,6 +50,7 @@
                     <td>{{ directeur.id }}</td>
                     <td>{{ directeur.nom }}</td>
                     <td>{{ directeur.prenom }}</td>
+                    <td>{{ directeur.sexe }}</td>
                     <td>
                         <a href="mailto:{{ directeur.email }}" class="text-decoration-none">
                             <i class="bi bi-envelope"></i> {{ directeur.email }}
@@ -74,7 +76,7 @@
                 </tr>
                 {% empty %}
                 <tr>
-                    <td colspan="7" class="text-center text-muted">Aucun directeur trouvé.</td> <!-- Ajustement du colspan -->
+                    <td colspan="8" class="text-center text-muted">Aucun directeur trouvé.</td> <!-- Ajustement du colspan -->
                 </tr>
                 {% endfor %}
             </tbody>

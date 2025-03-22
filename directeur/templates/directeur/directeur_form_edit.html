@@ -34,7 +34,22 @@
                         <label for="prenom" class="form-label">Prénom</label>
                         <input type="text" class="form-control" id="prenom" name="prenom" value="{{ form.prenom.value }}" required>
                     </div>
+                    <div class="mb-3">
+                        <label for="date_naissance" class="form-label">Date de naissance</label>
+                        <input type="date" class="form-control input-focus-blue" id="date_naissance" value="{{ form.date_naissance|date:'Y-m-d' }}" r name="date_naissance" required>
+                    </div>
 
+                    <div class="mb-3">
+                        <label for="lieu_naissance" class="form-label">Lieu de naissance</label>
+                        <input type="text" class="form-control input-focus-blue" id="lieu_naissance"  value="{{ form.lieu_naissance }}" rname="lieu_naissance" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="sexe" class="form-label">Sexe</label>
+                        <select class="form-select" id="sexe" name="sexe" required>
+                            <option value="Masculin" {% if form.sexe.value == 'Masculin' %}selected{% endif %}>Masculin</option>
+                            <option value="Féminin" {% if form.sexe.value == 'Féminin' %}selected{% endif %}>Féminin</option>
+                        </select>
+                    </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
                         <div class="input-group">

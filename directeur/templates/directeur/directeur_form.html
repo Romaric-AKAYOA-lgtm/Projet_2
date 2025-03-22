@@ -33,7 +33,15 @@
                         <label for="prenom" class="form-label">Prénom</label>
                         <input type="text" class="form-control" id="prenom" name="prenom" required>
                     </div>
+                    <div class="mb-3">
+                        <label for="date_naissance" class="form-label">Date de naissance</label>
+                        <input type="date" class="form-control input-focus-blue" id="date_naissance" name="date_naissance" required>
+                    </div>
 
+                    <div class="mb-3">
+                        <label for="lieu_naissance" class="form-label">Lieu de naissance</label>
+                        <input type="text" class="form-control input-focus-blue" id="lieu_naissance" name="lieu_naissance" required>
+                    </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
                         <div class="input-group">
@@ -57,7 +65,13 @@
                             </span>
                         </div>
                     </div>
-
+                    <div class="mb-3">
+                        <label for="sexe" class="form-label">Sexe</label>
+                        <select class="form-select" id="sexe" name="sexe" required>
+                            <option value="Masculin" {% if form.sexe.value == 'Masculin' %}selected{% endif %}>Masculin</option>
+                            <option value="Féminin" {% if form.sexe.value == 'Féminin' %}selected{% endif %}>Féminin</option>
+                        </select>
+                    </div>
                     <div class="mb-3">
                         <label for="adresse" class="form-label">Adresse</label>
                         <input type="text" class="form-control" id="adresse" name="adresse" required>
