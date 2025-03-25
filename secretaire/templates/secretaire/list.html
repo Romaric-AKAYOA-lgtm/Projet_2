@@ -49,8 +49,13 @@
                     <td>{{ secretaire.last_name }}</td>
                     <td>{{ secretaire.first_name }}</td>
                     <td>{{ secretaire.sexe}}</td>
-                    <td>{{ secretaire.email }}</td>
-                    <td>{{ secretaire.num_tel }}</td>
+                    <td>
+                        <a href="mailto:{{ directeur.email }}?subject=Votre%20sujet&body=Bonjour%20{{ directeur.first_name }},%0A%0A" class="text-decoration-none">
+                            <i class="bi bi-envelope"></i> {{ secretaire.email }}
+                        </a>
+                    <td>
+                        <a href="https://web.whatsapp.com/send?phone={{ visiteur.contact }}" target="_blank">{{ secretaire.num_tel  }}</a> <!-- Lien WhatsApp Web -->
+                    </td>
                     <td>{{ secretaire.date_debut|date:"d/m/Y"|default:"-" }}</td>
                     <td>{{ secretaire.date_fin|date:"d/m/Y"|default:"-" }}</td>
                     <td>

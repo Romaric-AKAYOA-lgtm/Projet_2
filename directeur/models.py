@@ -15,7 +15,10 @@ class Directeur(models.Model):
     adresse = models.CharField(max_length=60)
     date_debut = models.DateField()
     date_fin = models.DateField(null=True, blank=True)
-    sexe = models.CharField(max_length=1, choices=[('M', 'Masculin'), ('F', 'Féminin')], default='M')
+    sexe = models.CharField(
+        max_length=20, 
+        choices=[('Masculin', 'Masculin'), ('Féminin', 'Féminin')]
+    )
     date_naissance = models.DateField()
     lieu_naissance = models.CharField(max_length=60)
 

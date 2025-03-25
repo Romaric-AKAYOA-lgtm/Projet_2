@@ -9,28 +9,21 @@
         <a href="{% url 'Visiteur:creer' %}" class="btn btn-primary">
             <i class="bi bi-person-plus text-white"></i> Créer un visiteur
         </a>
-        
-            <!-- Formulaire de recherche -->
-            <form action="{% url 'Visiteur:recherche' %}" method="get" class="d-flex">
-                <!-- Champ pour sélectionner le critère de recherche -->
-                <select name="criteres" class="form-select me-2" aria-label="Critère de recherche">
-                    <option value="nom">Nom</option>
-                    <option value="prenom">Prénom</option>
-                    <option value="email">Email</option>
-                    <option value="contact">Contact</option>
-                    <!-- Ajouter d'autres critères si nécessaire -->
-                </select>
 
-                <!-- Champ pour la valeur de recherche -->
-                <input type="text" name="query" class="form-control me-2" placeholder="Rechercher un visiteur" aria-label="Recherche">
-                
-                <button type="submit" class="btn btn-secondary">
-                    <i class="bi bi-search"></i> Rechercher
-                </button>
-            </form>
-
+        <!-- Formulaire de recherche -->
+        <form action="{% url 'Visiteur:recherche' %}" method="get" class="d-flex">
+            <select name="criteres" class="form-select me-2" aria-label="Critère de recherche">
+                <option value="nom">Nom</option>
+                <option value="prenom">Prénom</option>
+                <option value="email">Email</option>
+                <option value="contact">Contact</option>
+            </select>
+            <input type="text" name="query" class="form-control me-2" placeholder="Rechercher un visiteur" aria-label="Recherche">
+            <button type="submit" class="btn btn-secondary">
+                <i class="bi bi-search"></i> Rechercher
+            </button>
+        </form>
     </div>
-    
 
     <div class="table-responsive">
         <table class="table table-striped table-hover text-center">
@@ -40,13 +33,13 @@
                     <th>Nom</th>
                     <th>Prénoms</th>
                     <th>Sexe</th>
-                    <th>Email</th>  <!-- Nouveau champ Email -->
+                    <th>Email</th>
                     <th>Contact</th>
                     <th>Type de visiteur</th>
                     <th>Actions</th>
                 </tr>
             </thead>
-            <tbody class="bg-white" >
+            <tbody class="bg-white">
                 {% for visiteur in visiteurs %}
                 <tr>
                     <td>{{ visiteur.id }}</td>
@@ -54,14 +47,18 @@
                     <td>{{ visiteur.prenom }}</td>
                     <td>{{ visiteur.sexe }}</td>
                     <td>
-                        <a href="mailto:{{ visiteur.email }}">{{ visiteur.email }}</a>  <!-- Lien email -->
+                        <a href="mailto:{{ visiteur.email }}?subject=Votre%20sujet&body=Bonjour%20{{ visiteur.nom }},%0A%0A" class="text-decoration-none">
+                            <i class="bi bi-envelope"></i> {{ visiteur.email }}
+                        </a>
                     </td>
                     <td>
-                        <a href="tel:{{ visiteur.contact }}">{{ visiteur.contact }}</a>  <!-- Lien téléphone -->
+                        <a href="https://web.whatsapp.com/send?phone={{ visiteur.contact }}" target="_blank">
+                            {{ visiteur.contact }}
+                        </a>
                     </td>
                     <td>{{ visiteur.type_visiteur }}</td>
-                    <td class="">
-                        <a href="{% url 'Visiteur:modifier' visiteur.id %}" class="btn btn-warning btn-sm mb-1 ">
+                    <td>
+                        <a href="{% url 'Visiteur:modifier' visiteur.id %}" class="btn btn-warning btn-sm mb-1">
                             <i class="bi bi-pencil"></i> Modifier
                         </a>
                         <button type="button" class="btn btn-danger btn-sm mb-1" data-bs-toggle="modal" data-bs-target="#deleteAdherentModal" data-id="{{ visiteur.id }}">
@@ -79,7 +76,7 @@
     </div>
 </div>
 
-<!-- Modal Supprimer Adhérent -->
+<!-- Modal Supprimer Visiteur -->
 <div class="modal fade" id="deleteAdherentModal" tabindex="-1" aria-labelledby="deleteAdherentModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -91,7 +88,7 @@
                 <p>Êtes-vous sûr de vouloir supprimer ce visiteur ? Cette action est irréversible.</p>
             </div>
             <div class="modal-footer">
-                <form action="{% url 'Visiteur:supprimer' 0 %}" method="POST" id="deleteForm">
+                <form action="" method="POST" id="deleteForm">
                     {% csrf_token %}
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
                     <button type="submit" class="btn btn-danger">Supprimer</button>
@@ -101,17 +98,17 @@
     </div>
 </div>
 
-<!-- Script pour afficher automatiquement le modal de suppression -->
+<!-- Script pour modifier l'action du formulaire de suppression dynamiquement -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         var deleteModal = document.getElementById("deleteAdherentModal");
         var deleteButtons = document.querySelectorAll('[data-bs-target="#deleteAdherentModal"]');
-        
+
         deleteButtons.forEach(function(button) {
             button.addEventListener('click', function() {
                 var visiteurId = this.getAttribute('data-id');
                 var form = document.getElementById('deleteForm');
-                form.action = '{% url "Visiteur:supprimer" 0 %}'.replace('0', visiteurId);
+                form.action = "{% url 'Visiteur:supprimer' 0 %}".replace('0', visiteurId);
             });
         });
     });

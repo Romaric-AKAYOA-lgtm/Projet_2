@@ -9,29 +9,24 @@
         <a href="{% url 'directeur:creer' %}" class="btn btn-primary">
             <i class="bi bi-person-plus"></i> Créer un Directeur
         </a>
-                            <!-- Formulaire de recherche -->
-                            <form action="{% url 'directeur:recherche' %}" method="get" class="d-flex">
-                                <!-- Champ pour sélectionner le critère de recherche -->
-                                <select name="criteres" class="form-select me-2" aria-label="Critère de recherche">
-                                    <option value="nom">Nom</option>
-                                    <option value="prenom">Prénom</option>
-                                    <option value="email">Email</option>
-                                    <option value="contact">Contact</option>
-                                    <!-- Ajouter d'autres critères si nécessaire -->
-                                </select>
-                
-                                <!-- Champ pour la valeur de recherche -->
-                                <input type="text" name="query" class="form-control me-2" placeholder="Rechercher un visiteur" aria-label="Recherche">
-                                
-                                <button type="submit" class="btn btn-secondary">
-                                    <i class="bi bi-search"></i> Rechercher
-                                </button>
-                            </form>
-                
+
+        <!-- Formulaire de recherche -->
+        <form action="{% url 'directeur:recherche' %}" method="get" class="d-flex">
+            <select name="criteres" class="form-select me-2" aria-label="Critère de recherche">
+                <option value="nom">Nom</option>
+                <option value="prenom">Prénom</option>
+                <option value="email">Email</option>
+                <option value="contact">Contact</option>
+            </select>
+            <input type="text" name="query" class="form-control me-2" placeholder="Rechercher un directeur" aria-label="Recherche">
+            <button type="submit" class="btn btn-secondary">
+                <i class="bi bi-search"></i> Rechercher
+            </button>
+        </form>
     </div>
 
     <div class="table-responsive">
-        <table class="table table-striped table-hover text-center">
+        <table class="table table-striped table-hover table-bordered text-center align-middle">
             <thead class="table-dark">
                 <tr>
                     <th>#</th>
@@ -40,11 +35,11 @@
                     <th>Sexe</th>
                     <th>Email</th>
                     <th>Téléphone</th>
-                    <th>Adresse</th> <!-- Ajout de l'en-tête pour l'adresse -->
+                    <th>Adresse</th>
                     <th>Actions</th>
                 </tr>
             </thead>
-            <tbody class="bg-white" >
+            <tbody class="bg-white">
                 {% for directeur in directeurs %}
                 <tr>
                     <td>{{ directeur.id }}</td>
@@ -52,31 +47,31 @@
                     <td>{{ directeur.prenom }}</td>
                     <td>{{ directeur.sexe }}</td>
                     <td>
-                        <a href="mailto:{{ directeur.email }}" class="text-decoration-none">
+                        <a href="mailto:{{ directeur.email }}?subject=Votre%20sujet&body=Bonjour%20{{ directeur.prenom }},%0A%0A" class="text-decoration-none">
                             <i class="bi bi-envelope"></i> {{ directeur.email }}
                         </a>
                     </td>
                     <td>
-                        <a href="tel:{{ directeur.num_tel }}" class="text-decoration-none">
-                            <i class="bi bi-telephone"></i> {{ directeur.num_tel }}
+                        <a href="https://web.whatsapp.com/send?phone={{ directeur.num_tel }}" target="_blank">
+                            <i class="bi bi-whatsapp text-success"></i> {{ directeur.num_tel }}
                         </a>
                     </td>
-                    <td>{{ directeur.adresse }}</td> <!-- Affichage de l'adresse -->
-                    <td class="">
-                        <a href="{% url 'directeur:information' directeur.id %}" class="btn btn-info btn-sm mb-1  ">
+                    <td>{{ directeur.adresse }}</td>
+                    <td>
+                        <a href="{% url 'directeur:information' directeur.id %}" class="btn btn-info btn-sm me-2">
                             <i class="bi bi-eye"></i> Détails
                         </a>
-                        <a href="{% url 'directeur:modifier' directeur.id %}" class="btn btn-warning btn-sm mb-1 ">
+                        <a href="{% url 'directeur:modifier' directeur.id %}" class="btn btn-warning btn-sm me-2">
                             <i class="bi bi-pencil"></i> Modifier
                         </a>
-                        <a href="{% url 'directeur:supprimer' directeur.id %}" class="btn btn-danger btn-sm mb-1 ">
+                        <a href="{% url 'directeur:supprimer' directeur.id %}" class="btn btn-danger btn-sm">
                             <i class="bi bi-trash"></i> Supprimer
                         </a>
                     </td>
                 </tr>
                 {% empty %}
                 <tr>
-                    <td colspan="8" class="text-center text-muted">Aucun directeur trouvé.</td> <!-- Ajustement du colspan -->
+                    <td colspan="8" class="text-center text-muted">Aucun directeur trouvé.</td>
                 </tr>
                 {% endfor %}
             </tbody>

@@ -32,6 +32,12 @@ def visiteur_list(request):
                                                            })
 
 def visiteur_create(request):
+    username = get_username_from_session(request)
+
+    # Assurez-vous que le nom d'utilisateur est disponible dans la session
+    if not username:
+        return redirect('login')  # Redirige vers la page de connexion si pas de nom d'utilisateur dans la session
+
     if request.method == "POST":
         form = VisiteurForm(request.POST)
         if form.is_valid():
@@ -39,7 +45,7 @@ def visiteur_create(request):
             return redirect('Visiteur:Visiteur')
     else:
         form = VisiteurForm()
-    return render(request, 'Visiteur/visiteur_create.html', {'form': form})
+    return render(request, 'Visiteur/visiteur_create.html', { 'username':username,'form': form})
 
 """
 def visiteur_detail(request, id):
@@ -47,6 +53,12 @@ def visiteur_detail(request, id):
     return render(request, 'Visiteur/visiteur_detail.html', {'visiteur': visiteur})
 """
 def modifier_visiteur(request, id):
+    username = get_username_from_session(request)
+
+    # Assurez-vous que le nom d'utilisateur est disponible dans la session
+    if not username:
+        return redirect('login')  # Redirige vers la page de connexion si pas de nom d'utilisateur dans la session
+
     # Récupérer le visiteur par son ID
     visiteur = get_object_or_404(Visiteur, id=id)
     
@@ -60,7 +72,7 @@ def modifier_visiteur(request, id):
         form = VisiteurForm(instance=visiteur)  # Charger l'instance du visiteur dans le formulaire
     
     # Passer à la fois le formulaire et le visiteur dans le contexte
-    return render(request, 'Visiteur/modifier_visiteur.html', {'form': form, 'visiteur': visiteur})
+    return render(request, 'Visiteur/modifier_visiteur.html', { 'username':username,'form': form, 'visiteur': visiteur})
 
 def supprimer_visiteur(request, id):
     visiteur = get_object_or_404(Visiteur, id=id)
@@ -68,6 +80,12 @@ def supprimer_visiteur(request, id):
     return redirect('Visiteur:Visiteur')
 
 def visiteur_search(request):
+    username = get_username_from_session(request)
+
+    # Assurez-vous que le nom d'utilisateur est disponible dans la session
+    if not username:
+        return redirect('login')  # Redirige vers la page de connexion si pas de nom d'utilisateur dans la session
+
     # Récupérer les paramètres de recherche
     query = request.GET.get('query', '')  # Recherche globale
     critere = request.GET.get('criteres', '')  # Critère de recherche sélectionné (nom, prénom, email, etc.)
@@ -110,6 +128,7 @@ def visiteur_search(request):
         visiteurs = None  # Pas de visiteurs trouvés
 
     return render(request, 'visiteur/search.html', {
+        'username':username,
         'visiteurs': visiteurs,
         'query': query,
         'criteres': critere,

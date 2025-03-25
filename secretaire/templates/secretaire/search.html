@@ -17,8 +17,17 @@
                             {% for secretaire in secretaires %}
                                 <li class="list-group-item">
                                     {{ secretaire.username }} - {{ secretaire.first_name }} {{ secretaire.last_name }} - {{ secretaire.email }}
+                                    
+                                    <a href="mailto:{{ secretaire.email }}?subject=Votre%20sujet&body=Bonjour%20{{ secretaire.first_name }},%0A%0A" class="text-decoration-none">
+                                        <i class="bi bi-envelope"></i> {{ secretaire.email }}
+                                    </a>
+
+                                    <a href="https://web.whatsapp.com/send?phone={{ secretaire.num_tel }}" target="_blank">
+                                        {{ secretaire.num_tel }}
+                                    </a> <!-- Lien WhatsApp Web -->
+                                    
                                     <a href="{% url 'secretaire:modifier' secretaire.id %}" class="btn btn-warning btn-sm float-end ms-2">Modifier</a>
-                                  </li>
+                                </li>
                             {% endfor %}
                         </ul>
                     {% else %}
@@ -37,12 +46,12 @@
 <!-- Script pour afficher le modal de façon automatique à la fin de la page -->
 {% if secretaires %}
     <script>
-        window.onload = function() {
+        document.addEventListener("DOMContentLoaded", function() {
             var myModal = new bootstrap.Modal(document.getElementById("modalSearchResults"), {
                 keyboard: false
             });
             myModal.show();
-        };
+        });
     </script>
 {% endif %}
 

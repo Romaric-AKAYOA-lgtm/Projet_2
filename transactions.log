@@ -3470,3 +3470,732 @@ django.db.utils.OperationalError: (1054, "Unknown column 'secretaire_secretaire.
 2025-03-22 15:23:50,903 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\directeur\forms.py changed, reloading.
 2025-03-22 15:24:06,219 - INFO - autoreload - Watching for file changes with StatReloader
 2025-03-22 15:51:05,200 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-22 15:56:13,923 - INFO - basehttp - "GET /admin/secretaire/secretaire/add/ HTTP/1.1" 200 17671
+2025-03-22 15:56:14,627 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-22 15:57:08,261 - ERROR - log - Internal Server Error: /admin/secretaire/secretaire/add/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'date_naissance' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1886, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1798, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1227, in save_model
+    obj.save()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'date_naissance' in 'field list'")
+2025-03-22 15:57:08,352 - ERROR - basehttp - "POST /admin/secretaire/secretaire/add/ HTTP/1.1" 500 222501
+2025-03-22 16:04:11,649 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-22 16:04:21,725 - INFO - basehttp - "POST /admin/secretaire/secretaire/add/ HTTP/1.1" 302 0
+2025-03-22 16:04:22,287 - INFO - basehttp - "GET /admin/login/?next=/admin/secretaire/secretaire/add/ HTTP/1.1" 200 4233
+2025-03-22 16:09:42,950 - INFO - basehttp - "POST /admin/login/?next=/admin/secretaire/secretaire/add/ HTTP/1.1" 302 0
+2025-03-22 16:09:43,489 - INFO - basehttp - "GET /admin/secretaire/secretaire/add/ HTTP/1.1" 200 17671
+2025-03-22 16:09:43,991 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-22 16:09:48,190 - INFO - basehttp - "GET / HTTP/1.1" 302 0
+2025-03-22 16:09:48,292 - INFO - basehttp - "GET /activation/page/ HTTP/1.1" 200 9174
+2025-03-22 16:10:01,069 - INFO - basehttp - "GET /admin/Activation/activation/ HTTP/1.1" 200 10307
+2025-03-22 16:10:01,388 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-22 16:10:03,661 - INFO - basehttp - "GET /admin/Activation/activation/add/ HTTP/1.1" 200 11875
+2025-03-22 16:10:04,154 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-22 16:10:15,069 - INFO - basehttp - "POST /admin/Activation/activation/add/ HTTP/1.1" 302 0
+2025-03-22 16:10:15,256 - INFO - basehttp - "GET /admin/Activation/activation/ HTTP/1.1" 200 12242
+2025-03-22 16:10:15,744 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-22 16:10:25,450 - INFO - basehttp - "GET /activation/page/ HTTP/1.1" 200 9174
+2025-03-22 16:10:33,492 - INFO - basehttp - "POST /activation/page/ HTTP/1.1" 302 0
+2025-03-22 16:10:33,562 - INFO - basehttp - "GET /home HTTP/1.1" 302 0
+2025-03-22 16:10:33,670 - INFO - basehttp - "GET / HTTP/1.1" 200 9366
+2025-03-22 16:10:44,484 - INFO - basehttp - "GET /admin/secretaire/secretaire/ HTTP/1.1" 200 10307
+2025-03-22 16:10:44,779 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-22 16:10:46,978 - INFO - basehttp - "GET /admin/secretaire/secretaire/add/ HTTP/1.1" 200 17671
+2025-03-22 16:10:47,340 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-22 16:11:25,433 - INFO - basehttp - "POST /admin/secretaire/secretaire/add/ HTTP/1.1" 302 0
+2025-03-22 16:11:25,617 - INFO - basehttp - "GET /admin/secretaire/secretaire/ HTTP/1.1" 200 11715
+2025-03-22 16:11:25,890 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-22 16:11:37,777 - INFO - basehttp - "POST / HTTP/1.1" 302 0
+2025-03-22 16:11:37,894 - INFO - basehttp - "GET /home HTTP/1.1" 200 12806
+2025-03-22 16:11:46,969 - INFO - basehttp - "GET /static/image/city-7352352_1280.jpg HTTP/1.1" 200 445704
+2025-03-22 16:11:46,970 - INFO - basehttp - "GET /static/image/city-182223_1280.jpg HTTP/1.1" 200 376515
+2025-03-22 16:11:47,034 - INFO - basehttp - "GET /static/image/istockphoto-2162033406-1024x1024.jpg HTTP/1.1" 200 62104
+2025-03-22 16:13:20,947 - INFO - basehttp - "GET /home HTTP/1.1" 200 12823
+2025-03-22 16:13:36,801 - INFO - basehttp - "GET /home HTTP/1.1" 200 12823
+2025-03-22 16:13:48,404 - INFO - basehttp - "GET /home HTTP/1.1" 200 12823
+2025-03-22 16:13:51,369 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 11097
+2025-03-22 16:13:53,758 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 9593
+2025-03-22 16:13:55,744 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 8966
+2025-03-22 16:13:57,724 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 9593
+2025-03-22 16:13:59,401 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 11097
+2025-03-22 16:14:03,313 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 9593
+2025-03-23 15:23:51,049 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-23 15:23:57,281 - INFO - basehttp - "GET / HTTP/1.1" 200 9383
+2025-03-23 15:24:02,012 - WARNING - log - Not Found: //admin
+2025-03-23 15:24:02,015 - WARNING - basehttp - "GET //admin HTTP/1.1" 404 3239
+2025-03-23 15:24:04,112 - WARNING - log - Not Found: /favicon.ico
+2025-03-23 15:24:04,116 - WARNING - basehttp - "GET /favicon.ico HTTP/1.1" 404 3254
+2025-03-23 15:24:09,882 - WARNING - log - Not Found: //admin
+2025-03-23 15:24:09,886 - WARNING - basehttp - "GET //admin HTTP/1.1" 404 3239
+2025-03-23 15:25:01,518 - INFO - basehttp - "GET / HTTP/1.1" 200 9383
+2025-03-23 15:25:08,532 - INFO - basehttp - "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 78743
+2025-03-23 15:25:08,543 - INFO - basehttp - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 155845
+2025-03-23 15:25:08,582 - INFO - basehttp - "GET /static/image/congo-2697382_1920.jpg HTTP/1.1" 200 566668
+2025-03-23 15:25:08,587 - INFO - basehttp - "GET /static/image/administration-1867877_1280.jpg HTTP/1.1" 200 407089
+2025-03-23 15:25:08,885 - INFO - basehttp - "GET /static/image/buildings-6956678_1920.jpg HTTP/1.1" 200 617712
+2025-03-23 15:25:23,470 - INFO - basehttp - "POST / HTTP/1.1" 302 0
+2025-03-23 15:25:23,525 - INFO - basehttp - "GET /admin/ HTTP/1.1" 302 0
+2025-03-23 15:25:23,770 - INFO - basehttp - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+2025-03-23 15:25:24,092 - INFO - basehttp - "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+2025-03-23 15:25:24,096 - INFO - basehttp - "GET /static/admin/css/base.css HTTP/1.1" 200 21310
+2025-03-23 15:25:24,101 - INFO - basehttp - "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+2025-03-23 15:25:24,111 - INFO - basehttp - "GET /static/admin/css/login.css HTTP/1.1" 200 958
+2025-03-23 15:25:24,127 - INFO - basehttp - "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+2025-03-23 15:25:24,132 - INFO - basehttp - "GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+2025-03-23 15:25:24,194 - INFO - basehttp - "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+2025-03-23 15:27:11,270 - INFO - basehttp - "GET /admin HTTP/1.1" 301 0
+2025-03-23 15:27:11,322 - INFO - basehttp - "GET /admin/ HTTP/1.1" 302 0
+2025-03-23 15:27:11,419 - INFO - basehttp - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+2025-03-24 23:40:53,774 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-24 23:41:11,998 - INFO - basehttp - "GET / HTTP/1.1" 200 9383
+2025-03-24 23:41:13,758 - INFO - basehttp - "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 78743
+2025-03-24 23:41:13,767 - INFO - basehttp - "GET /static/image/administration-1867877_1280.jpg HTTP/1.1" 200 407089
+2025-03-24 23:41:13,770 - INFO - basehttp - "GET /static/image/congo-2697382_1920.jpg HTTP/1.1" 200 566668
+2025-03-24 23:41:13,777 - INFO - basehttp - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 155845
+2025-03-24 23:41:13,841 - INFO - basehttp - "GET /static/image/buildings-6956678_1920.jpg HTTP/1.1" 200 617712
+2025-03-24 23:41:14,051 - WARNING - log - Not Found: /favicon.ico
+2025-03-24 23:41:14,054 - WARNING - basehttp - "GET /favicon.ico HTTP/1.1" 404 3254
+2025-03-24 23:41:50,850 - INFO - basehttp - "POST / HTTP/1.1" 302 0
+2025-03-24 23:41:50,903 - INFO - basehttp - "GET /home HTTP/1.1" 200 12823
+2025-03-24 23:41:50,957 - INFO - basehttp - "GET /static/image/city-7352352_1280.jpg HTTP/1.1" 200 445704
+2025-03-24 23:41:50,965 - INFO - basehttp - "GET /static/image/city-182223_1280.jpg HTTP/1.1" 200 376515
+2025-03-24 23:41:50,983 - INFO - basehttp - "GET /static/image/istockphoto-2162033406-1024x1024.jpg HTTP/1.1" 200 62104
+2025-03-24 23:43:33,760 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 11097
+2025-03-24 23:44:23,377 - INFO - basehttp - "GET /visiteur/creer/ HTTP/1.1" 200 10908
+2025-03-24 23:46:07,619 - INFO - basehttp - "POST /visiteur/creer/ HTTP/1.1" 302 0
+2025-03-24 23:46:07,653 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 11994
+2025-03-24 23:47:33,282 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 9593
+2025-03-24 23:47:38,302 - INFO - basehttp - "GET /visite/creer/ HTTP/1.1" 200 10992
+2025-03-24 23:49:20,688 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 9593
+2025-03-24 23:49:24,856 - INFO - basehttp - "GET /directeur/ HTTP/1.1" 200 9631
+2025-03-24 23:49:25,002 - INFO - basehttp - "GET /directeur/ HTTP/1.1" 200 9631
+2025-03-24 23:49:28,535 - INFO - basehttp - "GET /directeur/creer/ HTTP/1.1" 200 12837
+2025-03-24 23:52:13,215 - INFO - basehttp - "POST /directeur/creer/ HTTP/1.1" 200 13561
+2025-03-24 23:53:10,330 - INFO - basehttp - "POST /directeur/creer/ HTTP/1.1" 200 13561
+2025-03-24 23:53:59,486 - INFO - basehttp - "POST /directeur/creer/ HTTP/1.1" 200 13561
+2025-03-24 23:56:18,655 - INFO - basehttp - "POST /directeur/creer/ HTTP/1.1" 200 13561
+2025-03-24 23:56:20,910 - INFO - basehttp - "GET /directeur/ HTTP/1.1" 200 9631
+2025-03-24 23:56:22,257 - INFO - basehttp - "GET /directeur/creer/ HTTP/1.1" 200 12837
+2025-03-24 23:58:22,545 - INFO - basehttp - - Broken pipe from ('127.0.0.1', 49755)
+2025-03-24 23:58:22,578 - INFO - basehttp - "POST /directeur/creer/ HTTP/1.1" 200 13561
+2025-03-24 23:59:46,939 - INFO - basehttp - "POST /directeur/creer/ HTTP/1.1" 200 13561
+2025-03-25 00:00:37,103 - INFO - basehttp - "POST /directeur/creer/ HTTP/1.1" 200 13561
+2025-03-24 23:44:43,098 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-24 23:44:44,406 - INFO - basehttp - "GET / HTTP/1.1" 200 9383
+2025-03-24 23:44:46,329 - INFO - basehttp - "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 78743
+2025-03-24 23:44:46,334 - INFO - basehttp - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 155845
+2025-03-24 23:44:46,343 - INFO - basehttp - "GET /static/image/administration-1867877_1280.jpg HTTP/1.1" 200 407089
+2025-03-24 23:44:46,345 - INFO - basehttp - "GET /static/image/congo-2697382_1920.jpg HTTP/1.1" 200 566668
+2025-03-24 23:44:46,427 - INFO - basehttp - "GET /static/image/buildings-6956678_1920.jpg HTTP/1.1" 200 617712
+2025-03-24 23:44:46,616 - WARNING - log - Not Found: /favicon.ico
+2025-03-24 23:44:46,618 - WARNING - basehttp - "GET /favicon.ico HTTP/1.1" 404 3254
+2025-03-24 23:48:29,053 - INFO - basehttp - "POST / HTTP/1.1" 302 0
+2025-03-24 23:48:29,145 - INFO - basehttp - "GET /home HTTP/1.1" 200 12800
+2025-03-24 23:48:29,214 - INFO - basehttp - "GET /static/image/city-182223_1280.jpg HTTP/1.1" 200 376515
+2025-03-24 23:48:29,233 - INFO - basehttp - "GET /static/image/city-7352352_1280.jpg HTTP/1.1" 200 445704
+2025-03-24 23:48:29,246 - INFO - basehttp - "GET /static/image/istockphoto-2162033406-1024x1024.jpg HTTP/1.1" 200 62104
+2025-03-24 23:52:25,453 - INFO - basehttp - "GET /directeur/ HTTP/1.1" 200 9631
+2025-03-24 23:52:41,386 - INFO - basehttp - "GET /directeur/creer/ HTTP/1.1" 200 12837
+2025-03-24 23:53:49,827 - INFO - basehttp - "POST /directeur/creer/ HTTP/1.1" 200 13561
+2025-03-25 15:16:10,264 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\directeur\models.py changed, reloading.
+2025-03-25 15:16:13,460 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 15:17:14,629 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 15:17:15,890 - INFO - basehttp - "GET / HTTP/1.1" 200 9383
+2025-03-25 15:17:17,852 - INFO - basehttp - "GET /static/image/administration-1867877_1280.jpg HTTP/1.1" 200 407089
+2025-03-25 15:17:17,855 - INFO - basehttp - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 155845
+2025-03-25 15:17:17,864 - INFO - basehttp - "GET /static/image/congo-2697382_1920.jpg HTTP/1.1" 200 566668
+2025-03-25 15:17:17,882 - INFO - basehttp - "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 78743
+2025-03-25 15:17:17,959 - INFO - basehttp - "GET /static/image/buildings-6956678_1920.jpg HTTP/1.1" 200 617712
+2025-03-25 15:17:25,472 - INFO - basehttp - "POST /directeur/creer/ HTTP/1.1" 302 0
+2025-03-25 15:17:25,513 - INFO - basehttp - "GET /directeur/ HTTP/1.1" 200 10829
+2025-03-25 15:18:01,466 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 8966
+2025-03-25 15:18:12,168 - INFO - basehttp - "GET /programme_visite/creer/ HTTP/1.1" 200 11963
+2025-03-25 15:18:21,100 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 8966
+2025-03-25 15:18:23,439 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 9593
+2025-03-25 15:18:26,456 - INFO - basehttp - "GET /visite/creer/ HTTP/1.1" 200 11103
+2025-03-25 15:19:09,563 - ERROR - log - Internal Server Error: /visite/creer/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visite\views.py", line 51, in visite_create
+    visite = form.save(commit=False)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visite\forms.py", line 79, in save
+    conflit = ProgrammeVisite.objects.filter(date_creation=visite.date_create,  # Utilisation de `date_create`
+AttributeError: 'Visite' object has no attribute 'date_create'
+2025-03-25 15:19:09,567 - ERROR - basehttp - "POST /visite/creer/ HTTP/1.1" 500 72875
+2025-03-25 15:21:58,186 - INFO - basehttp - "GET /visite/creer/ HTTP/1.1" 302 0
+2025-03-25 15:21:58,220 - INFO - basehttp - "GET / HTTP/1.1" 200 9383
+2025-03-25 15:22:01,035 - WARNING - log - Not Found: /favicon.ico
+2025-03-25 15:22:01,036 - WARNING - basehttp - "GET /favicon.ico HTTP/1.1" 404 3254
+2025-03-25 15:23:06,284 - INFO - basehttp - "POST / HTTP/1.1" 302 0
+2025-03-25 15:23:06,320 - INFO - basehttp - "GET /home HTTP/1.1" 200 12776
+2025-03-25 15:23:11,893 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 9593
+2025-03-25 15:23:12,387 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 9593
+2025-03-25 15:23:14,065 - INFO - basehttp - "GET /visite/creer/ HTTP/1.1" 200 11103
+2025-03-25 15:23:51,082 - ERROR - log - Internal Server Error: /visite/creer/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visite\views.py", line 51, in visite_create
+    visite = form.save(commit=False)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visite\forms.py", line 79, in save
+    conflit = ProgrammeVisite.objects.filter(date_creation=visite.date_create,  # Utilisation de `date_create`
+AttributeError: 'Visite' object has no attribute 'date_create'
+2025-03-25 15:23:51,086 - ERROR - basehttp - "POST /visite/creer/ HTTP/1.1" 500 72876
+2025-03-25 15:31:06,241 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visite\forms.py changed, reloading.
+2025-03-25 15:31:08,416 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 15:34:37,246 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visite\forms.py changed, reloading.
+2025-03-25 15:34:39,656 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 15:36:03,865 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visite\forms.py changed, reloading.
+2025-03-25 15:36:05,454 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 15:36:15,356 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visite\forms.py changed, reloading.
+2025-03-25 15:36:16,952 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 15:37:04,819 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visite\forms.py changed, reloading.
+2025-03-25 15:37:08,167 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 15:37:21,171 - INFO - basehttp - "POST /visite/creer/ HTTP/1.1" 302 0
+2025-03-25 15:37:21,257 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 10160
+2025-03-25 15:37:36,311 - INFO - basehttp - "GET /visite/1/modifier/ HTTP/1.1" 200 11338
+2025-03-25 15:37:40,656 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 8966
+2025-03-25 15:37:42,284 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 10160
+2025-03-25 15:37:43,977 - INFO - basehttp - "GET /visite/creer/ HTTP/1.1" 200 11103
+2025-03-25 15:41:18,911 - INFO - basehttp - "GET /visite/creer/ HTTP/1.1" 200 11191
+2025-03-25 15:46:21,658 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 10160
+2025-03-25 15:46:26,723 - INFO - basehttp - "GET /visite/1/modifier/ HTTP/1.1" 200 11231
+2025-03-25 15:46:35,371 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 10160
+2025-03-25 15:46:47,078 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 8966
+2025-03-25 15:46:48,832 - INFO - basehttp - "GET /programme_visite/creer/ HTTP/1.1" 200 11963
+2025-03-25 15:48:02,971 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 8966
+2025-03-25 15:48:07,663 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 10160
+2025-03-25 15:48:40,505 - INFO - basehttp - "GET /visite/creer/ HTTP/1.1" 200 11191
+2025-03-25 15:49:24,973 - INFO - basehttp - "POST /visite/creer/ HTTP/1.1" 302 0
+2025-03-25 15:49:25,014 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 10727
+2025-03-25 15:49:27,345 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 8966
+2025-03-25 15:49:30,223 - INFO - basehttp - "GET /programme_visite/creer/ HTTP/1.1" 200 12463
+2025-03-25 15:49:37,612 - INFO - basehttp - "POST /programme_visite/creer/ HTTP/1.1" 302 0
+2025-03-25 15:49:37,644 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 10128
+2025-03-25 15:49:39,846 - INFO - basehttp - "GET /programme_visite/1/modifier/ HTTP/1.1" 200 10839
+2025-03-25 15:49:45,698 - INFO - basehttp - "POST /programme_visite/1/modifier/ HTTP/1.1" 302 0
+2025-03-25 15:49:45,730 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 10128
+2025-03-25 15:49:49,957 - INFO - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 200 36795
+2025-03-25 15:49:54,330 - INFO - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 200 36795
+2025-03-25 15:53:18,312 - INFO - basehttp - "GET /programme_visite/creer/ HTTP/1.1" 200 11963
+2025-03-25 15:53:24,163 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 10128
+2025-03-25 15:53:29,115 - INFO - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 200 36795
+2025-03-25 15:55:10,325 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 15:55:12,184 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 16:03:38,879 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 16:03:51,745 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 16:08:27,616 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 16:08:33,437 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 16:08:54,452 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 16:08:58,273 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 16:09:08,074 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 10128
+2025-03-25 16:09:10,862 - INFO - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 200 36795
+2025-03-25 16:11:10,574 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 10128
+2025-03-25 16:11:11,775 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 10727
+2025-03-25 16:11:13,572 - INFO - basehttp - "GET /visite/creer/ HTTP/1.1" 200 11191
+2025-03-25 16:11:22,994 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 10727
+2025-03-25 16:15:02,240 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 16:15:04,790 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 16:15:16,933 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 10727
+2025-03-25 16:15:21,889 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 10128
+2025-03-25 16:15:27,036 - ERROR - log - Internal Server Error: /programme_visite/imprimer/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 196, in imprimer_tous_les_programmes
+    date_debut_semaine = (date_aujourdhui - timedelta(days=6)).replace(hour=0, minute=0, second=0, microsecond=0)
+TypeError: replace() takes at most 3 keyword arguments (4 given)
+2025-03-25 16:15:27,051 - ERROR - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 500 64946
+2025-03-25 16:16:56,027 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 16:16:58,683 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 16:19:33,796 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 16:19:35,980 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 16:19:42,268 - INFO - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 200 37058
+2025-03-25 16:27:04,688 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 16:27:07,382 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 16:28:14,786 - ERROR - log - Internal Server Error: /programme_visite/imprimer/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 208, in imprimer_tous_les_programmes
+    return generer_word(request, programmes_jour, programmes_semaine, programmes_mois, "PROGRAMMES DE VISITE", secretaire_recente)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 288, in generer_word
+    ajouter_section("Programmes du Jour", programmes_jour)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 265, in ajouter_section
+    cell._element.get_or_add_tcPr().shd.val = 'clear'  # Enlever tout précédent fond
+AttributeError: 'CT_TcPr' object has no attribute 'shd'
+2025-03-25 16:28:14,792 - ERROR - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 500 78775
+2025-03-25 16:31:03,521 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 16:31:06,116 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 16:31:13,727 - ERROR - log - Internal Server Error: /programme_visite/imprimer/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 208, in imprimer_tous_les_programmes
+    return generer_word(request, programmes_jour, programmes_semaine, programmes_mois, "PROGRAMMES DE VISITE", secretaire_recente)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 288, in generer_word
+    ajouter_section("Programmes du Jour", programmes_jour)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 266, in ajouter_section
+    cell._element.get_or_add_tcPr().shd.fill = "87CEEB"  # Code couleur Sky Blue
+AttributeError: 'CT_TcPr' object has no attribute 'shd'
+2025-03-25 16:31:13,731 - ERROR - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 500 78720
+2025-03-25 16:31:15,198 - ERROR - log - Internal Server Error: /programme_visite/imprimer/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 208, in imprimer_tous_les_programmes
+    return generer_word(request, programmes_jour, programmes_semaine, programmes_mois, "PROGRAMMES DE VISITE", secretaire_recente)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 288, in generer_word
+    ajouter_section("Programmes du Jour", programmes_jour)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 266, in ajouter_section
+    cell._element.get_or_add_tcPr().shd.fill = "87CEEB"  # Code couleur Sky Blue
+AttributeError: 'CT_TcPr' object has no attribute 'shd'
+2025-03-25 16:31:15,202 - ERROR - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 500 78720
+2025-03-25 16:31:16,288 - ERROR - log - Internal Server Error: /programme_visite/imprimer/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 208, in imprimer_tous_les_programmes
+    return generer_word(request, programmes_jour, programmes_semaine, programmes_mois, "PROGRAMMES DE VISITE", secretaire_recente)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 288, in generer_word
+    ajouter_section("Programmes du Jour", programmes_jour)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 266, in ajouter_section
+    cell._element.get_or_add_tcPr().shd.fill = "87CEEB"  # Code couleur Sky Blue
+AttributeError: 'CT_TcPr' object has no attribute 'shd'
+2025-03-25 16:31:16,291 - ERROR - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 500 78720
+2025-03-25 16:33:14,934 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 16:33:17,159 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 16:35:19,505 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 16:35:21,246 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 16:35:33,330 - ERROR - log - Internal Server Error: /programme_visite/imprimer/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 208, in imprimer_tous_les_programmes
+    return generer_word(request, programmes_jour, programmes_semaine, programmes_mois, "PROGRAMMES DE VISITE", secretaire_recente)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 290, in generer_word
+    ajouter_section("Programmes du Jour", programmes_jour)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 268, in ajouter_section
+    cell._element.get_or_add_tcPr().shd.fill = "87CEEB"  # Code couleur Sky Blue
+AttributeError: 'CT_TcPr' object has no attribute 'shd'
+2025-03-25 16:35:33,341 - ERROR - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 500 78647
+2025-03-25 16:39:07,867 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 16:39:11,284 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 16:39:52,479 - ERROR - log - Internal Server Error: /programme_visite/imprimer/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 208, in imprimer_tous_les_programmes
+    return generer_word(request, programmes_jour, programmes_semaine, programmes_mois, "PROGRAMMES DE VISITE", secretaire_recente)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 291, in generer_word
+    ajouter_section("Programmes du Jour", programmes_jour)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 269, in ajouter_section
+    cell._element.get_or_add_tcPr().shd.fill = "87CEEB"  # Code couleur Sky Blue
+AttributeError: 'CT_TcPr' object has no attribute 'shd'
+2025-03-25 16:39:52,483 - ERROR - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 500 78610
+2025-03-25 16:39:53,690 - ERROR - log - Internal Server Error: /programme_visite/imprimer/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 208, in imprimer_tous_les_programmes
+    return generer_word(request, programmes_jour, programmes_semaine, programmes_mois, "PROGRAMMES DE VISITE", secretaire_recente)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 291, in generer_word
+    ajouter_section("Programmes du Jour", programmes_jour)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 269, in ajouter_section
+    cell._element.get_or_add_tcPr().shd.fill = "87CEEB"  # Code couleur Sky Blue
+AttributeError: 'CT_TcPr' object has no attribute 'shd'
+2025-03-25 16:39:53,693 - ERROR - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 500 78610
+2025-03-25 16:41:51,114 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 16:41:53,950 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 16:42:45,182 - ERROR - log - Internal Server Error: /programme_visite/imprimer/
+Traceback (most recent call last):
+  File "src\\lxml\\_elementpath.py", line 84, in lxml._elementpath.xpath_tokenizer
+KeyError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 208, in imprimer_tous_les_programmes
+    return generer_word(request, programmes_jour, programmes_semaine, programmes_mois, "PROGRAMMES DE VISITE", secretaire_recente)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 289, in generer_word
+    ajouter_section("Programmes du Jour", programmes_jour)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 267, in ajouter_section
+    cell._element.get_or_add_tcPr().find('w:shd').set('w:fill', '87CEEB')  # Code couleur Sky Blue
+  File "src\\lxml\\etree.pyx", line 1574, in lxml.etree._Element.find
+  File "src\\lxml\\_elementpath.py", line 319, in lxml._elementpath.find
+  File "src\\lxml\\_elementpath.py", line 308, in lxml._elementpath.iterfind
+  File "src\\lxml\\_elementpath.py", line 285, in lxml._elementpath._build_path_iterator
+  File "src\\lxml\\_elementpath.py", line 87, in xpath_tokenizer
+  File "<string>", line None
+SyntaxError: prefix 'w' not found in prefix map
+2025-03-25 16:42:45,187 - ERROR - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 500 185122
+2025-03-25 16:43:38,382 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 16:43:40,362 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 16:44:08,798 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 16:44:10,850 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 16:44:18,161 - ERROR - log - Internal Server Error: /programme_visite/imprimer/
+Traceback (most recent call last):
+  File "src\\lxml\\_elementpath.py", line 84, in lxml._elementpath.xpath_tokenizer
+KeyError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 208, in imprimer_tous_les_programmes
+    return generer_word(request, programmes_jour, programmes_semaine, programmes_mois, "PROGRAMMES DE VISITE", secretaire_recente)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 290, in generer_word
+    ajouter_section("Programmes du Jour", programmes_jour)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 268, in ajouter_section
+    cell._element.get_or_add_tcPr().find('w:shd').set('w:fill', '87CEEB')  # Code couleur Sky Blue
+  File "src\\lxml\\etree.pyx", line 1574, in lxml.etree._Element.find
+  File "src\\lxml\\_elementpath.py", line 319, in lxml._elementpath.find
+  File "src\\lxml\\_elementpath.py", line 308, in lxml._elementpath.iterfind
+  File "src\\lxml\\_elementpath.py", line 285, in lxml._elementpath._build_path_iterator
+  File "src\\lxml\\_elementpath.py", line 87, in xpath_tokenizer
+  File "<string>", line None
+SyntaxError: prefix 'w' not found in prefix map
+2025-03-25 16:44:18,166 - ERROR - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 500 185089
+2025-03-25 16:50:52,662 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 16:50:54,907 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 16:51:01,635 - ERROR - log - Internal Server Error: /programme_visite/imprimer/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 208, in imprimer_tous_les_programmes
+    return generer_word(request, programmes_jour, programmes_semaine, programmes_mois, "PROGRAMMES DE VISITE", secretaire_recente)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 289, in generer_word
+    ajouter_section("Programmes du Jour", programmes_jour)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 266, in ajouter_section
+    cell._element.get_or_add_tcPr().append(OxmlElement(qn('w:shd')))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\docx\oxml\parser.py", line 59, in OxmlElement
+    nsptag = NamespacePrefixedTag(nsptag_str)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\docx\oxml\ns.py", line 37, in __init__
+    self._ns_uri = nsmap[self._pfx]
+KeyError: '{http'
+2025-03-25 16:51:01,640 - ERROR - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 500 86156
+2025-03-25 16:51:26,524 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 10128
+2025-03-25 16:51:28,056 - ERROR - log - Internal Server Error: /programme_visite/imprimer/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 208, in imprimer_tous_les_programmes
+    return generer_word(request, programmes_jour, programmes_semaine, programmes_mois, "PROGRAMMES DE VISITE", secretaire_recente)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 289, in generer_word
+    ajouter_section("Programmes du Jour", programmes_jour)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 266, in ajouter_section
+    cell._element.get_or_add_tcPr().append(OxmlElement(qn('w:shd')))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\docx\oxml\parser.py", line 59, in OxmlElement
+    nsptag = NamespacePrefixedTag(nsptag_str)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\docx\oxml\ns.py", line 37, in __init__
+    self._ns_uri = nsmap[self._pfx]
+KeyError: '{http'
+2025-03-25 16:51:28,059 - ERROR - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 500 86019
+2025-03-25 16:53:36,833 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 16:53:41,269 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 16:53:43,237 - ERROR - log - Internal Server Error: /programme_visite/imprimer/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 208, in imprimer_tous_les_programmes
+    return generer_word(request, programmes_jour, programmes_semaine, programmes_mois, "PROGRAMMES DE VISITE", secretaire_recente)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 289, in generer_word
+    ajouter_section("Programmes du Jour", programmes_jour)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 267, in ajouter_section
+    cell._element.get_or_add_tcPr().find(qn('w:shd')).set('w:fill', '87CEEB')  # Code couleur Sky Blue
+  File "src\\lxml\\etree.pyx", line 851, in lxml.etree._Element.set
+  File "src\\lxml\\apihelpers.pxi", line 587, in lxml.etree._setAttributeValue
+  File "src\\lxml\\apihelpers.pxi", line 1741, in lxml.etree._attributeValidOrRaise
+ValueError: Invalid attribute name 'w:fill'
+2025-03-25 16:53:43,247 - ERROR - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 500 222800
+2025-03-25 16:53:45,855 - ERROR - log - Internal Server Error: /programme_visite/imprimer/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 208, in imprimer_tous_les_programmes
+    return generer_word(request, programmes_jour, programmes_semaine, programmes_mois, "PROGRAMMES DE VISITE", secretaire_recente)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 289, in generer_word
+    ajouter_section("Programmes du Jour", programmes_jour)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 267, in ajouter_section
+    cell._element.get_or_add_tcPr().find(qn('w:shd')).set('w:fill', '87CEEB')  # Code couleur Sky Blue
+  File "src\\lxml\\etree.pyx", line 851, in lxml.etree._Element.set
+  File "src\\lxml\\apihelpers.pxi", line 587, in lxml.etree._setAttributeValue
+  File "src\\lxml\\apihelpers.pxi", line 1741, in lxml.etree._attributeValidOrRaise
+ValueError: Invalid attribute name 'w:fill'
+2025-03-25 16:53:45,860 - ERROR - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 500 222800
+2025-03-25 16:54:54,217 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 16:54:56,336 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 16:55:08,702 - INFO - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 200 37058
+2025-03-25 16:56:26,967 - INFO - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 200 37058
+2025-03-25 16:58:47,043 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 16:58:48,999 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 17:01:12,488 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 17:01:14,137 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 17:01:55,330 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 17:01:56,825 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 17:02:16,342 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 10128
+2025-03-25 17:02:18,691 - ERROR - log - Internal Server Error: /programme_visite/imprimer/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 209, in imprimer_tous_les_programmes
+    return generer_word(request, programmes_jour, programmes_semaine, programmes_mois, "PROGRAMMES DE VISITE", secretaire_recente)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 289, in generer_word
+    ajouter_section("Programmes du Jour", programmes_jour)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 267, in ajouter_section
+    table.style = 'Times New Roman'  # Ajout du cadrage des lignes
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\docx\table.py", line 137, in style
+    style_id = self.part.get_style_id(style_or_name, WD_STYLE_TYPE.TABLE)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\docx\parts\document.py", line 80, in get_style_id
+    return self.styles.get_style_id(style_or_name, style_type)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\docx\styles\styles.py", line 101, in get_style_id
+    return self._get_style_id_from_name(style_or_name, style_type)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\docx\styles\styles.py", line 130, in _get_style_id_from_name
+    return self._get_style_id_from_style(self[style_name], style_type)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\docx\styles\styles.py", line 50, in __getitem__
+    raise KeyError("no style with name '%s'" % key)
+KeyError: "no style with name 'Times New Roman'"
+2025-03-25 17:02:18,695 - ERROR - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 500 98186
+2025-03-25 17:03:50,043 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 17:03:52,487 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 17:03:59,079 - ERROR - log - Internal Server Error: /programme_visite/imprimer/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 209, in imprimer_tous_les_programmes
+    return generer_word(request, programmes_jour, programmes_semaine, programmes_mois, "PROGRAMMES DE VISITE", secretaire_recente)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 289, in generer_word
+    ajouter_section("Programmes du Jour", programmes_jour)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 285, in ajouter_section
+    row_cells[4].text = programme.date_creation
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\docx\table.py", line 284, in text
+    r.text = text
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\docx\oxml\text\run.py", line 129, in text
+    _RunContentAppender.append_to_run_from_text(self, text)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\docx\oxml\text\run.py", line 248, in append_to_run_from_text
+    appender.add_text(text)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\docx\oxml\text\run.py", line 252, in add_text
+    for char in text:
+TypeError: 'datetime.datetime' object is not iterable
+2025-03-25 17:03:59,084 - ERROR - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 500 96060
+2025-03-25 17:05:58,436 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 17:06:00,513 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 17:09:24,029 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 17:09:26,568 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 17:09:38,911 - INFO - basehttp - "GET /programme_visite/imprimer/ HTTP/1.1" 200 37081
+2025-03-25 17:11:23,604 - INFO - basehttp - "GET /home HTTP/1.1" 200 12930
+2025-03-25 17:12:07,284 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 11994
+2025-03-25 17:12:08,608 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 10727
+2025-03-25 17:12:10,665 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 10128
+2025-03-25 17:12:12,787 - INFO - basehttp - "GET /secretaire/Secretaire/ HTTP/1.1" 200 19014
+2025-03-25 17:12:14,224 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 10128
+2025-03-25 17:12:20,505 - INFO - basehttp - "GET /programme_visite/recherche/?criteres=visite&query=AKAYOA HTTP/1.1" 200 8095
+2025-03-25 17:12:22,698 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 10128
+2025-03-25 17:12:42,271 - INFO - basehttp - "GET /programme_visite/recherche/?criteres=visite&query=MATONDO HTTP/1.1" 200 8947
+2025-03-25 17:12:52,422 - INFO - basehttp - "GET /programme_visite/1/modifier/ HTTP/1.1" 200 10839
+2025-03-25 17:13:05,924 - INFO - basehttp - "POST /programme_visite/1/modifier/ HTTP/1.1" 200 11251
+2025-03-25 17:13:21,319 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 10128
+2025-03-25 17:13:24,495 - INFO - basehttp - "GET /programme_visite/creer/ HTTP/1.1" 200 11963
+2025-03-25 17:15:52,994 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 10128
+2025-03-25 17:15:55,305 - INFO - basehttp - "GET /programme_visite/1/modifier/ HTTP/1.1" 200 11064
+2025-03-25 17:16:14,833 - INFO - basehttp - "POST /programme_visite/1/modifier/ HTTP/1.1" 200 11476
+2025-03-25 17:18:25,280 - INFO - basehttp - "POST /programme_visite/1/modifier/ HTTP/1.1" 200 11579
+2025-03-25 17:21:27,756 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 17:21:30,135 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 17:22:13,766 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 17:22:16,697 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 17:22:21,517 - INFO - basehttp - "POST /programme_visite/1/modifier/ HTTP/1.1" 200 11579
+2025-03-25 17:24:20,967 - ERROR - log - Internal Server Error: /programme_visite/1/modifier/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py", line 106, in modifier_programme_visite
+    return render(request, 'programme_visite/ajouter_programme_visite.html', {
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 33: 'endif', expected 'endblock'. Did you forget to register or load this tag?
+2025-03-25 17:24:20,977 - ERROR - basehttp - "POST /programme_visite/1/modifier/ HTTP/1.1" 500 205888
+2025-03-25 17:25:39,382 - INFO - basehttp - "POST /programme_visite/1/modifier/ HTTP/1.1" 200 11600
+2025-03-25 17:25:44,429 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 10128
+2025-03-25 17:26:12,324 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 10128
+2025-03-25 17:26:13,850 - INFO - basehttp - "GET /programme_visite/creer/ HTTP/1.1" 200 11963
+2025-03-25 17:27:55,882 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\programme_visite\views.py changed, reloading.
+2025-03-25 17:27:58,186 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 17:28:05,885 - INFO - basehttp - "GET /programme_visite/creer/ HTTP/1.1" 200 11968
+2025-03-25 17:28:08,989 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 10128
+2025-03-25 17:28:10,918 - INFO - basehttp - "GET /programme_visite/1/ HTTP/1.1" 200 9245
+2025-03-25 17:28:18,560 - INFO - basehttp - "GET /programme_visite/ HTTP/1.1" 200 10128
+2025-03-25 17:28:21,617 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 10727
+2025-03-25 17:28:26,012 - INFO - basehttp - "GET /visite/creer/ HTTP/1.1" 200 11191
+2025-03-25 17:28:31,867 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 10727
+2025-03-25 17:28:33,226 - INFO - basehttp - "GET /visite/1/modifier/ HTTP/1.1" 200 11231
+2025-03-25 17:28:38,759 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 10727
+2025-03-25 17:28:40,584 - INFO - basehttp - "GET /visite/ HTTP/1.1" 200 10727
+2025-03-25 17:28:41,513 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 11994
+2025-03-25 17:30:27,657 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 12012
+2025-03-25 17:32:02,758 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 12037
+2025-03-25 17:33:47,202 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 12130
+2025-03-25 17:34:22,069 - INFO - basehttp - "GET /visiteur/1/modifier/ HTTP/1.1" 200 10675
+2025-03-25 17:34:52,074 - INFO - basehttp - "POST /visiteur/1/modifier/ HTTP/1.1" 302 0
+2025-03-25 17:34:52,096 - INFO - basehttp - "GET /visiteur/ HTTP/1.1" 200 12130
+2025-03-25 17:35:55,227 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visiteur\views.py changed, reloading.
+2025-03-25 17:35:57,451 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 17:36:13,690 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visiteur\views.py changed, reloading.
+2025-03-25 17:36:15,575 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 17:36:53,980 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visiteur\views.py changed, reloading.
+2025-03-25 17:36:56,063 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-25 17:37:23,097 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\visiteur\views.py changed, reloading.
+2025-03-25 17:37:25,405 - INFO - autoreload - Watching for file changes with StatReloader

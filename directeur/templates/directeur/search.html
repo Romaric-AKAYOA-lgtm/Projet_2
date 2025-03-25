@@ -14,7 +14,16 @@
                         <ul class="list-group">
                             {% for directeur in directeurs %}
                                 <li class="list-group-item">
-                                    {{ directeur.nom }} {{ directeur.prenom }} - {{ directeur.email }}
+                                    {{ directeur.nom }} {{ directeur.prenom }}    
+                                    
+                                    <a href="mailto:{{ directeur.email }}?subject=Votre%20sujet&body=Bonjour%20{{ directeur.nom }},%0A%0A" class="text-decoration-none">
+                                        <i class="bi bi-envelope"></i> {{ directeur.email }}
+                                    </a>
+
+                                    <a href="https://web.whatsapp.com/send?phone={{ directeur.num_tel }}" target="_blank">
+                                        {{ directeur.num_tel }}
+                                    </a> <!-- Lien WhatsApp Web -->
+                                    
                                     <a href="{% url 'directeur:modifier' directeur.id %}" class="btn btn-warning btn-sm float-end ms-2">Modifier</a>
                                     <a href="{% url 'directeur:supprimer' directeur.id %}" class="btn btn-danger btn-sm float-end ms-2">Supprimer</a>
                                 </li>
@@ -35,12 +44,13 @@
 <!-- Script pour afficher le modal de façon automatique à la fin de la page -->
 {% if directeurs %}
     <script>
-        window.onload = function() {
+        document.addEventListener("DOMContentLoaded", function() {
             var myModal = new bootstrap.Modal(document.getElementById("modalSearchResults"), {
-                keyboard: false
+                backdrop: 'static',  // Empêche la fermeture du modal en cliquant à l'extérieur
+                keyboard: false      // Empêche la fermeture avec la touche 'Esc'
             });
             myModal.show();
-        };
+        });
     </script>
 {% endif %}
 

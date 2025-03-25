@@ -5,12 +5,11 @@
     <h1 class="text-center">Modifier une Visite</h1>
 
     <!-- Modale pour le formulaire de modification de visite -->
-    <div class="modal fade" id="modifierVisiteModal" tabindex="-1" aria-labelledby="modifierVisiteModalLabel" aria-hidden="true" style="display: block;" aria-modal="true">
+    <div class="modal fade" id="modifierVisiteModal" tabindex="-1" aria-labelledby="modifierVisiteModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header bg-warning text-white">
                     <h5 class="modal-title" id="modifierVisiteModalLabel">Modifier la Visite</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form action="{% url 'visite:modifier' visite.id %}" method="POST">
@@ -28,37 +27,25 @@
                                 <option value="">-- Sélectionner un visiteur --</option>
                                 {% for visiteur in visiteurs %}
                                     <option value="{{ visiteur.id }}" {% if visiteur.id == visite.visiteur.id %}selected{% endif %}>
-                                        {{ visiteur.nom }}  {{ visiteur.prenom }}
+                                        {{ visiteur.nom }} {{ visiteur.prenom }}
                                     </option>
                                 {% endfor %}
                             </select>
-                            {% if form.visiteur.errors %}
-                                <div class="text-danger">{{ form.visiteur.errors|striptags }}</div>
-                            {% endif %}
                         </div>
 
                         <div class="mb-3">
                             <label for="date_visite" class="form-label">Date de Visite</label>
                             <input type="date" class="form-control" name="date_visite" value="{{ visite.date_visite|date:'Y-m-d' }}" required>
-                            {% if form.date_visite.errors %}
-                                <div class="text-danger">{{ form.date_visite.errors|striptags }}</div>
-                            {% endif %}
                         </div>
 
                         <div class="mb-3">
                             <label for="heure_visite" class="form-label">Heure de Visite</label>
                             <input type="time" class="form-control" name="heure_visite" value="{{ visite.heure_visite|time:'H:i' }}" required>
-                            {% if form.heure_visite.errors %}
-                                <div class="text-danger">{{ form.heure_visite.errors|striptags }}</div>
-                            {% endif %}
                         </div>
 
                         <div class="mb-3">
                             <label for="objet" class="form-label">Description</label>
                             <textarea class="form-control" name="objet" required>{{ visite.objet }}</textarea>
-                            {% if form.objet.errors %}
-                                <div class="text-danger">{{ form.objet.errors|striptags }}</div>
-                            {% endif %}
                         </div>
 
                         <div class="mb-3">
@@ -67,13 +54,10 @@
                                 <option value="">-- Sélectionner un directeur --</option>
                                 {% for directeur in directeurs %}
                                     <option value="{{ directeur.id }}" {% if directeur.id == visite.directeur.id %}selected{% endif %}>
-                                        {{ directeur.nom }}  {{ directeur.prenom }}
+                                        {{ directeur.nom }} {{ directeur.prenom }}
                                     </option>
                                 {% endfor %}
                             </select>
-                            {% if form.directeur.errors %}
-                                <div class="text-danger">{{ form.directeur.errors|striptags }}</div>
-                            {% endif %}
                         </div>
 
                         <div class="mb-3">
@@ -82,12 +66,9 @@
                                 <option value="confirmé" {% if visite.statut == "confirmé" %}selected{% endif %}>Confirmé</option>
                                 <option value="annulé" {% if visite.statut == "annulé" %}selected{% endif %}>Annulé</option>
                             </select>
-                            {% if form.statut.errors %}
-                                <div class="text-danger">{{ form.statut.errors|striptags }}</div>
-                            {% endif %}
                         </div>
 
-                        <div class="mb-3  text-end ">
+                        <div class="mb-3 text-end">
                             <a href="{% url 'visite:Visite' %}" class="btn btn-secondary">Retour</a>
                             <button type="submit" class="btn btn-warning">Modifier</button>
                         </div>
@@ -100,9 +81,12 @@
 </div>
 
 <script>
-    // Ouvrir la modale automatiquement lors du chargement de la page
+    // Ouvrir la modale automatiquement et la verrouiller tant qu'aucun bouton n'est cliqué
     document.addEventListener('DOMContentLoaded', function () {
-        var modal = new bootstrap.Modal(document.getElementById('modifierVisiteModal'));
+        var modal = new bootstrap.Modal(document.getElementById('modifierVisiteModal'), {
+            backdrop: 'static',  // Empêche la fermeture en cliquant à l'extérieur
+            keyboard: false      // Désactive la fermeture avec la touche Échap
+        });
         modal.show();
     });
 </script>

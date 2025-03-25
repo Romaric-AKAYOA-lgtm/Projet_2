@@ -63,6 +63,7 @@ def programme_visite_create(request):
         return redirect("programme_visite:ProgrammeVisite")
 
     return render(request, "programme_visite/form.html", {
+        'username':username,
         "form": form,
         "visites": visites,
         "secretaires": secretaires,  # Passez les secrétaires au contexte
@@ -80,31 +81,37 @@ def programme_visite_detail(request, id):
 
 def modifier_programme_visite(request, id):
     username = get_username_from_session(request)
-
     # Assurez-vous que le nom d'utilisateur est disponible dans la session
     if not username:
         return redirect('login')  # Redirige vers la page de connexion si pas de nom d'utilisateur dans la session
-
+    # Récupère le programme de visite par son ID
     programme = get_object_or_404(ProgrammeVisite, id=id)
-    visites = Visite.objects.filter(statut='confirmé').order_by('-date_visite')  # Récupère toutes les visites confirmées
-    #secretaires = Secretaire.objects.all().order_by('-date_debut').first()  # Récupère la secrétaire la plus récente
+    # Récupère toutes les visites confirmées
+    visites = Visite.objects.filter(statut='confirmé').order_by('-date_visite')
+    # Récupère toutes les secrétaires ayant une date de début
     secretaires = Secretaire.objects.filter(date_debut__isnull=False).order_by('-date_debut')
-    
     if request.method == "POST":
         form = ProgrammeVisiteForm(request.POST, instance=programme)
+        
         if form.is_valid():
+            # Sauvegarder les modifications si le formulaire est valide
             form.save()
             return redirect('programme_visite:ProgrammeVisite')
+        else:
+            # Si le formulaire n'est pas valide, il contiendra des erreurs
+            pass  # Les erreurs seront gérées dans le template
     else:
         form = ProgrammeVisiteForm(instance=programme)
 
+    # Rendre le template avec les données
     return render(request, 'programme_visite/ajouter_programme_visite.html', {
-        'username':username,
-        'form': form,
+        'username': username,
+        'form': form,  # Transmettre le formulaire avec ses erreurs si elles existent
         'programme_visite': programme,
         'visites': visites,
         'secretaires': secretaires,  # Ajout de la secrétaire récente
     })
+
 
 def supprimer_programme_visite(request, id):
     programme = get_object_or_404(ProgrammeVisite, id=id)
@@ -188,18 +195,27 @@ def get_username_from_session(request):
     """Récupère le nom d'utilisateur à partir de la session."""
     return request.session.get('username')
 
+from datetime import date, timedelta
+
 def imprimer_tous_les_programmes(request):
     """Génère un PDF des programmes du jour, de la semaine et du mois."""
     date_aujourdhui = date.today()
+    
+    # Calcul de la date de début de semaine (sans l'heure)
     date_debut_semaine = date_aujourdhui - timedelta(days=6)
+    
+    # Calcul de la date de début de mois (sans l'heure)
     date_debut_mois = date_aujourdhui.replace(day=1)
-
-    programmes_jour = ProgrammeVisite.objects.filter(date_creation=date_aujourdhui)
-    programmes_semaine = ProgrammeVisite.objects.filter(date_creation__range=[date_debut_semaine, date_aujourdhui])
-    programmes_mois = ProgrammeVisite.objects.filter(date_creation__range=[date_debut_mois, date_aujourdhui])
+    
+    # Filtrage des programmes selon la date sans tenir compte de l'heure
+    programmes_jour = ProgrammeVisite.objects.filter(date_creation__date=date_aujourdhui)
+    programmes_semaine = ProgrammeVisite.objects.filter(date_creation__date__range=[date_debut_semaine, date_aujourdhui])
+    programmes_mois = ProgrammeVisite.objects.filter(date_creation__date__range=[date_debut_mois, date_aujourdhui])
 
     secretaire_recente = obtenir_secretaire_recente()
     return generer_word(request, programmes_jour, programmes_semaine, programmes_mois, "PROGRAMMES DE VISITE", secretaire_recente)
+
+
 from io import BytesIO
 from datetime import date
 from django.http import HttpResponse
@@ -256,7 +272,7 @@ def generer_word(request, programmes_jour, programmes_semaine, programmes_mois, 
             doc.add_paragraph("Aucun programme disponible.", style='Normal')
             return
         
-        table = doc.add_table(rows=1, cols=6)
+        table = doc.add_table(rows=1, cols=7)
         table.style = 'Table Grid'  # Ajout du cadrage des lignes
         
         hdr_cells = table.rows[0].cells
@@ -264,19 +280,26 @@ def generer_word(request, programmes_jour, programmes_semaine, programmes_mois, 
         hdr_cells[1].text = "Visite"
         hdr_cells[2].text = "Secrétaire"
         hdr_cells[3].text = "Statut"
-        hdr_cells[4].text = "Heure Début"
-        hdr_cells[5].text = "Heure Fin"
+        hdr_cells[4].text = "Date création"
+        hdr_cells[5].text = "Heure Début"
+        hdr_cells[6].text = "Heure Fin"
         
         for programme in programmes:
             secretaire_complete = f"{programme.secretaire.last_name} {programme.secretaire.first_name}" if programme.secretaire else "N/A"
+            
+            # Conversion de date_creation en chaîne si c'est un datetime
+            date_creation_str = programme.date_creation.strftime("%d/%m/%Y") if programme.date_creation else "N/A"
+            
+            # Création de la ligne du tableau
             row_cells = table.add_row().cells
             row_cells[0].text = str(programme.id)
             row_cells[1].text = str(programme.visite)
             row_cells[2].text = secretaire_complete
             row_cells[3].text = programme.statut
-            row_cells[4].text = programme.heure_debut.strftime("%H:%M") if programme.heure_debut else "N/A"
-            row_cells[5].text = programme.heure_fin.strftime("%H:%M") if programme.heure_fin else "N/A"
-    
+            row_cells[4].text = date_creation_str  # Ajout de la date formatée
+            row_cells[5].text = programme.heure_debut.strftime("%H:%M") if programme.heure_debut else "N/A"
+            row_cells[6].text = programme.heure_fin.strftime("%H:%M") if programme.heure_fin else "N/A"
+
     ajouter_section("Programmes du Jour", programmes_jour)
     ajouter_section("Programmes de la Semaine", programmes_semaine)
     ajouter_section("Programmes du Mois", programmes_mois)
