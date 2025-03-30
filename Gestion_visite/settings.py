@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'visite',
     'programme_visite',
     'Notifications',
+    'administration',
     'bootstrap4',  # Si tu utilises django-bootstrap4
 ]
 
@@ -57,6 +58,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                  # Ajouter le context processor de votre application 'administration'
+              'administration.context_processors.administration',  # Ajouter cette ligne
+       
             ],
         },
     },

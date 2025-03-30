@@ -4291,3 +4291,94 @@ django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 33: 'e
 2025-03-26 11:45:28,067 - INFO - basehttp - "GET /secretaire/Secretaire/ HTTP/1.1" 200 19355
 2025-03-26 11:45:28,899 - INFO - basehttp - "GET /directeur/ HTTP/1.1" 200 10268
 2025-03-26 11:45:30,182 - INFO - basehttp - "GET /secretaire/ HTTP/1.1" 200 9383
+2025-03-30 18:33:50,404 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-30 19:13:00,441 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-30 19:13:02,018 - INFO - basehttp - "GET / HTTP/1.1" 200 9383
+2025-03-30 19:47:31,490 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-30 19:47:33,116 - INFO - basehttp - "GET / HTTP/1.1" 200 12285
+2025-03-30 19:47:44,911 - INFO - basehttp - "POST / HTTP/1.1" 302 0
+2025-03-30 19:47:44,974 - INFO - basehttp - "GET /home HTTP/1.1" 200 16217
+2025-03-30 19:47:50,393 - INFO - basehttp - "GET /administration/list/ HTTP/1.1" 200 11076
+2025-03-30 19:47:53,614 - INFO - basehttp - "GET /administration/create/ HTTP/1.1" 200 13099
+2025-03-30 19:50:30,927 - ERROR - log - Internal Server Error: /administration/create/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\administration\views.py", line 57, in administration_create
+    return redirect('administration:detail')  # Rediriger vers la page de détail après sauvegarde
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'detail' with no arguments not found. 1 pattern(s) tried: ['administration/detail/(?P<id>[0-9]+)/\\Z']
+2025-03-30 19:50:30,933 - ERROR - basehttp - "POST /administration/create/ HTTP/1.1" 500 88434
+2025-03-30 19:54:01,522 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\administration\views.py changed, reloading.
+2025-03-30 19:54:04,060 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-30 19:55:09,919 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\administration\models.py changed, reloading.
+2025-03-30 19:55:12,183 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-30 19:56:13,628 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-30 19:56:15,269 - INFO - basehttp - "GET / HTTP/1.1" 200 12500
+2025-03-30 19:56:17,704 - INFO - basehttp - "GET /media/logos/administration-1867877_1280.jpg HTTP/1.1" 200 407089
+2025-03-30 19:56:17,726 - INFO - basehttp - "GET /media/drapeaux/congo-2697382_1920.jpg HTTP/1.1" 200 566668
+2025-03-30 19:56:29,463 - ERROR - log - Internal Server Error: /administration/create/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\administration\views.py", line 56, in administration_create
+    return redirect('administration:detail')  # Rediriger vers la page de détail après sauvegarde
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'detail' with no arguments not found. 1 pattern(s) tried: ['administration/detail/(?P<id>[0-9]+)/\\Z']
+2025-03-30 19:56:29,469 - ERROR - basehttp - "POST /administration/create/ HTTP/1.1" 500 88434
+2025-03-30 19:56:33,729 - ERROR - log - Internal Server Error: /administration/create/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\administration\views.py", line 56, in administration_create
+    return redirect('administration:detail')  # Rediriger vers la page de détail après sauvegarde
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'detail' with no arguments not found. 1 pattern(s) tried: ['administration/detail/(?P<id>[0-9]+)/\\Z']
+2025-03-30 19:56:33,733 - ERROR - basehttp - "POST /administration/create/ HTTP/1.1" 500 88434
+2025-03-30 19:56:41,013 - ERROR - log - Internal Server Error: /administration/create/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\administration\views.py", line 56, in administration_create
+    return redirect('administration:detail')  # Rediriger vers la page de détail après sauvegarde
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'detail' with no arguments not found. 1 pattern(s) tried: ['administration/detail/(?P<id>[0-9]+)/\\Z']
+2025-03-30 19:56:41,017 - ERROR - basehttp - "POST /administration/create/ HTTP/1.1" 500 88434
+2025-03-30 20:00:09,274 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\Gestion_visite\administration\views.py changed, reloading.
+2025-03-30 20:00:12,737 - INFO - autoreload - Watching for file changes with StatReloader
