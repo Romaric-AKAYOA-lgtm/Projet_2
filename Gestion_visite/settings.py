@@ -106,7 +106,14 @@ USE_TZ = True
 
 # Static and media files
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
+# Si tu utilises des fichiers statiques en développement
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',  # Assure-toi que ce chemin pointe vers ton dossier 'static' principal
+]
+
+# En production, spécifie un dossier pour collectstatic
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 

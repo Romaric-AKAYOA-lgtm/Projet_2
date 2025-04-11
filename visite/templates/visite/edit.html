@@ -23,7 +23,7 @@
 
                         <div class="mb-3">
                             <label for="visiteur" class="form-label">Sélectionner un visiteur</label>
-                            <select class="form-select" name="visiteur" required>
+                            <select class="form-select" name="visiteur" disabled>
                                 <option value="">-- Sélectionner un visiteur --</option>
                                 {% for visiteur in visiteurs %}
                                     <option value="{{ visiteur.id }}" {% if visiteur.id == visite.visiteur.id %}selected{% endif %}>
@@ -50,7 +50,7 @@
 
                         <div class="mb-3">
                             <label for="directeur" class="form-label">Sélectionner un directeur</label>
-                            <select class="form-select" name="directeur" required>
+                            <select class="form-select" name="directeur" disabled>
                                 <option value="">-- Sélectionner un directeur --</option>
                                 {% for directeur in directeurs %}
                                     <option value="{{ directeur.id }}" {% if directeur.id == visite.directeur.id %}selected{% endif %}>
@@ -62,12 +62,22 @@
 
                         <div class="mb-3">
                             <label for="statut" class="form-label">Statut</label>
-                            <select class="form-select" name="statut" required>
+                            <select class="form-select" name="statut" id="statut" required>
                                 <option value="confirmé" {% if visite.statut == "confirmé" %}selected{% endif %}>Confirmé</option>
                                 <option value="annulé" {% if visite.statut == "annulé" %}selected{% endif %}>Annulé</option>
                             </select>
                         </div>
 
+                        <!-- Motif d'annulation (s'affiche seulement si le statut est "annulé") -->
+                        <div class="mb-3">
+                            <label for="motif_annulation" class="form-label">Motif d'annulation</label>
+                            <select class="form-select" id="motif_annulation" name="motif_annulation" {% if visite.statut != 'annulé' %}disabled{% endif %}>
+                                <option value="">Sélectionner un motif</option>
+                                <option value="indisponible_directeur" {% if visite.motif_annulation == 'indisponible_directeur' %}selected{% endif %}>Indisponibilité du directeur</option>
+                                <option value="ajourné_visiteur" {% if visite.motif_annulation == 'ajourné_visiteur' %}selected{% endif %}>Ajournement du visiteur</option>
+                            </select>
+                        </div>
+                        
                         <div class="mb-3 text-end">
                             <a href="{% url 'visite:Visite' %}" class="btn btn-secondary">Retour</a>
                             <button type="submit" class="btn btn-warning">Modifier</button>
@@ -81,11 +91,29 @@
 </div>
 
 <script>
-    // Ouvrir la modale automatiquement et la verrouiller tant qu'aucun bouton n'est cliqué
+    // Fonction pour gérer l'activation du champ "Motif d'annulation"
     document.addEventListener('DOMContentLoaded', function () {
+        var statutSelect = document.getElementById('statut');
+        var motifSelect = document.getElementById('motif_annulation');
+        
+        // Activer ou désactiver le motif d'annulation selon le statut sélectionné
+        function toggleMotifAnnulation() {
+            if (statutSelect.value === 'annulé') {
+                motifSelect.disabled = false;
+            } else {
+                motifSelect.disabled = true;
+            }
+        }
+
+        // Appeler la fonction au chargement pour définir l'état initial
+        toggleMotifAnnulation();
+
+        // Écouter les changements du statut pour mettre à jour le champ du motif
+        statutSelect.addEventListener('change', toggleMotifAnnulation);
+        
         var modal = new bootstrap.Modal(document.getElementById('modifierVisiteModal'), {
-            backdrop: 'static',  // Empêche la fermeture en cliquant à l'extérieur
-            keyboard: false      // Désactive la fermeture avec la touche Échap
+            backdrop: 'static',
+            keyboard: false
         });
         modal.show();
     });

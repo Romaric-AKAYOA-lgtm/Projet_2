@@ -8,6 +8,9 @@ from secretaire.views import login_view
 urlpatterns = [
     path('admin/', admin.site.urls),  # Admin site
     path("home", views.home_view, name='home'), 
+    path('success/', views.success, name='success'),
+      # Définir l'URL pour créer une visite et un programme
+    path('creer-visite-programme/', views.creer_visite_programme, name='creer_visite_programme'),
     path('visiteur/', include('visiteur.urls')),  # Inclure les URLs de l'application visiteur
     path('visite/', include('visite.urls')),  # Inclure les URLs de l'application visite
     path('secretaire/', include('secretaire.urls')),  # Inclure les URLs de l'application secretaire

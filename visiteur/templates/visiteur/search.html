@@ -1,11 +1,10 @@
 {% extends 'template_base.html' %}
 
 {% block contenue %}
-
 <div class="container mt-4">
 
     <!-- Modal pour afficher les résultats de la recherche -->
-    <div class="modal fade" id="modalSearchResults" tabindex="-1" aria-labelledby="modalSearchResultsLabel" aria-hidden="true">
+    <div class="modal fade show" id="modalSearchResults" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalSearchResultsLabel">
         <div class="modal-dialog modal-lg"> <!-- Largeur augmentée -->
             <div class="modal-content">
                 <div class="modal-header bg-primary text-white">
@@ -21,11 +20,10 @@
                                         <a href="mailto:{{ visiteur.email }}?subject=Votre%20sujet&body=Bonjour%20{{ visiteur.nom }},%0A%0A" class="text-decoration-none">
                                             <i class="bi bi-envelope"></i> {{ visiteur.email }}
                                         </a>
-                                        <a href="https://web.whatsapp.com/send?phone={{ visiteur.contact }}" target="_blank">{{ visiteur.contact }}</a> <!-- Lien WhatsApp Web -->
+                                        <a href="https://web.whatsapp.com/send?phone={{ visiteur.contact }}" target="_blank">{{ visiteur.contact }}</a>
                                     </div>
                                     <div>
                                         <a href="{% url 'Visiteur:modifier' visiteur.id %}" class="btn btn-warning btn-sm ms-2">Modifier</a>
-                                        <a href="{% url 'Visiteur:supprimer' visiteur.id %}" class="btn btn-danger btn-sm">Supprimer</a>
                                     </div>
                                 </li>
                             {% endfor %}
@@ -35,7 +33,8 @@
                     {% endif %}
                 </div>
                 <div class="modal-footer">
-                    <a href="{% url 'Visiteur:Visiteur' %}" class="btn btn-secondary">Annuler</a>
+                    <!-- Ajout d'un bouton explicite pour fermer -->
+                    <a href="{% url 'Visiteur:Visiteur' %}" class="btn btn-secondary px-4 py-2 btn-sm">Annuler</a>
                 </div>
             </div>
         </div>
@@ -43,14 +42,23 @@
 
 </div>
 
-<!-- Script pour afficher le modal de façon automatique -->
+<!-- Script pour gérer l'affichage et la fermeture du modal -->
 {% if visiteurs %}
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            var myModal = new bootstrap.Modal(document.getElementById("modalSearchResults"));
-            myModal.show();
+            var myModalEl = document.getElementById("modalSearchResults");
+            var myModal = new bootstrap.Modal(myModalEl, {
+                backdrop: "static",
+                keyboard: false
+            });
+
+            myModal.show(); // Ouvre le modal automatiquement
+
+            // Empêcher la fermeture du modal sauf si on clique sur le bouton "Fermer"
+            document.getElementById("closeModalBtn").addEventListener("click", function () {
+                myModal.hide(); // Ferme le modal proprement
+            });
         });
     </script>
 {% endif %}
-
 {% endblock %}

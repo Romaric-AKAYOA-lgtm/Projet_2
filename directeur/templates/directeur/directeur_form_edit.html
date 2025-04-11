@@ -8,7 +8,7 @@
         <div class="modal-content">
             <div class="modal-header bg-warning">
                 <h5 class="modal-title text-white" id="directeurModalLabel">
-                    Modifier un Directeur
+                    {{ form.instance.pk|yesno:"Modifier un Directeur,Créer un Directeur" }}
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
             </div>
@@ -25,69 +25,81 @@
                 <form method="POST" action="{% url 'directeur:modifier' form.instance.pk %}" class="needs-validation" novalidate>
                     {% csrf_token %}
 
-                    <div class="mb-3">
-                        <label for="nom" class="form-label">Nom</label>
-                        <input type="text" class="form-control" id="nom" name="nom" value="{{ form.nom.value }}" required>
-                    </div>
+                    <div class="row">
+                        <!-- First Column (4 champs) -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="nom" class="form-label">Nom</label>
+                                <input type="text" class="form-control" id="nom" name="nom" value="{{ form.nom.value }}" required>
+                            </div>
 
-                    <div class="mb-3">
-                        <label for="prenom" class="form-label">Prénom</label>
-                        <input type="text" class="form-control" id="prenom" name="prenom" value="{{ form.prenom.value }}" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="date_naissance" class="form-label">Date de naissance</label>
-                        <input type="date" class="form-control input-focus-blue" id="date_naissance" value="{{ form.date_naissance|date:'Y-m-d' }}" r name="date_naissance" required>
-                    </div>
+                            <div class="mb-3">
+                                <label for="prenom" class="form-label">Prénom</label>
+                                <input type="text" class="form-control" id="prenom" name="prenom" value="{{ form.prenom.value }}" required>
+                            </div>
 
-                    <div class="mb-3">
-                        <label for="lieu_naissance" class="form-label">Lieu de naissance</label>
-                        <input type="text" class="form-control input-focus-blue" id="lieu_naissance"  value="{{ form.lieu_naissance }}" rname="lieu_naissance" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="sexe" class="form-label">Sexe</label>
-                        <select class="form-select" id="sexe" name="sexe" >
-                            <option value="Masculin" {% if form.sexe.value == 'Masculin' %}selected{% endif %}>Masculin</option>
-                            <option value="Féminin" {% if form.sexe.value == 'Féminin' %}selected{% endif %}>Féminin</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <div class="input-group">
-                            <input type="email" class="form-control" id="email" name="email" value="{{ form.email.value }}" required>
-                            <span class="input-group-text">
-                                <a href="#" id="mailto-link" class="text-decoration-none" style="pointer-events: none;">
-                                    <i class="bi bi-envelope"></i>
-                                </a>
-                            </span>
+                            <div class="mb-3">
+                                <label for="date_naissance" class="form-label">Date de naissance</label>
+                                <input type="date" class="form-control input-focus-blue" id="date_naissance" name="date_naissance" value="{{ form.date_naissance|date:'Y-m-d' }}" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="lieu_naissance" class="form-label">Lieu de naissance</label>
+                                <input type="text" class="form-control input-focus-blue" id="lieu_naissance" name="lieu_naissance" value="{{ form.lieu_naissance }}" required>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="mb-3">
-                        <label for="num_tel" class="form-label">Numéro de téléphone</label>
-                        <div class="input-group">
-                            <input type="tel" class="form-control" id="num_tel" name="num_tel" value="{{ form.num_tel.value }}">
-                            <span class="input-group-text">
-                                <a href="#" id="tel-link" class="text-decoration-none" style="pointer-events: none;">
-                                    <i class="bi bi-telephone"></i>
-                                </a>
-                            </span>
+                        <!-- Second Column (4 autres champs) -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="sexe" class="form-label">Sexe</label>
+                                <select class="form-select" id="sexe" name="sexe">
+                                    <option value="Masculin" {% if form.sexe.value == 'Masculin' %}selected{% endif %}>Masculin</option>
+                                    <option value="Féminin" {% if form.sexe.value == 'Féminin' %}selected{% endif %}>Féminin</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" id="email" name="email" value="{{ form.email.value }}" required>
+                                    <span class="input-group-text">
+                                        <a href="#" id="mailto-link" class="text-decoration-none" style="pointer-events: none;">
+                                            <i class="bi bi-envelope"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="num_tel" class="form-label">Numéro de téléphone</label>
+                                <div class="input-group">
+                                    <input type="tel" class="form-control" id="num_tel" name="num_tel" value="{{ form.num_tel.value }}">
+                                    <span class="input-group-text">
+                                        <a href="#" id="tel-link" class="text-decoration-none" style="pointer-events: none;">
+                                            <i class="bi bi-telephone"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="adresse" class="form-label">Adresse</label>
+                                <input type="text" class="form-control" id="adresse" name="adresse" value="{{ form.adresse.value }}" required>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="adresse" class="form-label">Adresse</label>
-                        <input type="text" class="form-control" id="adresse" name="adresse" value="{{ form.adresse.value }}" required>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Date Début</label>
-                        <input type="date" class="form-control" name="date_debut" value="{{ directeur.date_debut|date:'Y-m-d' }}">
+                        <input type="date" class="form-control" name="date_debut" value="{{ form.date_debut|date:'Y-m-d' }}">
                     </div>
+
                     <div class="mb-3">
                         <label class="form-label">Date Fin</label>
-                        <input type="date" class="form-control" name="date_fin" value="{{ directeur.date_fin|date:'Y-m-d' }}">
+                        <input type="date" class="form-control" name="date_fin" value="{{ form.date_fin|date:'Y-m-d' }}">
                     </div>
-                    
+
                     <div class="text-end">
                         <a href="{% url 'directeur:Directeur' %}" class="btn btn-secondary px-4 py-2 btn-sm">Annuler</a>
                         <button type="submit" class="btn btn-warning px-4 py-2 btn-sm">

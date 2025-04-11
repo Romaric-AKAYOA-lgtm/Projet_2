@@ -1,0 +1,17 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+    <h1>Créer une Visite et un Programme</h1>
+    
+    <form method="POST">
+        {% csrf_token %}
+        
+        <!-- Afficher le formulaire -->
+        <div>
+            {{ form.as_p }}
+        </div>
+
+        <!-- Bouton de soumission -->
+        <button type="submit">Enregistrer</button>
+    </form>
+    {% endblock %}

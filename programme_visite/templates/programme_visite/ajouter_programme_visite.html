@@ -1,91 +1,113 @@
 {% extends 'template_base.html' %}
 
 {% block contenue %}
-<div class="container mt-4">
-    <!-- Modal Modifier Programme de Visite -->
-    <div class="modal fade show" id="modalModifierProgrammeVisite" tabindex="-1" aria-labelledby="modalModifierProgrammeVisiteLabel" aria-hidden="false" style="display: block;">
-        <div class="modal-dialog modal-lg"> <!-- Large width -->
-            <div class="modal-content">
-                <div class="modal-header bg-warning text-white">
-                    <h5 class="modal-title" id="modalModifierProgrammeVisiteLabel">Modifier un Programme de Visite</h5>
-                </div>
-                <div class="modal-body">
+<!-- Modale pour le formulaire d'ajout de visite -->
+<div class="modal fade show" id="ajouterVisiteModal" tabindex="-1" aria-labelledby="ajouterVisiteModalLabel" aria-hidden="false" style="display: block;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="ajouterVisiteModalLabel">Ajouter une Visite</h5>
+            </div>
+            <div class="modal-body">
+                <form action="{% url 'visite:creer' %}" method="POST">
+                    {% csrf_token %}
                     {% if form.errors %}
                     <div class="alert alert-danger">
-                        <ul>
-                            {% for field in form %}
-                                {% if field.errors %}
-                                    <li><strong>{{ field.label }} :</strong>
-                                        <ul>
-                                            {% for error in field.errors %}
-                                                <li>{{ error|striptags }}</li>
-                                            {% endfor %}
-                                        </ul>
-                                    </li>
-                                {% endif %}
-                            {% endfor %}
-                        </ul>
+                        {% for field in form %}
+                            {% if field.errors %}
+                                <strong>{{ field.label }}</strong> : {{ field.errors|striptags }}
+                            {% endif %}
+                        {% endfor %}
                     </div>
                     {% endif %}
-                    
-                    <form action="{% url 'programme_visite:modifier' programme_visite.id %}" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
-                        {% csrf_token %}
-                        
-                        <div class="mb-3">
-                            <label for="visite" class="form-label">Visite</label>
-                            <select class="form-select input-focus-blue" id="visite" name="visite" required>
-                                {% for visite in visites %}
-                                    <option value="{{ visite.id }}" {% if visite.id == programme_visite.visite.id %}selected{% endif %}>{{ visite }}</option>
-                                {% endfor %}
-                            </select>
+                
+                    <div class="mb-3">
+                        <label for="visiteur" class="form-label">Sélectionner un visiteur</label>
+                        <select class="form-select" name="visiteur" required>
+                            <option value="">-- Sélectionner un visiteur --</option>
+                            {% for visiteur in visiteurs %}
+                                <option value="{{ visiteur.id }}">{{ visiteur.nom }} {{ visiteur.prenom }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="date_visite" class="form-label">Date de Visite</label>
+                        <input type="date" class="form-control" name="date_visite" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="heure_visite" class="form-label">Heure de Visite</label>
+                        <input type="time" class="form-control" name="heure_visite">
+                    </div>
+                    <div class="mb-3">
+                        <label for="objet" class="form-label">Description</label>
+                        <textarea class="form-control" name="objet" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="directeur" class="form-label">Sélectionner un directeur</label>
+                        <select class="form-select" name="directeur" required>
+                            <option value="">-- Sélectionner un directeur --</option>
+                            {% for directeur in directeurs %}
+                                <option value="{{ directeur.id }}">{{ directeur.nom }} {{ directeur.prenom }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="statut" class="form-label">Statut</label>
+                        <select class="form-select" name="statut" required>
+                            <option value="confirmé">Confirmé</option>
+                            <option value="annulé">Annulé</option>
+                        </select>
+                    </div>
+                    {% if errors %}
+                        <div class="alert alert-danger" role="alert">
+                            {% for error in errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
                         </div>
-
-                        <div class="mb-3">
-                            <label for="secretaire" class="form-label">Secrétaire</label>
-                            <select class="form-select input-focus-blue" id="secretaire" name="secretaire" required>
-                                {% for secretaire in secretaires %}
-                                    <option value="{{ secretaire.id }}" {% if secretaire.id == programme_visite.secretaire.id %}selected{% endif %}>{{ secretaire.last_name }} {{ secretaire.first_name }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="statut" class="form-label">Statut</label>
-                            <select class="form-select input-focus-blue" id="statut" name="statut" required>
-                                <option value="en attente" {% if programme_visite.statut == "en attente" %}selected{% endif %}>En attente</option>
-                                <option value="validé" {% if programme_visite.statut == "validé" %}selected{% endif %}>Validé</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="heure_debut" class="form-label">Heure de Début</label>
-                            <input type="datetime-local" class="form-control input-focus-blue" id="heure_debut" name="heure_debut" value="{{ programme_visite.heure_debut|date:'Y-m-d\TH:i' }}" required>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="heure_fin" class="form-label">Heure de Fin</label>
-                            <input type="datetime-local" class="form-control input-focus-blue" id="heure_fin" name="heure_fin" value="{{ programme_visite.heure_fin|date:'Y-m-d\TH:i' }}" required>
-                        </div>
-
-                        <div class="text-end">
-                            <a href="{% url 'programme_visite:ProgrammeVisite' %}" class="btn btn-secondary px-4 py-2 btn-sm">Annuler</a>
-                            <button type="submit" class="btn btn-warning px-4 py-2 btn-sm">Modifier</button>
-                        </div>
-                    </form>
-                </div>
+                    {% endif %}
+                    <div class="text-end ">
+                        <a href="{% url 'visite:Visite' %}" class="btn btn-secondary" id="fermerModal">Retour</a>
+                        <button type="submit" class="btn btn-primary">Ajouter</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
 
+<!-- Styles pour flouter l'arrière-plan du modal avec fond gris -->
+<style>
+    .modal-backdrop {
+        backdrop-filter: blur(8px);
+        background-color: rgba(0, 0, 0, 0.85); /* Fond gris très foncé avec transparence */
+        z-index: -1;
+    }
+</style>
+
+<!-- Script pour afficher la modale et empêcher sa fermeture -->
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Initialiser la modale et l'afficher
-        var myModal = new bootstrap.Modal(document.getElementById("modalModifierProgrammeVisite"), {
-            backdrop: 'static',  // Empêcher la fermeture en cliquant à l'extérieur
-            keyboard: false      // Empêcher la fermeture avec la touche Esc
+    document.addEventListener('DOMContentLoaded', function () {
+        var myModalEl = document.getElementById('ajouterVisiteModal');
+        var myModal = new bootstrap.Modal(myModalEl, {
+            backdrop: 'static',
+            keyboard: false
         });
         myModal.show();
+
+        // Empêche la fermeture en cliquant en dehors de la modale
+        myModalEl.addEventListener('hidden.bs.modal', function (event) {
+            event.preventDefault();
+            myModal.show();
+        });
+
+        // Permet de fermer uniquement via le bouton "Retour"
+        document.getElementById("fermerModal").addEventListener("click", function(event) {
+            myModal.hide();
+        });
     });
 </script>
+
+<!-- Ajout de Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 {% endblock %}

@@ -1,27 +1,36 @@
 {% extends 'template_base.html' %}
 
 {% block contenue %}
-
-<!-- CSS Personnalisé -->
 <style>
     .hero-section {
         height: 400px;
         overflow: hidden;
     }
-    
     .hero-bg {
         height: 400px;
         object-fit: cover;
         filter: brightness(50%);
     }
-    
     .hero-content {
         z-index: 2;
+    }
+
+    /* Styles pour le défilement et l'effet de survol des cartes */
+    .card {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .card-body {
+        max-height: 200px;
+        overflow-y: auto;
     }
 </style>
 
 <!-- Hero Section -->
-<div class="hero-section position-relative text-center text-white ">
+<div class="hero-section position-relative text-center text-white">
     <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -44,145 +53,184 @@
     </div>
 </div>
 
-<div class="container-fluid mt-5">
-    <div class="row">
+<div class="mt-5   mb-3 ">
 
-        <!-- Liste des Directeurs -->
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-header bg-dark text-white text-center">📌 Directeurs</div>
-                <div class="card-body">
-                    <ul class="list-group">
-                        {% for directeur in directeurs %}
-                            <li class="list-group-item">{{ directeur.nom }} {{ directeur.prenom }}</li>
-                        {% empty %}
-                            <li class="list-group-item text-muted">Aucun directeur enregistré</li>
-                        {% endfor %}
-                    </ul>
+    <!-- 🟢 Première ligne -->
+    <div class="row g-4 justify-content-center">
+        <!-- Directeurs -->
+        <div class="col-12 col-sm-5 col-md-4 col-lg-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-header bg-dark text-white text-center">
+                    Directeurs
+                </div>
+                <div class="card-body overflow-auto" style="max-height: 200px;">
+                    <table class="table table-bordered table-striped">
+                        <thead class="table-dark">
+                            <tr><th>Nom</th><th>Prénom</th></tr>
+                        </thead>
+                        <tbody>
+                            {% for directeur in directeurs %}
+                                <tr><td>{{ directeur.nom }}</td><td>{{ directeur.prenom }}</td></tr>
+                            {% empty %}
+                                <tr><td colspan="2" class="text-center text-muted">Aucun directeur</td></tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
 
-        <!-- Liste des Secrétaires -->
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-header bg-dark text-white text-center">Secrétaires</div>
-                <div class="card-body">
-                    <ul class="list-group">
-                        {% for secretaire in secretaires %}
-                            <li class="list-group-item">{{ secretaire.last_name }} {{ secretaire.first_name }}</li>
-                        {% empty %}
-                            <li class="list-group-item text-muted">Aucun secrétaire enregistré</li>
-                        {% endfor %}
-                    </ul>
+        <!-- Secrétaires -->
+        <div class="col-12 col-sm-5 col-md-4 col-lg-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-header bg-secondary text-white text-center">
+                    Secrétaires
+                </div>
+                <div class="card-body overflow-auto" style="max-height: 200px;">
+                    <table class="table table-bordered table-striped">
+                        <thead class="table-secondary">
+                            <tr><th>Nom</th><th>Prénom</th></tr>
+                        </thead>
+                        <tbody>
+                            {% for secretaire in secretaires %}
+                                <tr><td>{{ secretaire.last_name }}</td><td>{{ secretaire.first_name }}</td></tr>
+                            {% empty %}
+                                <tr><td colspan="2" class="text-center text-muted">Aucun secrétaire</td></tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
 
-        <!-- Liste des Visiteurs -->
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-header bg-dark text-white text-center">👥 Visiteurs</div>
-                <div class="card-body">
-                    <ul class="list-group">
-                        {% for visiteur in visiteurs %}
-                            <li class="list-group-item">{{ visiteur.nom }} {{ visiteur.prenom }}</li>
-                        {% empty %}
-                            <li class="list-group-item text-muted">Aucun visiteur enregistré</li>
-                        {% endfor %}
-                    </ul>
+        <!-- Visiteurs -->
+        <div class="col-12 col-sm-5 col-md-4 col-lg-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-header bg-primary text-white text-center">
+                    Visiteurs
+                </div>
+                <div class="card-body overflow-auto" style="max-height: 200px;">
+                    <table class="table table-bordered table-striped">
+                        <thead class="table-primary">
+                            <tr><th>Nom</th><th>Prénom</th></tr>
+                        </thead>
+                        <tbody>
+                            {% for visiteur in visiteurs %}
+                                <tr><td>{{ visiteur.nom }}</td><td>{{ visiteur.prenom }}</td></tr>
+                            {% empty %}
+                                <tr><td colspan="2" class="text-center text-muted">Aucun visiteur</td></tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-
     </div>
 
-    <div class="row mt-4">
-        
-        <!-- Visites en cours -->
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-header bg-success text-white text-center">🚶 Visites en Cours</div>
-                <div class="card-body">
-                    <ul class="list-group">
-                        {% for visite in visites_en_cours %}
-                            <li class="list-group-item">{{ visite }}</li>
-                        {% empty %}
-                            <li class="list-group-item text-muted">Aucune visite en cours</li>
-                        {% endfor %}
-                    </ul>
+    <!-- 🟡 Deuxième ligne -->
+    <div class="row g-4 justify-content-center mt-4">
+        <!-- Visites en Cours -->
+        <div class="col-12 col-sm-5 col-md-4 col-lg-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-header bg-success text-white text-center">
+                    Visites en Cours
+                </div>
+                <div class="card-body overflow-auto" style="max-height: 200px;">
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            {% for visite in visites_en_cours %}
+                                <tr><td>{{ visite }}</td></tr>
+                            {% empty %}
+                                <tr><td class="text-center text-muted">Aucune visite en cours</td></tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
 
-        <!-- Programmes de Visite Reportés -->
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-header bg-danger text-white text-center">Programmes Reportés</div>
-                <div class="card-body">
-                    <ul class="list-group">
-                        {% for programme in programmes_reportes %}
-                            <li class="list-group-item">{{ programme }}</li>
-                        {% empty %}
-                            <li class="list-group-item text-muted">Aucun programme reporté</li>
-                        {% endfor %}
-                    </ul>
+        <!-- Programmes Reportés -->
+        <div class="col-12 col-sm-5 col-md-4 col-lg-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-header bg-danger text-white text-center">
+                    Programmes Reportés
+                </div>
+                <div class="card-body overflow-auto" style="max-height: 200px;">
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            {% for programme in programmes_reportes %}
+                                <tr><td>{{ programme }}</td></tr>
+                            {% empty %}
+                                <tr><td class="text-center text-muted">Aucun programme reporté</td></tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
 
         <!-- Visites du Jour -->
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-header bg-info text-white text-center">📅 Visites du Jour</div>
-                <div class="card-body">
-                    <ul class="list-group">
-                        {% for visite in visites_du_jour %}
-                            <li class="list-group-item">{{ visite }}</li>
-                        {% empty %}
-                            <li class="list-group-item text-muted">Aucune visite aujourd'hui</li>
-                        {% endfor %}
-                    </ul>
+        <div class="col-12 col-sm-5 col-md-4 col-lg-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-header bg-info text-white text-center">
+                    Visites du Jour
+                </div>
+                <div class="card-body overflow-auto" style="max-height: 200px;">
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            {% for visite in visites_du_jour %}
+                                <tr><td>{{ visite }}</td></tr>
+                            {% empty %}
+                                <tr><td class="text-center text-muted">Aucune visite aujourd'hui</td></tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-
     </div>
 
-    <div class="row mt-4">
-
+    <!-- 🔵 Troisième ligne -->
+    <div class="row g-4 justify-content-center mt-4">
         <!-- Visites de la Semaine -->
-        <div class="col-md-6 mb-3">
-            <div class="card">
-                <div class="card-header bg-primary text-white text-center">📆 Visites de la Semaine</div>
-                <div class="card-body">
-                    <ul class="list-group">
-                        {% for visite in visites_de_la_semaine %}
-                            <li class="list-group-item">{{ visite }}</li>
-                        {% empty %}
-                            <li class="list-group-item text-muted">Aucune visite cette semaine</li>
-                        {% endfor %}
-                    </ul>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-header bg-primary text-white text-center">
+                    Visites de la Semaine
+                </div>
+                <div class="card-body overflow-auto" style="max-height: 200px;">
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            {% for visite in visites_de_la_semaine %}
+                                <tr><td>{{ visite }}</td></tr>
+                            {% empty %}
+                                <tr><td class="text-center text-muted">Aucune visite cette semaine</td></tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
 
         <!-- Visites du Mois -->
-        <div class="col-md-6 mb-2">
-            <div class="card">
-                <div class="card-header bg-warning text-dark text-center">📅 Visites du Mois</div>
-                <div class="card-body">
-                    <ul class="list-group">
-                        {% for visite in visites_du_mois %}
-                            <li class="list-group-item">{{ visite }}</li>
-                        {% empty %}
-                            <li class="list-group-item text-muted">Aucune visite ce mois-ci</li>
-                        {% endfor %}
-                    </ul>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6 ">
+            <div class="card shadow-sm h-100">
+                <div class="card-header bg-warning text-dark text-center">
+                    Visites du Mois
+                </div>
+                <div class="card-body overflow-auto" style="max-height: 200px;">
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            {% for visite in visites_du_mois %}
+                                <tr><td>{{ visite }}</td></tr>
+                            {% empty %}
+                                <tr><td class="text-center text-muted">Aucune visite ce mois-ci</td></tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-
     </div>
 
 </div>

@@ -42,3 +42,30 @@ def home_view(request):
     }
 
     return render(request, "home.html", context)
+
+from django.shortcuts import render, redirect
+from .forms import VisiteProgrammeForm
+
+def creer_visite_programme(request):
+    """
+    Cette vue permet de créer une visite et son programme associé.
+    Si la méthode est GET, on affiche un formulaire vide.
+    Si la méthode est POST, on traite le formulaire soumis et crée les objets Visite et ProgrammeVisite.
+    """
+    if request.method == 'POST':
+        # Créer le formulaire et le remplir avec les données soumises
+        form = VisiteProgrammeForm(request.POST)
+        if form.is_valid():
+            # Sauvegarder les données et créer les objets Visite et ProgrammeVisite
+            visite, programme = form.save()
+            # Rediriger vers une page de succès ou d'affichage des résultats
+            return redirect('success_url')  # Remplacez 'success_url' par l'URL où vous souhaitez rediriger
+    else:
+        # Si la méthode est GET, on crée un formulaire vide
+        form = VisiteProgrammeForm()
+
+    # Affichage du formulaire dans le template
+    return render(request, 'creer_visite_programme.html', {'form': form})
+
+def success(request):
+    return render(request, 'success.html')

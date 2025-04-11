@@ -49,11 +49,22 @@
     </div>
 </div>
 
-<!-- 🔹 SCRIPT POUR OUVRIR LA MODALE AUTOMATIQUEMENT -->
+<!-- 🔹 GRISER L'ARRIÈRE-PLAN ET FERMER LE MODAL SEULEMENT PAR BOUTON -->
+<div id="modalBackdrop" class="modal-backdrop fade show"></div>
+
+<!-- 🔹 SCRIPT POUR OUVRIR LE MODAL AUTOMATIQUEMENT ET VERROUILLER LE MODAL -->
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        var myModal = new bootstrap.Modal(document.getElementById('detailsProgrammeVisite'));
+        var myModal = new bootstrap.Modal(document.getElementById('detailsProgrammeVisite'), {
+            backdrop: 'static',  // Empêche la fermeture du modal en cliquant à l'extérieur
+            keyboard: false       // Empêche la fermeture avec la touche Échap
+        });
         myModal.show();
+
+        // Ajout d'un événement pour fermer le modal uniquement en cliquant sur un bouton
+        document.querySelector('.btn-secondary').addEventListener('click', function () {
+            myModal.hide();  // Ferme le modal quand on clique sur le bouton "Annuler"
+        });
     });
 </script>
 

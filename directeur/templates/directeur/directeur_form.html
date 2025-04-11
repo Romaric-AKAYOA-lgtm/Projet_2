@@ -10,7 +10,7 @@
                 <h5 class="modal-title text-white" id="directeurModalLabel">
                     {{ form.instance.pk|yesno:"Modifier un Directeur,Créer un Directeur" }}
                 </h5>
-             </div>
+            </div>
             <div class="modal-body">
                 {% if form.errors %}
                 <div class="alert alert-danger">
@@ -24,67 +24,79 @@
                 <form method="POST" class="needs-validation" novalidate>
                     {% csrf_token %}
 
-                    <div class="mb-3">
-                        <label for="nom" class="form-label">Nom</label>
-                        <input type="text" class="form-control" id="nom" name="nom" required>
-                    </div>
+                    <div class="row">
+                        <!-- First Column -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="nom" class="form-label">Nom</label>
+                                <input type="text" class="form-control" id="nom" name="nom" required>
+                            </div>
 
-                    <div class="mb-3">
-                        <label for="prenom" class="form-label">Prénom</label>
-                        <input type="text" class="form-control" id="prenom" name="prenom" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="date_naissance" class="form-label">Date de naissance</label>
-                        <input type="date" class="form-control input-focus-blue" id="date_naissance" name="date_naissance" required>
-                    </div>
+                            <div class="mb-3">
+                                <label for="prenom" class="form-label">Prénom</label>
+                                <input type="text" class="form-control" id="prenom" name="prenom" required>
+                            </div>
 
-                    <div class="mb-3">
-                        <label for="lieu_naissance" class="form-label">Lieu de naissance</label>
-                        <input type="text" class="form-control input-focus-blue" id="lieu_naissance" name="lieu_naissance" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <div class="input-group">
-                            <input type="email" class="form-control" id="email" name="email" required>
-                            <span class="input-group-text">
-                                <a href="#" id="mailto-link" class="text-decoration-none" style="pointer-events: none;">
-                                    <i class="bi bi-envelope"></i>
-                                </a>
-                            </span>
+                            <div class="mb-3">
+                                <label for="date_naissance" class="form-label">Date de naissance</label>
+                                <input type="date" class="form-control input-focus-blue" id="date_naissance" name="date_naissance" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="lieu_naissance" class="form-label">Lieu de naissance</label>
+                                <input type="text" class="form-control input-focus-blue" id="lieu_naissance" name="lieu_naissance" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                    <span class="input-group-text">
+                                        <a href="#" id="mailto-link" class="text-decoration-none" style="pointer-events: none;">
+                                            <i class="bi bi-envelope"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="num_tel" class="form-label">Numéro de téléphone</label>
+                                <div class="input-group">
+                                    <input type="tel" class="form-control" id="num_tel" name="num_tel">
+                                    <span class="input-group-text">
+                                        <a href="#" id="tel-link" class="text-decoration-none" style="pointer-events: none;">
+                                            <i class="bi bi-telephone"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="mb-3">
-                        <label for="num_tel" class="form-label">Numéro de téléphone</label>
-                        <div class="input-group">
-                            <input type="tel" class="form-control" id="num_tel" name="num_tel">
-                            <span class="input-group-text">
-                                <a href="#" id="tel-link" class="text-decoration-none" style="pointer-events: none;">
-                                    <i class="bi bi-telephone"></i>
-                                </a>
-                            </span>
+                        <!-- Second Column -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="sexe" class="form-label">Sexe</label>
+                                <select class="form-select" id="sexe" name="sexe" required>
+                                    <option value="Masculin" {% if form.sexe.value == 'Masculin' %}selected{% endif %}>Masculin</option>
+                                    <option value="Féminin" {% if form.sexe.value == 'Féminin' %}selected{% endif %}>Féminin</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="adresse" class="form-label">Adresse</label>
+                                <input type="text" class="form-control" id="adresse" name="adresse" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="date_debut" class="form-label">Date de début</label>
+                                <input type="date" class="form-control" id="date_debut" name="date_debut" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="date_fin" class="form-label">Date de fin</label>
+                                <input type="date" class="form-control" id="date_fin" name="date_fin">
+                            </div>
                         </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="sexe" class="form-label">Sexe</label>
-                        <select class="form-select" id="sexe" name="sexe" required>
-                            <option value="Masculin" {% if form.sexe.value == 'Masculin' %}selected{% endif %}>Masculin</option>
-                            <option value="Féminin" {% if form.sexe.value == 'Féminin' %}selected{% endif %}>Féminin</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="adresse" class="form-label">Adresse</label>
-                        <input type="text" class="form-control" id="adresse" name="adresse" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="date_debut" class="form-label">Date de début</label>
-                        <input type="date" class="form-control" id="date_debut" name="date_debut" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="date_fin" class="form-label">Date de fin</label>
-                        <input type="date" class="form-control" id="date_fin" name="date_fin">
                     </div>
 
                     <div class="text-end">

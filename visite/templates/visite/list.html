@@ -1,7 +1,7 @@
 {% extends 'template_base.html' %}
 
 {% block contenue %}
-<div class="container mt-4">
+<div class="container-fluid mt-4">
     <h1 class="text-center   text-white">Liste des Visites</h1>
 
     <div class="d-flex justify-content-between mb-3">
@@ -18,9 +18,7 @@
     
             <input type="text" name="query" class="form-control me-2" placeholder="Rechercher une visite" aria-label="Recherche" value="{{ query }}">
     
-            <button type="submit" class="btn btn-secondary">
-                <i class="bi bi-search"></i> Rechercher
-            </button>
+            <button type="submit" class="btn btn-secondary">   Rechercher </button>
         </form>
     </div>
     
